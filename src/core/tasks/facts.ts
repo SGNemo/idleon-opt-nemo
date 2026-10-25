@@ -1,6 +1,7 @@
 import { Account } from '../model/account';
 import { GameData } from '../../data/schemas';
-import { mineheadUpgradeCostUpperBound } from '../formulas/minehead';
+import { mineheadUpgradeCost } from '../formulas/minehead';
+import { sushiRestOfGameBonus, uniqueSushiCount } from '../formulas/sushi';
 import { VILLAGER_NAMES, villagerExpReq } from '../formulas/hole';
 import { Facts } from './types';
 
@@ -29,17 +30,25 @@ export const computeFacts = (account: Account, data: GameData): Facts => {
     facts['minehead.nextOpponent'] = `${next.ordinal.replace(/_/g, ' ')} ${next.name}`.trim();
     facts['minehead.nextOpponentBonus'] = prettyDescription(next.bonusDescription, next.bonusValue);
   }
+  const unique = uniqueSushiCount(account.sushi.uniqueSushiTracking, data.sushi.names.length - 1);
+  const sushiDiscountPct = Math.max(
+    sushiRestOfGameBonus(unique, data.sushi.restOfGameValues, 1),
+    sushiRestOfGameBonus(unique, data.sushi.restOfGameValues, 16),
+  );
+  const costReduction = data.minehead.upgrades[26];
+  const costReductionQty = costReduction ? costReduction.effectPerLevel * (m.upgradeLevels[26] ?? 0) : 0;
+  facts['minehead.sushiDiscountPct'] = sushiDiscountPct;
   const affordable = data.minehead.upgrades
     .map((u) => {
       const level = m.upgradeLevels[u.index] ?? 0;
       const maxed = u.maxLevel < 999 && level >= u.maxLevel;
-      const cost = mineheadUpgradeCostUpperBound(u.index, level, u.costExponent, account.serverVars.mineCost);
+      const cost = mineheadUpgradeCost({ index: u.index, level, costExponent: u.costExponent, mineCost: account.serverVars.mineCost, costReductionQty, sushiDiscountPct });
       return { name: u.name.replace(/_/g, ' '), level, maxed, cost };
     })
     .filter((u) => !u.maxed && u.cost <= m.currency)
     .sort((a, b) => a.cost - b.cost);
   facts['minehead.affordableCount'] = affordable.length;
-  facts['minehead.affordableTop'] = affordable.slice(0, 3).map((u) => `${u.name} (Lv ${u.level}, ≤${fmtCost(u.cost)})`);
+  facts['minehead.affordableTop'] = affordable.slice(0, 3).map((u) => `${u.name} (Lv ${u.level}, ${fmtCost(u.cost)})`);
   facts['minehead.currency'] = m.currency;
 
   // ---- Hole villagers

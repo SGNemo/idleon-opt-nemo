@@ -19,8 +19,8 @@ export const loadAppData = async (gameVersion: number | null): Promise<LoadedDat
   const versions = (await getJson('data/versions.json')) as number[];
   const exact = gameVersion !== null && versions.includes(gameVersion);
   const version = exact ? gameVersion : Math.max(...versions);
-  const parts = await Promise.all(['meta', 'minehead', 'sneaking', 'hole'].map((n) => getJson(`data/${version}/${n}.json`)));
-  const data = GameDataSchema.parse(Object.fromEntries(['meta', 'minehead', 'sneaking', 'hole'].map((n, i) => [n, parts[i]])));
+  const parts = await Promise.all(['meta', 'minehead', 'sneaking', 'hole', 'sushi'].map((n) => getJson(`data/${version}/${n}.json`)));
+  const data = GameDataSchema.parse(Object.fromEntries(['meta', 'minehead', 'sneaking', 'hole', 'sushi'].map((n, i) => [n, parts[i]])));
   const rules = (await Promise.all(RULE_FILES.map((f) => getJson(`data/rules/${f}.json`)))).flatMap((r) => RuleFileSchema.parse(r));
   return {
     data,

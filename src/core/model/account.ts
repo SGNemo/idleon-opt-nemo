@@ -38,6 +38,10 @@ export const AccountSchema = z.object({
     /** Per character: [floor, ...] as stored. */
     ninjas: z.array(z.object({ floor: z.number() })),
   }),
+  sushi: z.object({
+    /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered. */
+    uniqueSushiTracking: numArray,
+  }),
   hole: z.object({
     villagerLevels: numArray,
     villagerExp: numArray,

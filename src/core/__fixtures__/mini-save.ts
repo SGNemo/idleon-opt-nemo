@@ -27,6 +27,8 @@ export const miniSave = {
     ),
   ),
   Holes: JSON.stringify([[], [22, 61, 86], [1e17, 4e16, 6e17], [1, 1, 1]]),
+  // 64 discovered sushi types, as in the real save
+  Sushi: JSON.stringify([[], [], [], [], [], [...Array(64).fill(1), -1, -1], [], []]),
   OptLacc: Array.from({ length: 240 }, (_, i) => (i === 231 ? 3 : i === 232 ? 4 : 0)),
   servervars: { A_MineCost: 1.31, A_MineHP: 1.01, GameVERSION: 143 },
 };

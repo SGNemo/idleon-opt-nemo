@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { loadGameData, loadRules } from '../../data/load-node';
 import { miniSave } from '../__fixtures__/mini-save';
 import { buildTasks, computeFacts, parseSave } from '..';
-import { mineheadUpgradeCostUpperBound } from '../formulas/minehead';
+import { mineheadUpgradeCost } from '../formulas/minehead';
 import { villagerExpReq } from '../formulas/hole';
 
 const data = loadGameData(143);
@@ -43,9 +43,13 @@ describe('tasks', () => {
 });
 
 describe('formulas (unverified, see docs/FORMULAS.md)', () => {
-  it('upgrade cost upper bound grows with level', () => {
-    expect(mineheadUpgradeCostUpperBound(0, 10, 1.1, 1)).toBeLessThan(mineheadUpgradeCostUpperBound(0, 11, 1.1, 1));
-    expect(mineheadUpgradeCostUpperBound(0, 0, 1.1, 1)).toBe(5);
+  it('MH-01 reproduces the in-game cost: Base Damage I Lv 159 = 9.54M with 50% sushi discount', () => {
+    const cost = mineheadUpgradeCost({ index: 0, level: 159, costExponent: 1.1, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });
+    expect(cost / 1e6).toBeCloseTo(9.54, 1);
+  });
+  it('sushi discount comes from the data: 64 sushi found -> bonus 16 = 50%', () => {
+    const facts = computeFacts(parseSave(miniSave), data);
+    expect(facts['minehead.sushiDiscountPct']).toBe(50);
   });
   it('villager exp requirement is finite and increasing', () => {
     for (let i = 0; i < 5; i++) expect(villagerExpReq(21, i)).toBeLessThan(villagerExpReq(22, i));

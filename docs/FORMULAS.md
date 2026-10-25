@@ -20,7 +20,7 @@ Notation: `QTY(i)` = upgrade effect of Minehead upgrade `i` = `doubler(i) * effe
 
 | ID | Formula | Definition | Status |
 |---|---|---|---|
-| MH-01 | Upgrade cost ("handleUpgCost") | `cost(i, lvl) = (5 + i + max(0,i-2)^1.3) * 2^max(0,i-4) * A_MineCost^max(0,i-9) / (1 + QTY(26)/100) * exponent[i]^lvl * max(0.1, 1 - max(sushi(1), sushi(16))/100)` | TODO |
+| MH-01 | Upgrade cost ("handleUpgCost") | `cost(i, lvl) = (5 + i + max(0,i-2)^1.3) * 2^max(0,i-4) * A_MineCost^max(0,i-9) / (1 + QTY(26)/100) * exponent[i]^lvl * max(0.1, 1 - max(sushi(1), sushi(16))/100)` | verified (scope: no Menagerie doubler on upgrade 26; 1 test value, see Test values) |
 | MH-02 | Research level required | `req(i) = 1 + 3i + floor(i/3) + floor(i/11)` | TODO |
 | MH-03 | Opponent max HP ("handleMaxHP_Opp") | `hp(t) = (5 + 2t + t²) * 1.8^t * 1.85^floor(max(0,t-4)/3) * 4^floor(max(0,t-5)/7) * A_MineHP^max(0,t-9)` | TODO |
 | MH-04 | Opponent mine count ("Minehead:Mines_Opp") | `round(clamp(1 - R + floor(t/3)+floor(t/7)+floor(t/13)+min(1,floor(t/15))+floor(t/17), 1, 40))`, `R` = superbit(Less_Charge) + equinox cloud 41 + jade(Depth_Charge_Disposal) + min(3, ceil(spelunk[18][40]/2)); each of the first three capped at 1 | TODO |
@@ -96,7 +96,7 @@ comments in `hole.ts`. Account options used: 231/232 mastery, 233+ gemstone coun
 
 | ID | File | Used by |
 |---|---|---|
-| MH-01 (upper bound only, no discounts) | `src/core/formulas/minehead.ts` | rule `minehead.upgrades` |
+| MH-01 (full, incl. sushi discount) | `src/core/formulas/minehead.ts` | rule `minehead.upgrades` |
 | MH-03 | `src/core/formulas/minehead.ts` | not used yet |
 | HO-01 | `src/core/formulas/hole.ts` | rule `hole.villagers-ready` |
 
@@ -110,3 +110,9 @@ Tasks built on these carry `status: todo-formula` in `data/rules/*.json`.
 | HO-01 | Studies villager Lv 245, EXP 3.35e19 → can level up in game | Formula says ready (consistent). Only a yes/no check, not the exact threshold | TODO (one consistent observation) |
 
 To reach `verified`: parse sushi data (for the 0.5 factor) and compare a second upgrade (e.g. index 11 or 13 at Lv 44), and for HO-01 a villager that is just below its threshold.
+
+### Update: MH-01 resolved
+Sushi "rest of game" bonus 16 is 50 % on the owner's save (64 sushi types found, `research[37][16]`), bonus 1 is 30 %;
+`max()` gives 50 % → 19.07M × 0.5 = 9.536M = the in-game 9.54M. Implemented as MH-01 (verified in the scope above) plus
+SU-01 (sushi bonus = `research[37][i]` if `uniqueSushi > i`, TODO until a second sushi value is compared).
+Still open for the rule `minehead.upgrades`: MH-02 (research level lock) and Menagerie doublers.

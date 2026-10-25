@@ -97,6 +97,14 @@ export const HoleDataSchema = z.object({
   fountainUpgrades: z.array(z.unknown()),
 });
 
+export const SushiDataSchema = z.object({
+  /** One name per sushi tier; its length - 1 is the highest tier. */
+  names: z.array(z.string()),
+  /** "Rest of game" bonus per tier index: value applies once more than `index` unique sushi were found. */
+  restOfGameValues: z.array(z.number()),
+  restOfGameDescriptions: z.array(z.string()),
+});
+
 export const DataMetaSchema = z.object({
   gameVersion: z.number(),
   source: z.string(),
@@ -110,10 +118,12 @@ export const GameDataSchema = z.object({
   minehead: MineheadDataSchema,
   sneaking: SneakingDataSchema,
   hole: HoleDataSchema,
+  sushi: SushiDataSchema,
 });
 
 export type MineheadData = z.infer<typeof MineheadDataSchema>;
 export type SneakingData = z.infer<typeof SneakingDataSchema>;
+export type SushiData = z.infer<typeof SushiDataSchema>;
 export type HoleData = z.infer<typeof HoleDataSchema>;
 export type GameData = z.infer<typeof GameDataSchema>;
 

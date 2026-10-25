@@ -1,10 +1,21 @@
 // Minehead formulas. Status per docs/FORMULAS.md: all TODO (unverified).
 
-/** MH-01 (TODO): upper bound of the upgrade cost. The real cost is multiplied by factors <= 1
- *  (cost-reduction upgrade QTY(26), sushi discount, floor 0.1), which this bound ignores. */
-export const mineheadUpgradeCostUpperBound = (index: number, level: number, costExponent: number, mineCost: number): number => {
-  const base = (5 + index + Math.pow(Math.max(0, index - 2), 1.3)) * Math.pow(2, Math.max(0, index - 4)) * Math.pow(mineCost, Math.max(0, index - 9));
-  return base * Math.pow(costExponent, level);
+/** MH-01: Minehead upgrade cost (no Menagerie doubler on upgrade 26 considered).
+ *  cost = base(i) * exp^level / (1 + QTY26/100) * max(0.1, 1 - max(sushi 1, sushi 16)/100)
+ *  Checked in game: Base Damage I Lv 159 = 9.54M (see docs/FORMULAS.md). */
+export const mineheadUpgradeCost = (o: {
+  index: number;
+  level: number;
+  costExponent: number;
+  mineCost: number;
+  /** QTY(26): effect of the cost-reduction upgrade. */
+  costReductionQty: number;
+  /** max(sushi bonus 1, sushi bonus 16), in percent. */
+  sushiDiscountPct: number;
+}): number => {
+  const i = o.index;
+  const base = (5 + i + Math.pow(Math.max(0, i - 2), 1.3)) * Math.pow(2, Math.max(0, i - 4)) * Math.pow(o.mineCost, Math.max(0, i - 9));
+  return base * (1 / (1 + o.costReductionQty / 100)) * Math.pow(o.costExponent, o.level) * Math.max(0.1, 1 - o.sushiDiscountPct / 100);
 };
 
 /** MH-03 (TODO): opponent max HP. */

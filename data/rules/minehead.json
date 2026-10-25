@@ -30,7 +30,7 @@
     "system": "Minehead",
     "world": 7,
     "title": "{minehead.affordableCount} Minehead-Upgrades bezahlbar",
-    "reason": "Günstigste: {minehead.affordableTop}. Kosten sind eine Obergrenze (ohne Rabatte), Research-Level nicht geprüft.",
+    "reason": "Günstigste: {minehead.affordableTop}. Kosten inkl. Sushi-Rabatt ({minehead.sushiDiscountPct} %) und Cost-Reduction-Upgrade; Menagerie-Doppler und Research-Level nicht geprüft.",
     "effort": "low",
     "gain": "Mehr Schaden / Währung",
     "status": "todo-formula",

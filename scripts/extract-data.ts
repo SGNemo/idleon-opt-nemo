@@ -1,4 +1,4 @@
-// Builds data/<gameVersion>/{meta,minehead,sneaking,hole}.json from the Toolbox website-data tables.
+// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi}.json from the Toolbox website-data tables.
 // The Toolbox tables are used as a data SOURCE only (numbers/names generated from the game); no code is reused.
 //
 // Usage: npm run data:update -- [--game-version 143] [--sha <toolbox commit>]
@@ -146,6 +146,12 @@ const hole = {
   fountainUpgrades: shared.holeFountUpg,
 };
 
+const sushi = {
+  names: research[30],
+  restOfGameValues: nums(research[37]),
+  restOfGameDescriptions: research[36],
+};
+
 const meta = {
   gameVersion,
   source: `https://github.com/${REPO}`,
@@ -154,7 +160,7 @@ const meta = {
   note: 'Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version.',
 };
 
-const data = GameDataSchema.parse({ meta, minehead, sneaking, hole });
+const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi });
 
 const outDir = join('data', String(gameVersion));
 mkdirSync(outDir, { recursive: true });
