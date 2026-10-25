@@ -8,7 +8,7 @@ if (!file) {
   process.exit(2);
 }
 
-const SUSPICIOUS_KEYS = /token|password|passwd|secret|api[-_]?key|refresh|idtoken|auth|email|mail|uid|session|cookie/i;
+const SUSPICIOUS_KEYS = /token|password|passwd|secret(?!keeper)|api[-_]?key|refresh_?token|idtoken|^auth|^e-?mail$|^uid$|session_?id|cookie/i;
 const PATTERNS = [
   ['email', /[\w.+-]+@[\w-]+\.[\w.-]+/],
   ['jwt', /eyJ[\w-]{10,}\.[\w-]{10,}\.[\w-]{5,}/],
