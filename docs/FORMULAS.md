@@ -101,3 +101,12 @@ comments in `hole.ts`. Account options used: 231/232 mastery, 233+ gemstone coun
 | HO-01 | `src/core/formulas/hole.ts` | rule `hole.villagers-ready` |
 
 Tasks built on these carry `status: todo-formula` in `data/rules/*.json`.
+
+## Test values (from the game, save v143)
+
+| ID | Observation | Result | Status |
+|---|---|---|---|
+| MH-01 | Base Damage I, Lv 159 → next level costs 9.54M in game | Formula without discounts gives 19.07M; × 0.5 = 9.536M matches 9.54M (ratio 0.5002). So a discount factor of ≈0.5 applies. Not computed yet: sushi discount `max(0.1, 1 - max(sushi(1), sushi(16))/100)` and cost-reduction upgrade QTY(26); which of them gives 0.5 on this save is unknown | TODO (base term consistent, discounts unverified) |
+| HO-01 | Studies villager Lv 245, EXP 3.35e19 → can level up in game | Formula says ready (consistent). Only a yes/no check, not the exact threshold | TODO (one consistent observation) |
+
+To reach `verified`: parse sushi data (for the 0.5 factor) and compare a second upgrade (e.g. index 11 or 13 at Lv 44), and for HO-01 a villager that is just below its threshold.
