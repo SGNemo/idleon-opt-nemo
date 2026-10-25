@@ -100,6 +100,12 @@ export const computeFacts = (account: Account, data: GameData, calibration: Mine
     }
   }
 
+  // ---- Account option flags (OptLacc[n] as fact `opt.n`), used by the daily/weekly rules
+  account.accountOptions.forEach((v, i) => {
+    if (typeof v === 'number') facts[`opt.${i}`] = v;
+  });
+  facts['weekly.maxSkulls'] = 5;
+
   // ---- Menagerie
   const g = account.menagerie;
   const mdata = data.menagerie;

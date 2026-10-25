@@ -145,3 +145,9 @@ shows 22B HP (MH-03 gives 21.94B with A_MineHP 1.01). Jelly Operator state lives
 | MENA-04 | Minehead doublers owned | `boost[8] level + 3 (bundle ban_l) + companion Ancientfish`; placed list = Spelunk[51] | consistent: boost lv 2 + 3 = 5 owned = 5 ids placed (11,7,9,0,4) |
 | MENA-05 | Mission progress sources | see `src/core/save/menagerie-progress.ts` (Opals, Tome, miniboss rank not derivable yet) | TODO (Turkey Meal 148 matches Meals[0][0]) |
 Save keys: Menagerie[0] scalars (0 Lumi, 1 shells, 2 rank), [1] mission claims, [2] unlocks owned, [3] boost levels. Spelunk[51/52/53] doubler placement for Minehead/Sushi/Jelly.
+
+### Update: mission progress sources and goal of the boss fight
+Verified against in-game counters: Cavern Layer Removals 125 = Holes[11][1]+[3]+[5]+[7] (34+31+32+28); Palette LVs 1,819 = sum Spelunk[9]; Total Depths 3,862 = sum Spelunk[1] + sum Spelunk[47]; Turkey Meal 148 = Meals[0][0].
+Owner note: the boss is killed in one hit on the last life; "Final Round Fury" and "Big Hit Combos" (doubled by Menagerie doublers) are large multipliers for that. The optimizer models only
+the Base/Mega damage groups (the other factors cancel in ratios), so do not move doublers off those two upgrades.
+Daily/weekly flags (OptLacc 113, 137, 182, 189, 190, 105) come from the IdleonToolbox dashboard and are status todo-formula until compared with the game.

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "weekly.boss-reset",
+    "system": "Weekly Boss",
+    "world": 2,
+    "title": "Weekly Boss: täglicher Raid-Reset offen",
+    "reason": "Das Flag (OptLacc 190) steht auf 0 und springt beim Daily-Reset zurück. Quelle: IdleonToolbox, Dashboard weeklyBosses.daily.",
+    "effort": "low",
+    "gain": "Weekly-Boss-Versuch",
+    "status": "todo-formula",
+    "priority": 65,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "opt.190",
+        "op": "==",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "weekly.boss-trophy",
+    "system": "Weekly Boss",
+    "world": 2,
+    "title": "Weekly Boss: beste Schädel {opt.189}/5",
+    "reason": "Trophäen fallen nur bei neuer Wochenbestleistung, bei 5 Schädeln ist Schluss (OptLacc 189).",
+    "effort": "high",
+    "gain": "Trophäe / Wochenbonus",
+    "status": "todo-formula",
+    "priority": 35,
+    "progress": {
+      "current": "opt.189",
+      "max": "weekly.maxSkulls"
+    },
+    "when": [
+      {
+        "fact": "opt.189",
+        "op": "<",
+        "value": 5
+      }
+    ]
+  },
+  {
+    "id": "daily.random-event",
+    "system": "Allgemein",
+    "world": 1,
+    "title": "Heute noch kein Random Event gemacht",
+    "reason": "OptLacc 137 steht auf 0 (springt beim Daily-Reset zurück). Quelle: IdleonToolbox, randomEvents.",
+    "effort": "low",
+    "gain": "Event-Belohnung",
+    "status": "todo-formula",
+    "priority": 30,
+    "when": [
+      {
+        "fact": "opt.137",
+        "op": "==",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "weekly.shimmer",
+    "system": "Shimmer Island",
+    "world": 2,
+    "title": "Shimmer-Trial diese Woche nicht abgeholt",
+    "reason": "OptLacc 182 steht auf 0 (Wochenreset). Quelle: IdleonToolbox, islands.shimmerIsland.",
+    "effort": "low",
+    "gain": "Wochen-Belohnung",
+    "status": "todo-formula",
+    "priority": 55,
+    "when": [
+      {
+        "fact": "opt.182",
+        "op": "==",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "daily.killroy",
+    "system": "Killroy",
+    "world": 2,
+    "title": "Killroy heute noch nicht gemacht",
+    "reason": "OptLacc 113 steht auf 0. Du hast außerdem {opt.105} Schädel (OptLacc 105). Quelle: IdleonToolbox, killRoy.general/skulls (vereinfacht, ohne Raum-Prüfung).",
+    "effort": "medium",
+    "gain": "Killroy-Belohnung",
+    "status": "todo-formula",
+    "priority": 50,
+    "when": [
+      {
+        "fact": "opt.113",
+        "op": "==",
+        "value": 0
+      }
+    ]
+  }
+]

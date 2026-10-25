@@ -148,3 +148,18 @@ describe('menagerie facts', () => {
     expect(facts['menagerie.claimable']).toContain('Turkey Meal LVs');
   });
 });
+
+describe('daily/weekly flag rules', () => {
+  it('turn OptLacc flags at 0 into tasks and ignore flags already set', () => {
+    const account = parseSave(miniSave);
+    account.accountOptions = [];
+    account.accountOptions[190] = 0;
+    account.accountOptions[189] = 3;
+    account.accountOptions[182] = 1;
+    const ids = buildTasks(rules, computeFacts(account, data)).map((t) => t.id);
+    expect(ids).toContain('weekly.boss-reset');
+    expect(ids).toContain('weekly.boss-trophy');
+    expect(ids).not.toContain('weekly.shimmer');
+    expect(ids).not.toContain('daily.random-event');
+  });
+});
