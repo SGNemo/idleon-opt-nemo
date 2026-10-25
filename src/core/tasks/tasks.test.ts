@@ -115,7 +115,7 @@ describe('jelly operator', () => {
     const facts = computeFacts(account, data);
     expect(facts['jelly.operationsLeft']).toBe(6);
     expect(String(facts['jelly.nextObstruction'])).toMatch(/^#39 /);
-    const tasks = buildTasks(facts, rules);
+    const tasks = buildTasks(rules, facts);
     expect(tasks.some((t) => t.id === 'jelly.operations')).toBe(true);
   });
 });
