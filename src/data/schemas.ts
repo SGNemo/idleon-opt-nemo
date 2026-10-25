@@ -1,0 +1,118 @@
+import { z } from 'zod';
+
+/**
+ * Game data schemas. Field names are ours and describe what the value MEANS;
+ * the extract script maps from the source tables (whose names can be misleading).
+ */
+
+export const MineheadDataSchema = z.object({
+  upgrades: z.array(
+    z.object({
+      index: z.number().int(),
+      name: z.string(),
+      /** Max level; >= 999 means uncapped. */
+      maxLevel: z.number(),
+      /** Effect value per level (before Menagerie doublers). */
+      effectPerLevel: z.number(),
+      /** Per-level cost growth base. */
+      costExponent: z.number(),
+      description: z.string(),
+    }),
+  ),
+  /** Tile multiplier table (upgrade 12) and additive-tile table (upgrade 17), indexed by upgrade QTY. */
+  multiplierTable: z.array(z.number()),
+  additiveTable: z.array(z.number()),
+  /** Grid size per expansion level as [cols, rows]. */
+  gridSizes: z.array(z.tuple([z.number(), z.number()])),
+  opponents: z.array(
+    z.object({
+      index: z.number().int(),
+      name: z.string(),
+      ordinal: z.string(),
+      title: z.string(),
+      /** Flat reward value (placeholders in the description refer to it). */
+      bonusValue: z.number(),
+      bonusDescription: z.string(),
+    }),
+  ),
+  glimbo: z.array(
+    z.object({
+      index: z.number().int(),
+      item: z.string(),
+      costBase: z.number(),
+      /** Index into the upgrade vault whose max level this trade raises. */
+      vaultIndex: z.number().int(),
+      vaultName: z.string(),
+      vaultBaseMaxLevel: z.number(),
+      /** True if research grid square 169 multiplies the extra levels. */
+      gridBonusApplies: z.boolean(),
+    }),
+  ),
+});
+
+export const SneakingDataSchema = z.object({
+  upgrades: z.array(
+    z.object({
+      index: z.number().int(),
+      name: z.string(),
+      /** Bonus per level (NLbonuses plain branch). */
+      modifier: z.number(),
+      /** Upgrade that must be level >= 1 first (may equal own index = locked until mastery rewrites it). */
+      prerequisite: z.number().int(),
+      /** Cost parameters, semantics not yet verified. */
+      costParams: z.object({ x7: z.number(), x8: z.number() }),
+      description: z.string(),
+    }),
+  ),
+  knowledgeRoot: z.number().int(),
+  masteryPrerequisites: z.array(z.object({ mastery: z.number(), upgrade: z.number(), prereq: z.number() })),
+  masteryDrops: z.array(z.unknown()),
+  floors: z.object({
+    baseDoorMaxHp: z.array(z.number()),
+    baseDifficulty: z.array(z.number()),
+    /** Row 10 / row 11 of the source table: door-HP and difficulty scaling per mastery. */
+    doorHpScale: z.array(z.number()),
+    difficultyScale: z.array(z.number()),
+    /** Flat [item, chance, ...] loot lists, one per floor. */
+    dropLists: z.array(z.array(z.string())),
+  }),
+  emporium: z.object({
+    displayOrder: z.array(z.number()),
+    upgrades: z.array(z.object({ index: z.number().int(), name: z.string(), x1: z.number(), x2: z.number(), x3: z.number(), description: z.string() })),
+  }),
+  equipment: z.record(
+    z.object({ rawName: z.string(), type: z.number(), subType: z.number(), name: z.string(), x3: z.number().optional(), x5: z.number().optional() }),
+  ),
+  pristineCharms: z.array(z.object({ rawName: z.string(), name: z.string(), x3: z.number(), bonus: z.string() })),
+  masteryBonuses: z.array(z.string()),
+  gemstoneDescriptions: z.array(z.string()),
+});
+
+/** Hole is stored raw for now; semantics get registered system by system (see docs/FORMULAS.md). */
+export const HoleDataSchema = z.object({
+  holesInfo: z.array(z.array(z.unknown())),
+  buildings: z.array(z.unknown()),
+  cosmoUpgrades: z.array(z.unknown()),
+  lampWishes: z.array(z.unknown()),
+  fountainUpgrades: z.array(z.unknown()),
+});
+
+export const DataMetaSchema = z.object({
+  gameVersion: z.number(),
+  source: z.string(),
+  sourceCommit: z.string(),
+  fetchedAt: z.string(),
+  note: z.string(),
+});
+
+export const GameDataSchema = z.object({
+  meta: DataMetaSchema,
+  minehead: MineheadDataSchema,
+  sneaking: SneakingDataSchema,
+  hole: HoleDataSchema,
+});
+
+export type MineheadData = z.infer<typeof MineheadDataSchema>;
+export type SneakingData = z.infer<typeof SneakingDataSchema>;
+export type HoleData = z.infer<typeof HoleDataSchema>;
+export type GameData = z.infer<typeof GameDataSchema>;

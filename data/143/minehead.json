@@ -1,0 +1,801 @@
+{
+ "upgrades": [
+  {
+   "index": 0,
+   "name": "Base_Damage_I",
+   "maxLevel": 9999,
+   "effectPerLevel": 1,
+   "costExponent": 1.1,
+   "description": "Boosts_your_base_damage_in_the_classic_game_of_Depth_Charge_by_+{"
+  },
+  {
+   "index": 1,
+   "name": "Numbahs",
+   "maxLevel": 17,
+   "effectPerLevel": 1,
+   "costExponent": 6,
+   "description": "Increase_the_max_possible_Tile_Number_you_can_find_to_$!_These_are_a_MULTI_for_damage!"
+  },
+  {
+   "index": 2,
+   "name": "Grid_Expansion",
+   "maxLevel": 16,
+   "effectPerLevel": 1,
+   "costExponent": 7.5,
+   "description": "$"
+  },
+  {
+   "index": 3,
+   "name": "Bettah_Numbahs",
+   "maxLevel": 9999,
+   "effectPerLevel": 10,
+   "costExponent": 1.15,
+   "description": "Boosts_your_odds_of_getting_bigger_Tile_Numbers_by_}x"
+  },
+  {
+   "index": 4,
+   "name": "Mega_Damage_I",
+   "maxLevel": 9999,
+   "effectPerLevel": 5,
+   "costExponent": 1.12,
+   "description": "Permanently_increases_all_damage_you_deal_in_the_classic_game_of_Depth_Charge_by_+{%"
+  },
+  {
+   "index": 5,
+   "name": "Miney_Farmey_I",
+   "maxLevel": 9999,
+   "effectPerLevel": 10,
+   "costExponent": 1.1,
+   "description": "Boosts_the_amount_of_Mine_Currency_you_generate_per_hour_by_+{%"
+  },
+  {
+   "index": 6,
+   "name": "Extra_Lives",
+   "maxLevel": 7,
+   "effectPerLevel": 1,
+   "costExponent": 250,
+   "description": "Start_each_game_with_+1_extra_life!"
+  },
+  {
+   "index": 7,
+   "name": "Base_Damage_II",
+   "maxLevel": 9999,
+   "effectPerLevel": 3,
+   "costExponent": 1.1,
+   "description": "Boosts_your_base_damage_in_the_classic_game_of_Depth_Charge_by_+{"
+  },
+  {
+   "index": 8,
+   "name": "Golden_Tiles",
+   "maxLevel": 16,
+   "effectPerLevel": 1,
+   "costExponent": 8,
+   "description": "Click_on_up_to_{_Golden_Tiles_per_game,_which_are_guaranteed_to_be_safe_from_Depth_Charges!"
+  },
+  {
+   "index": 9,
+   "name": "Big_Hit_Combos",
+   "maxLevel": 9999,
+   "effectPerLevel": 1,
+   "costExponent": 1.3,
+   "description": "Increases_damage_by_+{%_for_every_tile_revealed,_resetting_at_the_start_of_each_turn."
+  },
+  {
+   "index": 10,
+   "name": "Boom_Blocker",
+   "maxLevel": 2,
+   "effectPerLevel": 1,
+   "costExponent": 1000000000,
+   "description": "Start_each_game_of_Depth_Charge_with_+{_Blocks._Depth_Charges_HATE_this_feature!"
+  },
+  {
+   "index": 11,
+   "name": "Final_Round_Fury",
+   "maxLevel": 9999,
+   "effectPerLevel": 2,
+   "costExponent": 1.3,
+   "description": "Your_damage_is_}x_higher_when_down_to_your_last_life!"
+  },
+  {
+   "index": 12,
+   "name": "Multiplier_Madness",
+   "maxLevel": 10,
+   "effectPerLevel": 1,
+   "costExponent": 35,
+   "description": "You_can_now_find_Multiplier_Tiles,_up_to_$!_These_multiply_damage_for_the_current_turn."
+  },
+  {
+   "index": 13,
+   "name": "Moar_Moar_Multi's",
+   "maxLevel": 9999,
+   "effectPerLevel": 6,
+   "costExponent": 1.15,
+   "description": "Boosts_your_odds_of_getting_bigger_Multiplier_Tiles_by_}x"
+  },
+  {
+   "index": 14,
+   "name": "Triple_Crown_Hunter",
+   "maxLevel": 250,
+   "effectPerLevel": 1,
+   "costExponent": 1.16,
+   "description": "Tiles_can_now_have_a_Blue_Crown_background,_reveal_3_to_multiply_current_damage_by_$"
+  },
+  {
+   "index": 15,
+   "name": "Crown_Craze",
+   "maxLevel": 100,
+   "effectPerLevel": 1,
+   "costExponent": 1.4,
+   "description": "Boosts_your_odds_of_revealing_Blue_Crown_backgrounds_by_}x"
+  },
+  {
+   "index": 16,
+   "name": "Legal_Cheating_Button",
+   "maxLevel": 20,
+   "effectPerLevel": 1,
+   "costExponent": 6,
+   "description": "Reveals_a_Depth_Charges,_has_{_uses,_but_has_a_25%_chance_to_break_until_next_turn!"
+  },
+  {
+   "index": 17,
+   "name": "Awesome_Additives",
+   "maxLevel": 10,
+   "effectPerLevel": 1,
+   "costExponent": 35,
+   "description": "You_can_now_find_Additive_Tiles,_up_to_$!_These_boost_your_damage_for_the_ENTIRE_game!"
+  },
+  {
+   "index": 18,
+   "name": "Always_Adding",
+   "maxLevel": 9999,
+   "effectPerLevel": 5,
+   "costExponent": 1.15,
+   "description": "Boosts_your_odds_of_revealing_bigger_Additive_Tiles_by_}x"
+  },
+  {
+   "index": 19,
+   "name": "Clutch_Overtime_Block",
+   "maxLevel": 1,
+   "effectPerLevel": 1,
+   "costExponent": 100000,
+   "description": "When_down_to_your_last_life,_get_+{_Block!_Depth_Charges_STILL_HATE_this_feature!!!"
+  },
+  {
+   "index": 20,
+   "name": "Classic_Flags",
+   "maxLevel": 8,
+   "effectPerLevel": 1,
+   "costExponent": 500,
+   "description": "You_can_place_down_{_Flags,_which_show_the_amount_of_surrounding_Depth_Charges!"
+  },
+  {
+   "index": 21,
+   "name": "Mega_Damage_II",
+   "maxLevel": 9999,
+   "effectPerLevel": 20,
+   "costExponent": 1.1,
+   "description": "Permanently_increases_all_damage_you_deal_in_the_classic_game_of_Depth_Charge_by_+{%"
+  },
+  {
+   "index": 22,
+   "name": "Miney_Farmey_II",
+   "maxLevel": 9999,
+   "effectPerLevel": 15,
+   "costExponent": 1.15,
+   "description": "Boosts_the_amount_of_Mine_Currency_you_generate_per_hour_by_+{%"
+  },
+  {
+   "index": 23,
+   "name": "Jackpot_Time",
+   "maxLevel": 9999,
+   "effectPerLevel": 1,
+   "costExponent": 1.14,
+   "description": "Boosts_your_odds_of_finding_Jackpot_tiles!_You've_currently_got_a_1_in_$_chance!"
+  },
+  {
+   "index": 24,
+   "name": "Record_Breaking_Jackpots",
+   "maxLevel": 6,
+   "effectPerLevel": 1,
+   "costExponent": 1000,
+   "description": "Jackpot_Tiles_now_reveal_$_tiles_when_found!"
+  },
+  {
+   "index": 25,
+   "name": "Base_Damage_III",
+   "maxLevel": 9999,
+   "effectPerLevel": 12,
+   "costExponent": 1.1,
+   "description": "Boosts_your_base_damage_in_the_classic_game_of_Depth_Charge_by_+{"
+  },
+  {
+   "index": 26,
+   "name": "El'_Cheapo_Upgrado",
+   "maxLevel": 9999,
+   "effectPerLevel": 1,
+   "costExponent": 1.15,
+   "description": "All_upgrades_are_$%_cheaper,_now_and_forever!"
+  },
+  {
+   "index": 27,
+   "name": "Mega_Damage_III",
+   "maxLevel": 9999,
+   "effectPerLevel": 50,
+   "costExponent": 1.12,
+   "description": "Permanently_increases_all_damage_you_deal_in_the_classic_game_of_Depth_Charge_by_+{%"
+  },
+  {
+   "index": 28,
+   "name": "Miney_Damagey_Synergy",
+   "maxLevel": 9999,
+   "effectPerLevel": 2,
+   "costExponent": 1.25,
+   "description": "$"
+  },
+  {
+   "index": 29,
+   "name": "Rift_Guy's_Upgrade",
+   "maxLevel": 0,
+   "effectPerLevel": 1,
+   "costExponent": 9999999,
+   "description": "Uh,_yea._This_is_MY_upgrade,_NOT_yours._I_maxed_it_out_because_I'm_me,_duh."
+  }
+ ],
+ "multiplierTable": [
+  1,
+  1.2,
+  1.4,
+  1.6,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  8,
+  8,
+  8
+ ],
+ "additiveTable": [
+  0,
+  10,
+  20,
+  50,
+  100,
+  200,
+  500,
+  1000,
+  2000,
+  5000,
+  10000
+ ],
+ "gridSizes": [
+  [
+   3,
+   3
+  ],
+  [
+   4,
+   3
+  ],
+  [
+   5,
+   3
+  ],
+  [
+   4,
+   4
+  ],
+  [
+   6,
+   3
+  ],
+  [
+   5,
+   4
+  ],
+  [
+   6,
+   4
+  ],
+  [
+   7,
+   4
+  ],
+  [
+   6,
+   5
+  ],
+  [
+   7,
+   5
+  ],
+  [
+   8,
+   5
+  ],
+  [
+   9,
+   5
+  ],
+  [
+   10,
+   5
+  ],
+  [
+   9,
+   6
+  ],
+  [
+   10,
+   6
+  ],
+  [
+   11,
+   6
+  ],
+  [
+   12,
+   6
+  ]
+ ],
+ "opponents": [
+  {
+   "index": 0,
+   "name": "Bronzehead",
+   "ordinal": "first",
+   "title": "the_honorable",
+   "bonusValue": 10,
+   "bonusDescription": "}x_Total_Damage_and_}x_Drop_Rate!_@_(NOTE:All_Bonuses_earned_from_beating_Opponents_affect_the_rest_of_the_game)"
+  },
+  {
+   "index": 1,
+   "name": "Gemhead",
+   "ordinal": "second",
+   "title": "the_honorable",
+   "bonusValue": 2,
+   "bonusDescription": "+{%_AFK_gains_for_Research!_This_affects_offline_Research,_you_get_100%_gains_if_you're_online!_Current_Research_AFK_rate:_$%."
+  },
+  {
+   "index": 2,
+   "name": "Yarnhead",
+   "ordinal": "third",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "+{_new_Research_Magnifier_to_study_your_Observations!"
+  },
+  {
+   "index": 3,
+   "name": "Sashimihead",
+   "ordinal": "fourth",
+   "title": "the_honorable",
+   "bonusValue": 40,
+   "bonusDescription": "Increases_the_Max_LV_of_'Blooming_Axe'_upgrade_in_Breeding_by_+{_LVs"
+  },
+  {
+   "index": 4,
+   "name": "Bleckhead",
+   "ordinal": "fifth",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "+{%_Damage_per_Weapon_POW._Based_on_your_current_weapon,_you're_getting_$x_Damage"
+  },
+  {
+   "index": 5,
+   "name": "Saturnhead",
+   "ordinal": "sixth",
+   "title": "the_honorable",
+   "bonusValue": 100,
+   "bonusDescription": "All_of_Bubba_the_Seal's_upgrades_are_}x_cheaper_than_normal"
+  },
+  {
+   "index": 6,
+   "name": "Basshead",
+   "ordinal": "seventh",
+   "title": "the_honorable",
+   "bonusValue": 50,
+   "bonusDescription": "Multiplies_Minehead_Currency_gain_by_}x"
+  },
+  {
+   "index": 7,
+   "name": "Kelphead",
+   "ordinal": "eighth",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "Unlock_another_Atom_for_your_Atom_Collider,_which_boosts_minehead_currency_gain_when_upgraded"
+  },
+  {
+   "index": 8,
+   "name": "Snouthead",
+   "ordinal": "ninth",
+   "title": "the_honorable",
+   "bonusValue": 2,
+   "bonusDescription": "+{_more_weekly_Exotic_Market_purchases_for_Farming,_and_first_few_purchases_cost_no_crops"
+  },
+  {
+   "index": 9,
+   "name": "Threadhead",
+   "ordinal": "tenth",
+   "title": "the_honorable",
+   "bonusValue": 80,
+   "bonusDescription": "+{_Max_LVs_for_blessing_upgrades,_for_all_Divinities"
+  },
+  {
+   "index": 10,
+   "name": "Clownhead",
+   "ordinal": "eleventh",
+   "title": "the_honorable",
+   "bonusValue": 3,
+   "bonusDescription": "+{%_extra_AFK_gains_for_research"
+  },
+  {
+   "index": 11,
+   "name": "Goldhead",
+   "ordinal": "twelfth",
+   "title": "the_honorable",
+   "bonusValue": 25,
+   "bonusDescription": "}x_multiplier_to_Bucks_gained_in_the_Sushi_Station"
+  },
+  {
+   "index": 12,
+   "name": "Maizehead",
+   "ordinal": "thirteenth",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "+{_new_Magnifier,_with_which_you_can_more_carefully_observe_your_Observations!"
+  },
+  {
+   "index": 13,
+   "name": "Ironhead",
+   "ordinal": "fourteenth",
+   "title": "the_honorable",
+   "bonusValue": 30,
+   "bonusDescription": "+{_LVs_for_your_Grind_Time_bubble_every_day"
+  },
+  {
+   "index": 14,
+   "name": "Purrhead",
+   "ordinal": "fifteenth",
+   "title": "the_honorable",
+   "bonusValue": 2,
+   "bonusDescription": "+{%_grand_discovery_chance_per_Spelunking_LV"
+  },
+  {
+   "index": 15,
+   "name": "Screamhead",
+   "ordinal": "sixteenth",
+   "title": "the_honorable",
+   "bonusValue": 10,
+   "bonusDescription": "+{_daily_bubble_LVs_from_Kattlekruk_divinity"
+  },
+  {
+   "index": 16,
+   "name": "Ballhead",
+   "ordinal": "seventeenth",
+   "title": "the_honorable",
+   "bonusValue": 20,
+   "bonusDescription": "The_trapping_bonus_from_your_Magnesium_Atom_keeps_increasing_for_+{_extra_days"
+  },
+  {
+   "index": 17,
+   "name": "Grosshead",
+   "ordinal": "eighteenth",
+   "title": "the_honorable",
+   "bonusValue": 5,
+   "bonusDescription": "}x_higher_chance_to_grow_Chemical_Plants_in_Gaming"
+  },
+  {
+   "index": 18,
+   "name": "Blindhead",
+   "ordinal": "nineteenth",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "+{_more_Trimmed_Construction_Slot,_which_build_things_$x_faster"
+  },
+  {
+   "index": 19,
+   "name": "Detahead",
+   "ordinal": "twentieth",
+   "title": "the_honorable",
+   "bonusValue": 25,
+   "bonusDescription": "}x_extra_Monument_AFK_Hours_gained_from_all_sources_for_all_monuments"
+  },
+  {
+   "index": 20,
+   "name": "Brainhead",
+   "ordinal": "twenty_first",
+   "title": "the_honorable",
+   "bonusValue": 1,
+   "bonusDescription": "+{_new_Magnifier,_further_expanding_your_capacity_to_scrutinize_and_systematically_examine_your_Observations"
+  },
+  {
+   "index": 21,
+   "name": "Raspberryhead",
+   "ordinal": "twenty_second",
+   "title": "the_honorable",
+   "bonusValue": 2,
+   "bonusDescription": "+{%_Hat_Rack_bonus_multi"
+  },
+  {
+   "index": 22,
+   "name": "Leopahead",
+   "ordinal": "twenty_third",
+   "title": "the_honorable",
+   "bonusValue": 50,
+   "bonusDescription": "}x_daily_amber_gains_from_your_Biggest_Hauls_in_Spelunking"
+  },
+  {
+   "index": 23,
+   "name": "Baldhead",
+   "ordinal": "twenty_fourth",
+   "title": "the_honorable",
+   "bonusValue": 23,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 24,
+   "name": "Royalhead",
+   "ordinal": "twenty_fifth",
+   "title": "the_honorable",
+   "bonusValue": 24,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 25,
+   "name": "Stouthead",
+   "ordinal": "twenty_sixth",
+   "title": "the_honorable",
+   "bonusValue": 25,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 26,
+   "name": "Chillhead",
+   "ordinal": "twenty_seventh",
+   "title": "the_honorable",
+   "bonusValue": 26,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 27,
+   "name": "Summerhead",
+   "ordinal": "twenty_eighth",
+   "title": "the_honorable",
+   "bonusValue": 27,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 28,
+   "name": "Tentahead",
+   "ordinal": "twenty_ninth",
+   "title": "the_honorable",
+   "bonusValue": 28,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 29,
+   "name": "Humungohead",
+   "ordinal": "thirtieth",
+   "title": "the_honorable",
+   "bonusValue": 29,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 30,
+   "name": "Mr_Minehead",
+   "ordinal": "final",
+   "title": "the_big_man_himself",
+   "bonusValue": 30,
+   "bonusDescription": "Nothing..._yet..."
+  },
+  {
+   "index": 31,
+   "name": "Boghead",
+   "ordinal": "permanent",
+   "title": "the_never_ending",
+   "bonusValue": 31,
+   "bonusDescription": "Nothing..._yet..."
+  }
+ ],
+ "glimbo": [
+  {
+   "index": 0,
+   "item": "Coral3",
+   "costBase": 1.06,
+   "vaultIndex": 2,
+   "vaultName": "Monster_Tax",
+   "vaultBaseMaxLevel": 500,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 1,
+   "item": "Pearl6",
+   "costBase": 1.005,
+   "vaultIndex": 3,
+   "vaultName": "Wicked_Smart",
+   "vaultBaseMaxLevel": 500,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 2,
+   "item": "Refinery3",
+   "costBase": 1.2,
+   "vaultIndex": 13,
+   "vaultName": "Major_Discount",
+   "vaultBaseMaxLevel": 80,
+   "gridBonusApplies": false
+  },
+  {
+   "index": 3,
+   "item": "Refinery4",
+   "costBase": 1.1,
+   "vaultIndex": 21,
+   "vaultName": "Go_Go_Secret_Owl",
+   "vaultBaseMaxLevel": 100,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 4,
+   "item": "w7B1b",
+   "costBase": 1.4,
+   "vaultIndex": 32,
+   "vaultName": "Vault_Mastery",
+   "vaultBaseMaxLevel": 50,
+   "gridBonusApplies": false
+  },
+  {
+   "index": 5,
+   "item": "Critter7A",
+   "costBase": 1.06,
+   "vaultIndex": 43,
+   "vaultName": "Active_Murdering",
+   "vaultBaseMaxLevel": 100,
+   "gridBonusApplies": false
+  },
+  {
+   "index": 6,
+   "item": "Refinery5",
+   "costBase": 1.1,
+   "vaultIndex": 45,
+   "vaultName": "Go_Go_Secret_Kangaroo_Mouse",
+   "vaultBaseMaxLevel": 250,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 7,
+   "item": "Coral4",
+   "costBase": 1.06,
+   "vaultIndex": 50,
+   "vaultName": "Critters_'n_Souls",
+   "vaultBaseMaxLevel": 300,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 8,
+   "item": "Refinery6",
+   "costBase": 1.1,
+   "vaultIndex": 54,
+   "vaultName": "Kitchen_Dream-mare",
+   "vaultBaseMaxLevel": 500,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 9,
+   "item": "Critter9A",
+   "costBase": 1.05,
+   "vaultIndex": 56,
+   "vaultName": "Foraging_Forever",
+   "vaultBaseMaxLevel": 250,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 10,
+   "item": "Timecandy5",
+   "costBase": 1.01,
+   "vaultIndex": 57,
+   "vaultName": "Teh_TOM",
+   "vaultBaseMaxLevel": 500,
+   "gridBonusApplies": false
+  },
+  {
+   "index": 11,
+   "item": "Refinery7",
+   "costBase": 1.1,
+   "vaultIndex": 58,
+   "vaultName": "Pet_Punchies",
+   "vaultBaseMaxLevel": 250,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 12,
+   "item": "Refinery8",
+   "costBase": 1.3,
+   "vaultIndex": 61,
+   "vaultName": "Vault_Mastery_II",
+   "vaultBaseMaxLevel": 50,
+   "gridBonusApplies": false
+  },
+  {
+   "index": 13,
+   "item": "Soul8",
+   "costBase": 1.35,
+   "vaultIndex": 63,
+   "vaultName": "Artifact_Find_Chance",
+   "vaultBaseMaxLevel": 250,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 14,
+   "item": "Quest110",
+   "costBase": 1.35,
+   "vaultIndex": 65,
+   "vaultName": "Go_Go_Bubba_the_Seal",
+   "vaultBaseMaxLevel": 500,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 15,
+   "item": "w7B11b",
+   "costBase": 1.25,
+   "vaultIndex": 68,
+   "vaultName": "Mega_Bits",
+   "vaultBaseMaxLevel": 300,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 16,
+   "item": "Critter10A",
+   "costBase": 1.07,
+   "vaultIndex": 71,
+   "vaultName": "Divinity_Points",
+   "vaultBaseMaxLevel": 100,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 17,
+   "item": "Ladle",
+   "costBase": 1.25,
+   "vaultIndex": 75,
+   "vaultName": "Better_Captains",
+   "vaultBaseMaxLevel": 100,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 18,
+   "item": "Critter11",
+   "costBase": 1.2,
+   "vaultIndex": 81,
+   "vaultName": "Finders_Keepers",
+   "vaultBaseMaxLevel": 250,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 19,
+   "item": "Spelunking4",
+   "costBase": 1.25,
+   "vaultIndex": 85,
+   "vaultName": "Bigger_Better_Beans",
+   "vaultBaseMaxLevel": 50,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 20,
+   "item": "SilverPen",
+   "costBase": 1.5,
+   "vaultIndex": 87,
+   "vaultName": "Rest_of_the_Essentials",
+   "vaultBaseMaxLevel": 200,
+   "gridBonusApplies": true
+  },
+  {
+   "index": 21,
+   "item": "Refinery9",
+   "costBase": 1.5,
+   "vaultIndex": 89,
+   "vaultName": "Vault_Mastery_III",
+   "vaultBaseMaxLevel": 50,
+   "gridBonusApplies": false
+  }
+ ]
+}

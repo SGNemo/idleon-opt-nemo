@@ -1,0 +1,1813 @@
+{
+ "upgrades": [
+  {
+   "index": 0,
+   "name": "Centurion_Lineage",
+   "modifier": 5,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 2,
+    "x8": 1.31
+   },
+   "description": "Each_Ninja_Knowledge_upgrade_costs_}x_less_every_100th_level_it_has!"
+  },
+  {
+   "index": 1,
+   "name": "Way_of_Bargain",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 100000000,
+    "x8": 1.13
+   },
+   "description": "Decreases_the_cost_of_all_Ninja_Knowledge_upgrades_by_}x."
+  },
+  {
+   "index": 2,
+   "name": "Respectful_Minded",
+   "modifier": 3,
+   "prerequisite": 8,
+   "costParams": {
+    "x7": 8500,
+    "x8": 1.12
+   },
+   "description": "+{%_bonus_Sneaking_EXP_gain."
+  },
+  {
+   "index": 3,
+   "name": "Mastery_Loot",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 10000000,
+    "x8": 1.8
+   },
+   "description": "Raise_the_max_LV_of_all_items_found_by_+{_per_Mastery_you_are_currently_on."
+  },
+  {
+   "index": 4,
+   "name": "Way_of_Haste",
+   "modifier": 1,
+   "prerequisite": 2,
+   "costParams": {
+    "x7": 48000,
+    "x8": 1.35
+   },
+   "description": "+{%_action_speed._So_instead_of_actions_taking_an_hour,_it's_under_an_hour!"
+  },
+  {
+   "index": 5,
+   "name": "Mahjong_Boosters",
+   "modifier": 4,
+   "prerequisite": 15,
+   "costParams": {
+    "x7": 17500,
+    "x8": 1.25
+   },
+   "description": "+{%_Door_Damage_and_Untie_Rate."
+  },
+  {
+   "index": 6,
+   "name": "Gemstone_Pilfer",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 40000000,
+    "x8": 1.35
+   },
+   "description": "Raise_the_max_LV_of_Gemstones_found_to_+{,_counting_as_more_for_collection_when_used"
+  },
+  {
+   "index": 7,
+   "name": "Kunai_Knowledge",
+   "modifier": 1,
+   "prerequisite": 12,
+   "costParams": {
+    "x7": 10000,
+    "x8": 1.45
+   },
+   "description": "Raise_the_max_LV_of_Kunai_found_to_+{,_also_increases_rarity_of_Kunai_found."
+  },
+  {
+   "index": 8,
+   "name": "Currency_Conduit",
+   "modifier": 1,
+   "prerequisite": 14,
+   "costParams": {
+    "x7": 1250,
+    "x8": 1.1
+   },
+   "description": "+{%_bonus_Jade_Coins_found_per_Sneaking_LV"
+  },
+  {
+   "index": 9,
+   "name": "Name",
+   "modifier": 0,
+   "prerequisite": 9,
+   "costParams": {
+    "x7": 10000,
+    "x8": 1.1
+   },
+   "description": "Desc"
+  },
+  {
+   "index": 10,
+   "name": "Glove_Ingenuity",
+   "modifier": 1,
+   "prerequisite": 11,
+   "costParams": {
+    "x7": 10000000,
+    "x8": 1.55
+   },
+   "description": "Raise_the_max_LV_of_Gloves_found_to_+{,_also_increases_rarity_of_Gloves_found."
+  },
+  {
+   "index": 11,
+   "name": "Charm_Collector",
+   "modifier": 1,
+   "prerequisite": 7,
+   "costParams": {
+    "x7": 250000,
+    "x8": 1.43
+   },
+   "description": "Raise_the_max_LV_of_Charms_found_to_+{,_also_increases_rarity_of_Charms_found."
+  },
+  {
+   "index": 12,
+   "name": "Nunchaku_Grip",
+   "modifier": 1,
+   "prerequisite": 13,
+   "costParams": {
+    "x7": 350,
+    "x8": 1.43
+   },
+   "description": "Raise_the_max_LV_of_Nunchaku_found_to_+{,_also_increases_rarity_of_Nunchaku_found."
+  },
+  {
+   "index": 13,
+   "name": "Way_of_Stealth",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 50,
+    "x8": 1.08
+   },
+   "description": "+{_Stealth_per_Sneaking_Lv._Stealth_is_what_lowers_detection_rate."
+  },
+  {
+   "index": 14,
+   "name": "Looting_Ambition",
+   "modifier": 1,
+   "prerequisite": 13,
+   "costParams": {
+    "x7": 80,
+    "x8": 1.3
+   },
+   "description": "Successfully_sneaking_now_has_a_small_chance_of_finding_items._}x_Item_Find_Chance."
+  },
+  {
+   "index": 15,
+   "name": "Thick_Skin",
+   "modifier": 2,
+   "prerequisite": 14,
+   "costParams": {
+    "x7": 3650,
+    "x8": 1.5
+   },
+   "description": "When_detected,_getting_Knocked_Out_lasts_for_}x_less_time."
+  },
+  {
+   "index": 16,
+   "name": "Star_Sweeping",
+   "modifier": 1,
+   "prerequisite": 15,
+   "costParams": {
+    "x7": 25000,
+    "x8": 25
+   },
+   "description": "Insta-revive_a_knocked_out_ninja_by_dragging_them_to_the_Safe_Area,_up_to_{_times_a_day."
+  },
+  {
+   "index": 17,
+   "name": "Strange_Symbols",
+   "modifier": 2,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 10000000000000,
+    "x8": 3.1
+   },
+   "description": "Symbols_now_drop_from_any_floor,_and_are_successful_}x_more_often"
+  },
+  {
+   "index": 18,
+   "name": "Cheaper_Stealth",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 100000000000000,
+    "x8": 2.3
+   },
+   "description": "The_cost_of_'Way_of_Stealth'_upgrade_goes_up_}x_slower."
+  },
+  {
+   "index": 19,
+   "name": "Admiring_the_Art",
+   "modifier": 5,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000,
+    "x8": 1.7
+   },
+   "description": "}x_Sneaking_EXP_Gain_for_all_Ninja."
+  },
+  {
+   "index": 20,
+   "name": "Charming_Symbols",
+   "modifier": 2,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 10000000000000000,
+    "x8": 3.5
+   },
+   "description": "Symbols_can_now_be_used_on_charm_slots,_and_}x_chance_to_find_rarer_symbols!"
+  },
+  {
+   "index": 21,
+   "name": "Funeral_Flowers",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 100000000000000000,
+    "x8": 5571.5
+   },
+   "description": "Getting_KO'd_boosts_Stealth_on_that_floor_by_+{%._Resets_when_changing_mastery."
+  },
+  {
+   "index": 22,
+   "name": "Double_Gemstones",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 9
+   },
+   "description": "Gemstones_have_a_{%_chance_of_being_worth_2x_as_much_when_added_to_collection"
+  },
+  {
+   "index": 23,
+   "name": "Shhhhhhhhhhh",
+   "modifier": 5,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 1.15
+   },
+   "description": "}x_Total_Stealth_for_all_Ninjas."
+  },
+  {
+   "index": 24,
+   "name": "Cheaper_Mastery",
+   "modifier": 50,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 1.15
+   },
+   "description": "The_cost_of_'Mastery_Loot'_upgrade_is_}x_cheaper."
+  },
+  {
+   "index": 25,
+   "name": "Cheaper_Haste",
+   "modifier": 15,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 1.15
+   },
+   "description": "The_cost_of_'Way_of_Haste'_upgrade_is_}x_cheaper."
+  },
+  {
+   "index": 26,
+   "name": "Cheaper_Bargain",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 2.3
+   },
+   "description": "The_cost_of_'Way_of_Bargain'_upgrade_goes_up_}x_slower."
+  },
+  {
+   "index": 27,
+   "name": "True_Battering",
+   "modifier": 2,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 1.3
+   },
+   "description": "}x_more_Door_Damage_for_all_Ninjas."
+  },
+  {
+   "index": 28,
+   "name": "Jadevalanche",
+   "modifier": 3,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1000000000000000000,
+    "x8": 1.25
+   },
+   "description": "}x_higher_Jade_Gain_for_all_Ninjas."
+  },
+  {
+   "index": 29,
+   "name": "Successful_Symbols",
+   "modifier": 5,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1e+24,
+    "x8": 6.3
+   },
+   "description": "There_is_now_a_4th_symbol_type,_and_all_symbols_are_successful_}x_more_often."
+  },
+  {
+   "index": 30,
+   "name": "Grievance_Garlands",
+   "modifier": 25,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 1e+28,
+    "x8": 323.5
+   },
+   "description": "Get_}x_more_Funeral_Flowers_whenever_a_Ninja_gets_KO'd."
+  },
+  {
+   "index": 31,
+   "name": "Omnijade_Usable",
+   "modifier": 1,
+   "prerequisite": 0,
+   "costParams": {
+    "x7": 100000000000000000000,
+    "x8": 1000000000000000
+   },
+   "description": "Get_+{_Omnijade,_apply_to_upgrades_to_get_+1_LV/day_without_raising_cost."
+  }
+ ],
+ "knowledgeRoot": 13,
+ "masteryPrerequisites": [
+  {
+   "mastery": 5,
+   "upgrade": 0,
+   "prereq": 1
+  },
+  {
+   "mastery": 3,
+   "upgrade": 1,
+   "prereq": 4
+  },
+  {
+   "mastery": 1,
+   "upgrade": 3,
+   "prereq": 5
+  },
+  {
+   "mastery": 1,
+   "upgrade": 6,
+   "prereq": 10
+  }
+ ],
+ "masteryDrops": [
+  {
+   "mastery": 1,
+   "list": 13,
+   "items": [
+    {
+     "item": "NjGem0",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "mastery": 1,
+   "list": 15,
+   "items": [
+    {
+     "item": "NjGem1",
+     "chance": 0.07
+    }
+   ]
+  },
+  {
+   "mastery": 1,
+   "list": 17,
+   "items": [
+    {
+     "item": "NjGem2",
+     "chance": 0.06
+    }
+   ]
+  },
+  {
+   "mastery": 1,
+   "list": 20,
+   "items": [
+    {
+     "item": "NjGem3",
+     "chance": 0.05
+    }
+   ]
+  },
+  {
+   "mastery": 1,
+   "list": 16,
+   "classType": 29,
+   "items": [
+    {
+     "item": "NjGem6",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "mastery": 1,
+   "list": 21,
+   "classType": 29,
+   "items": [
+    {
+     "item": "NjGem7",
+     "chance": 0.08
+    }
+   ]
+  },
+  {
+   "mastery": 2,
+   "list": 14,
+   "items": [
+    {
+     "item": "NjTr20",
+     "chance": 0.15
+    },
+    {
+     "item": "NjGem4",
+     "chance": 0.05
+    }
+   ]
+  },
+  {
+   "mastery": 2,
+   "list": 15,
+   "items": [
+    {
+     "item": "NjTr24",
+     "chance": 0.14
+    }
+   ]
+  },
+  {
+   "mastery": 2,
+   "list": 16,
+   "items": [
+    {
+     "item": "NjTr21",
+     "chance": 0.14
+    }
+   ]
+  },
+  {
+   "mastery": 2,
+   "list": 18,
+   "items": [
+    {
+     "item": "NjTr22",
+     "chance": 0.13
+    },
+    {
+     "item": "NjGem5",
+     "chance": 0.05
+    }
+   ]
+  },
+  {
+   "mastery": 2,
+   "list": 21,
+   "items": [
+    {
+     "item": "NjTr23",
+     "chance": 0.12
+    }
+   ]
+  }
+ ],
+ "floors": {
+  "baseDoorMaxHp": [
+   1,
+   150,
+   800,
+   5000,
+   25000,
+   200000,
+   1500000,
+   20000000,
+   100000000,
+   2000000000,
+   40000000000,
+   45000000000000
+  ],
+  "baseDifficulty": [
+   0.01,
+   15,
+   80,
+   500,
+   2500,
+   8000,
+   40000,
+   170000,
+   800000,
+   3000000,
+   10000000,
+   20000000
+  ],
+  "doorHpScale": [
+   0,
+   100,
+   300,
+   1500,
+   6000,
+   17500,
+   60000,
+   170000,
+   800000,
+   4000000,
+   15000000,
+   60000000
+  ],
+  "difficultyScale": [
+   25,
+   40,
+   150,
+   1150,
+   2000,
+   14000,
+   25000,
+   170000,
+   200000,
+   2250000,
+   5000000,
+   25000000
+  ],
+  "dropLists": [
+   [
+    "NjItem2",
+    "0.001",
+    "NjItem0",
+    "0.10"
+   ],
+   [
+    "NjItem0",
+    "0.05",
+    "NjTr0",
+    "0.2",
+    "NjTr8",
+    "0.3",
+    "NjItem1",
+    "0.05",
+    "NjItem14",
+    "0.03",
+    "NjWep0",
+    "0.15"
+   ],
+   [
+    "NjItem5",
+    "0.04",
+    "NjTr15",
+    "0.15",
+    "NjTr13",
+    "0.17",
+    "NjTr5",
+    "0.2",
+    "NjWep1",
+    "0.15"
+   ],
+   [
+    "NjItem3",
+    "0.02",
+    "NjItem11",
+    "0.04",
+    "NjTr7",
+    "0.17",
+    "NjTr9",
+    "0.2",
+    "NjWep5",
+    "0.15"
+   ],
+   [
+    "NjItem9",
+    "0.03",
+    "NjItem10",
+    "0.01",
+    "NjTr10",
+    "0.17",
+    "NjTr4",
+    "0.2",
+    "NjWep2",
+    "0.15"
+   ],
+   [
+    "NjItem12",
+    "0.04",
+    "NjTr14",
+    "0.17",
+    "NjTr11",
+    "0.2",
+    "NjWep6",
+    "0.15"
+   ],
+   [
+    "NjItem4",
+    "0.03",
+    "NjTr18",
+    "0.17",
+    "NjTr1",
+    "0.2",
+    "NjWep3",
+    "0.15"
+   ],
+   [
+    "NjItem13",
+    "0.02",
+    "NjTr2",
+    "0.17",
+    "NjGl0",
+    "0.08",
+    "NjTr6",
+    "0.2",
+    "NjWep7",
+    "0.15"
+   ],
+   [
+    "NjItem6",
+    "0.005",
+    "NjTr12",
+    "0.17",
+    "NjTr16",
+    "0.23",
+    "NjWep4",
+    "0.15"
+   ],
+   [
+    "NjItem7",
+    "0.001",
+    "NjGl1",
+    "0.05",
+    "NjTr17",
+    "0.21",
+    "NjWep8",
+    "0.15"
+   ],
+   [
+    "NjItem8",
+    "0.0005",
+    "NjGl2",
+    "0.04",
+    "NjTr3",
+    "0.2"
+   ],
+   [
+    "NjItem2",
+    "0.0001",
+    "NjTr19",
+    "0.2"
+   ]
+  ]
+ },
+ "emporium": {
+  "displayOrder": [
+   0,
+   12,
+   5,
+   8,
+   22,
+   27,
+   18,
+   1,
+   17,
+   24,
+   19,
+   25,
+   13,
+   16,
+   26,
+   7,
+   9,
+   23,
+   14,
+   20,
+   28,
+   2,
+   3,
+   15,
+   10,
+   11,
+   6,
+   21,
+   35,
+   30,
+   34,
+   37,
+   29,
+   31,
+   32,
+   4,
+   36,
+   33,
+   38,
+   39,
+   40,
+   41,
+   42,
+   43,
+   44,
+   45,
+   46,
+   47,
+   48,
+   49,
+   50,
+   51,
+   52,
+   53,
+   54,
+   55
+  ],
+  "upgrades": [
+   {
+    "index": 0,
+    "name": "Quick_Ref_Access",
+    "x1": 500,
+    "x2": 1,
+    "x3": 0,
+    "description": "Adds_the_Sneaking_skill_to_your_QuickRef_menu!_Manage_your_Ninja_Twins_from_anywhere!"
+   },
+   {
+    "index": 1,
+    "name": "Gold_Food_Beanstalk",
+    "x1": 500,
+    "x2": 1,
+    "x3": 1,
+    "description": "Grows_a_giant_beanstalk_behind_the_ninja_castle!_Drop_a_stack_of_10,000_Gold_Food_to_add_it_with_the_beanstalk_and_permanently_gain_its_bonus!"
+   },
+   {
+    "index": 2,
+    "name": "Supersized_Gold_Beanstacking",
+    "x1": 500,
+    "x2": 1,
+    "x3": 2,
+    "description": "You_can_now_drop_a_stack_of_100,000_Gold_Food_to_supersize_it!_This_will_obviously_give_a_bigger_bonus,_and_will_even_enlargen_the_food_on_the_stalk!"
+   },
+   {
+    "index": 3,
+    "name": "Charmed,_I'm_Sure",
+    "x1": 500,
+    "x2": 1,
+    "x3": 3,
+    "description": "All_your_Ninja_Twins_can_now_equip_two_of_the_same_charm_at_once!"
+   },
+   {
+    "index": 4,
+    "name": "Mob_Cosplay_Craze",
+    "x1": 500,
+    "x2": 1,
+    "x3": 4,
+    "description": "Certain_monsters_in_World_6_will_now_have_a_rare_chance_to_drop_Ninja_Hats,_but_only_the_ones_you've_found_already_from_the_Ninja_Castle!"
+   },
+   {
+    "index": 5,
+    "name": "Level_Exemption",
+    "x1": 500,
+    "x2": 1,
+    "x3": 5,
+    "description": "Completely_and_utterly_removes_the_UNDER-LEVELED_bonus_reduction_of_all_stamps_in_your_collection,_now_and_forever._Amen."
+   },
+   {
+    "index": 6,
+    "name": "Gaming_to_the_MAX",
+    "x1": 500,
+    "x2": 1,
+    "x3": 6,
+    "description": "All_plant_types_in_Gaming_have_+1_Max_Evolution,_but_this_one_is_50,000x_rarer_than_normal_and_will_make_you_wonder_if_evolution_is_even_real_(it_is)"
+   },
+   {
+    "index": 7,
+    "name": "Revenge_of_the_Pickle",
+    "x1": 500,
+    "x2": 1,
+    "x3": 7,
+    "description": "Adds_a_new_boss_page_to_the_left_of_World_1_in_Deathnote._Each_BoneJoePickle_in_your_inventory_counts_as_+1_Boss_Deathnote_Kill!"
+   },
+   {
+    "index": 8,
+    "name": "The_Artifact_Matrix",
+    "x1": 500,
+    "x2": 1,
+    "x3": 8,
+    "description": "Extends_the_Laboratory_Event_Horizon,_adding_another_bonus_to_connect_to!_In_particular,_a_boost_to_Artifact_Find_Chance!"
+   },
+   {
+    "index": 9,
+    "name": "The_Slab_Matrix",
+    "x1": 500,
+    "x2": 1,
+    "x3": 9,
+    "description": "Further_extends_the_Laboratory_Event_Horizon,_adding_another_bonus_to_connect_to!_In_particular,_a_boost_to_all_bonuses_from_the_Slab!"
+   },
+   {
+    "index": 10,
+    "name": "The_Spirit_Matrix",
+    "x1": 500,
+    "x2": 1,
+    "x3": 10,
+    "description": "Even_further_extends_the_Laboratory_Event_Horizon,_adding_another_bonus_to_connect_to!_In_particular,_a_boost_to_W6_Skill_exp_gain!"
+   },
+   {
+    "index": 11,
+    "name": "The_Crop_Matrix",
+    "x1": 500,
+    "x2": 1,
+    "x3": 11,
+    "description": "Yet_again_even_further_extends_the_Laboratory_Event_Horizon,_adding_another_bonus_to_connect_to!_In_particular,_a_boost_to_Crop_Depot!"
+   },
+   {
+    "index": 12,
+    "name": "MSA_Expander_I",
+    "x1": 500,
+    "x2": 1,
+    "x3": 12,
+    "description": "Adds_a_new_bonus_type_to_the_Miniature_Soul_Apparatus_in_World_3,_specifically_Farming_EXP!"
+   },
+   {
+    "index": 13,
+    "name": "MSA_Expander_II",
+    "x1": 500,
+    "x2": 1,
+    "x3": 13,
+    "description": "Adds_a_new_bonus_type_to_the_Miniature_Soul_Apparatus_in_World_3,_specifically_Jade_Coin_Gain!"
+   },
+   {
+    "index": 14,
+    "name": "MSA_Expander_III",
+    "x1": 500,
+    "x2": 1,
+    "x3": 14,
+    "description": "Adds_a_new_bonus_type_to_the_Miniature_Soul_Apparatus_in_World_3,_specifically_All_Essence_Gain!"
+   },
+   {
+    "index": 15,
+    "name": "Deal_Sweetening",
+    "x1": 500,
+    "x2": 1,
+    "x3": 15,
+    "description": "Earn_+25%_more_Magic_Beans_from_the_mysterious_Legumulyte_bean_merchant_found_in_the_Troll_Broodnest_map."
+   },
+   {
+    "index": 16,
+    "name": "No_Meal_Left_Behind",
+    "x1": 500,
+    "x2": 1,
+    "x3": 16,
+    "description": "Every_24_hours,_your_lowest_level_Meal_gets_+1_Lv._This_only_works_on_Meals_Lv_2_or_higher,_and_doesn't_trigger_on_days_you_don't_play."
+   },
+   {
+    "index": 17,
+    "name": "Jade_Coin_Magnetism",
+    "x1": 500,
+    "x2": 1,
+    "x3": 17,
+    "description": "Adds_a_new_bonus_of_+5%_Jade_Coin_Gain_per_10_items_found_after_1000_items,_as_shown_at_The_Slab_in_World_5."
+   },
+   {
+    "index": 18,
+    "name": "Essence_Confetti",
+    "x1": 500,
+    "x2": 1,
+    "x3": 18,
+    "description": "Adds_a_new_bonus_of_+3%_All_Essence_Gain_per_10_items_found_after_1000_items,_as_shown_at_The_Slab_in_World_5."
+   },
+   {
+    "index": 19,
+    "name": "Shrine_Collective_Bargaining_Agreement",
+    "x1": 500,
+    "x2": 1,
+    "x3": 19,
+    "description": "Shrines_no_longer_lose_EXP_when_moved_around,_so_you_can_finally_bring_those_baddies_out_of_retirement!"
+   },
+   {
+    "index": 20,
+    "name": "Papa_Blob's_Quality_Guarantee",
+    "x1": 500,
+    "x2": 1,
+    "x3": 20,
+    "description": "Increases_the_Max_Level_of_all_cooking_meals_by_+10._Better_meals,_better_levels,_Papa_Blob's."
+   },
+   {
+    "index": 21,
+    "name": "Chef_Geustloaf's_Cutting_Edge_Philosophy",
+    "x1": 500,
+    "x2": 1,
+    "x3": 21,
+    "description": "Increases_the_Max_Level_of_all_cooking_meals_by_+10_again!_But_oh_hoho,_you_sir_are_no_Chef_Geustloaf!_Good_luck_cooking_to_these_LVs!"
+   },
+   {
+    "index": 22,
+    "name": "Crop_Depot_Scientist",
+    "x1": 500,
+    "x2": 1,
+    "x3": 22,
+    "description": "Employs_a_friendly_scientist_blobulyte_to_keep_a_Data_Sheet_of_all_the_crops_you've_ever_found!"
+   },
+   {
+    "index": 23,
+    "name": "Science_Environmentally_Sourced_Pencil",
+    "x1": 500,
+    "x2": 1,
+    "x3": 23,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'+15%_Cash_from_Mobs'_per_crop_found!"
+   },
+   {
+    "index": 24,
+    "name": "Science_Pen",
+    "x1": 500,
+    "x2": 1,
+    "x3": 24,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'1.02x_Plant_Evolution_Chance_in_Gaming_(multiplicative)'_per_Crop!"
+   },
+   {
+    "index": 25,
+    "name": "Science_Marker",
+    "x1": 500,
+    "x2": 1,
+    "x3": 25,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'+8%_Jade_Coin_Gain'_per_Crop!"
+   },
+   {
+    "index": 26,
+    "name": "Science_Featherpen",
+    "x1": 500,
+    "x2": 1,
+    "x3": 26,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'1.10x_Cooking_Speed_(multiplicative)'_per_Crop!"
+   },
+   {
+    "index": 27,
+    "name": "Reinforced_Science_Pencil",
+    "x1": 500,
+    "x2": 1,
+    "x3": 27,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'+20%_Total_Damage'_per_Crop!"
+   },
+   {
+    "index": 28,
+    "name": "Science_Crayon",
+    "x1": 500,
+    "x2": 1,
+    "x3": 28,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'+7%_Shiny_Mob_Lv_Up_Rate_and_Mob_Breeding_Rate'_per_Crop!"
+   },
+   {
+    "index": 29,
+    "name": "Science_Paintbrush",
+    "x1": 500,
+    "x2": 1,
+    "x3": 29,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist's_Data_Sheet!_Specifically_'+0.1_Base_Critter_caught_in_Trapping'_per_Crop!"
+   },
+   {
+    "index": 30,
+    "name": "New_Critter",
+    "x1": 500,
+    "x2": 1,
+    "x3": 30,
+    "description": "Unlocks_a_new_critter_type_to_capture!_These_have_their_own_very_special_vial_in_Alchemy."
+   },
+   {
+    "index": 31,
+    "name": "Ionized_Sigils",
+    "x1": 500,
+    "x2": 1,
+    "x3": 31,
+    "description": "Sigils_can_now_be_upgraded_a_3rd_time._Push_past_lame_ol'_yellow,_and_further_increasing_those_sigil_boosts!"
+   },
+   {
+    "index": 32,
+    "name": "The_Endercaptain",
+    "x1": 500,
+    "x2": 1,
+    "x3": 32,
+    "description": "Adds_the_Endercaptain_to_Recruitment_pool._They're_very_rare,_and_have_a_hidden_account-wide_+25%_Loot_Multi_and_Artifact_Find."
+   },
+   {
+    "index": 33,
+    "name": "True_Godly_Blessings",
+    "x1": 500,
+    "x2": 1,
+    "x3": 33,
+    "description": "All_Divinity_Gods_give_1.05x_higher_Blessing_bonus_per_God_Rank._Whats_a_Blessing_bonus?_Select_a_god,_it's_the_one_on_the_bottom,_go_look."
+   },
+   {
+    "index": 34,
+    "name": "Brighter_Lighthouse_Bulb",
+    "x1": 500,
+    "x2": 1,
+    "x3": 34,
+    "description": "You_can_now_find_3_additional_Artifacts_from_The_Edge_island."
+   },
+   {
+    "index": 35,
+    "name": "Sovereign_Artifacts",
+    "x1": 500,
+    "x2": 1,
+    "x3": 35,
+    "description": "You_can_now_find_Sovereign_Artifacts_from_sailing,_but_only_if_you've_found_the_Eldritch_form_first."
+   },
+   {
+    "index": 36,
+    "name": "New_Bribes",
+    "x1": 500,
+    "x2": 1,
+    "x3": 36,
+    "description": "Mr._Pigibank_is_up_to_no_good_once_again,_and_he's_looking_to_get_some_funding_from_his_favorite_patron..._you._Well,_your_wallet_specifically."
+   },
+   {
+    "index": 37,
+    "name": "Laboratory_Bling",
+    "x1": 500,
+    "x2": 1,
+    "x3": 37,
+    "description": "Adds_3_new_Jewels_to_unlock_at_the_Jewel_Spinner_in_W4_Town._Or,_get_one_for_free_every_700_total_Lab_LV_as_shown_in_Rift_Skill_Mastery."
+   },
+   {
+    "index": 38,
+    "name": "Science_Highlighter",
+    "x1": 500,
+    "x2": 1,
+    "x3": 38,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist!_Specifically_'+1%_Drop_Rate'_per_Crop_after_100!_So_having_105_crops_would_only_give_+5%"
+   },
+   {
+    "index": 39,
+    "name": "Emperor_Season_Pass",
+    "x1": 500,
+    "x2": 1,
+    "x3": 39,
+    "description": "There_is_now_a_50%_chance_to_get_+2_visits_to_the_Emperor_every_day,_and_your_maximum_visits_goes_up_from_6_to_11"
+   },
+   {
+    "index": 40,
+    "name": "Science_Fancy_Pen",
+    "x1": 500,
+    "x2": 1,
+    "x3": 40,
+    "description": "Adds_the_'Spelunky'_bonus_to_your_scientist,_which_boosts_both_POW_and_Amber_gain_by_5%_per_Crop_after_200!_So_having_210_crops_only_gives_+50%"
+   },
+   {
+    "index": 41,
+    "name": "Palette_Slot",
+    "x1": 500,
+    "x2": 1,
+    "x3": 41,
+    "description": "Unlocks_+1_Palette_Slot_in_Gaming!_This_would_be_kinda_pointless_on_it's_own..._so_it_comes_with_+100%_Palette_Luck!"
+   },
+   {
+    "index": 42,
+    "name": "Another_Gallery_Podium",
+    "x1": 500,
+    "x2": 1,
+    "x3": 42,
+    "description": "Pardon_my_interruption_sir,_but_I_must_urge_you_to_buy_this_upgrade..._another_podium_slot_for_your_Gallery_would_be_most_becoming_indeed!"
+   },
+   {
+    "index": 43,
+    "name": "Coral_Conservationism",
+    "x1": 500,
+    "x2": 1,
+    "x3": 43,
+    "description": "Boosts_daily_coral_gain_at_the_Coral_Reef_in_World_7_in_Shimmerfin_Deep_Town_in_the_game_IdleOn_on_the_Left_side_of_the_map_by_+20%"
+   },
+   {
+    "index": 44,
+    "name": "Science_Chalk",
+    "x1": 500,
+    "x2": 1,
+    "x3": 44,
+    "description": "Adds_a_new_bonus_type_to_your_crop_scientist!_Specifically_'+1%_Research_EXP'_per_10_Crops_after_200!_So_240_crops_would_only_give_+4%"
+   },
+   {
+    "index": 45,
+    "name": "Depth_Charge_Disposal",
+    "x1": 500,
+    "x2": 1,
+    "x3": 45,
+    "description": "All_Minehead_opponents_in_Mr._Minehead's_Depth_Charge_game_have_1_less_Depth_Charge_to_deploy!_Less_mines_means_less_booms!"
+   },
+   {
+    "index": 46,
+    "name": "Optimal_Optometry",
+    "x1": 500,
+    "x2": 1,
+    "x3": 46,
+    "description": "Your_Optical_Monocles_give_1.35x_more_Insight_EXP/hr,_and_your_Kaleidoscopes_have_a_1.06x_larger_boost_to_adjacent_magnifiers!"
+   },
+   {
+    "index": 47,
+    "name": "Menagerie_Maxxing",
+    "x1": 500,
+    "x2": 1,
+    "x3": 47,
+    "description": "You_get_+1_extra_mission_in_the_Luminous_Menagerie,_as_well_as_a_small_but_noble_1.10x_hourly_Lumi_gains_multiplier!"
+   },
+   {
+    "index": 48,
+    "name": "UNDER_CONSTRUCTION",
+    "x1": 500,
+    "x2": 1,
+    "x3": 48,
+    "description": "This_bonus_isn't_out_yet,_so_you_cant_buy_it!_Please_come_back_in_a_few_updates,_I_made_myself_clear_before!"
+   },
+   {
+    "index": 49,
+    "name": "UNDER_CONSTRUCTION",
+    "x1": 500,
+    "x2": 1,
+    "x3": 49,
+    "description": "This_bonus_isn't_out_yet._'nuff_said."
+   },
+   {
+    "index": 50,
+    "name": "UNDER_CONSTRUCTION",
+    "x1": 500,
+    "x2": 1,
+    "x3": 49,
+    "description": "This_bonus_isn't_out_yet._'nuff_said."
+   },
+   {
+    "index": 51,
+    "name": "UNDER_CONSTRUCTION",
+    "x1": 500,
+    "x2": 1,
+    "x3": 49,
+    "description": "This_bonus_isn't_out_yet._'nuff_said."
+   }
+  ]
+ },
+ "equipment": {
+  "NjItem0": {
+   "rawName": "NjItem0",
+   "type": 0,
+   "subType": 0,
+   "name": "Straw_Hat"
+  },
+  "NjItem1": {
+   "rawName": "NjItem1",
+   "type": 0,
+   "subType": 1,
+   "name": "Wig_Bandana"
+  },
+  "NjItem2": {
+   "rawName": "NjItem2",
+   "type": 0,
+   "subType": 2,
+   "name": "Funky_Hat"
+  },
+  "NjItem3": {
+   "rawName": "NjItem3",
+   "type": 0,
+   "subType": 3,
+   "name": "Reinforced_Headband"
+  },
+  "NjItem4": {
+   "rawName": "NjItem4",
+   "type": 0,
+   "subType": 4,
+   "name": "Shogun_Helmet"
+  },
+  "NjItem5": {
+   "rawName": "NjItem5",
+   "type": 0,
+   "subType": 5,
+   "name": "Gilded_Headband"
+  },
+  "NjItem6": {
+   "rawName": "NjItem6",
+   "type": 0,
+   "subType": 6,
+   "name": "Bamboo_Hat"
+  },
+  "NjItem7": {
+   "rawName": "NjItem7",
+   "type": 0,
+   "subType": 7,
+   "name": "Festive_Beast_Mask"
+  },
+  "NjItem8": {
+   "rawName": "NjItem8",
+   "type": 0,
+   "subType": 8,
+   "name": "Heiress_Headdress"
+  },
+  "NjItem9": {
+   "rawName": "NjItem9",
+   "type": 0,
+   "subType": 9,
+   "name": "Spirited_Mane"
+  },
+  "NjItem10": {
+   "rawName": "NjItem10",
+   "type": 0,
+   "subType": 10,
+   "name": "Fiery_Mane"
+  },
+  "NjItem11": {
+   "rawName": "NjItem11",
+   "type": 0,
+   "subType": 11,
+   "name": "Guardian_Mane"
+  },
+  "NjItem12": {
+   "rawName": "NjItem12",
+   "type": 0,
+   "subType": 12,
+   "name": "Fanned_Blossomage"
+  },
+  "NjItem13": {
+   "rawName": "NjItem13",
+   "type": 0,
+   "subType": 13,
+   "name": "Dainty_Brim"
+  },
+  "NjItem14": {
+   "rawName": "NjItem14",
+   "type": 0,
+   "subType": 14,
+   "name": "Charcoal_Hat"
+  },
+  "Blank": {
+   "rawName": "Blank",
+   "type": 0,
+   "subType": 0,
+   "name": "Nothing",
+   "x3": 0,
+   "x5": 0
+  },
+  "NjWep0": {
+   "rawName": "NjWep0",
+   "type": 1,
+   "subType": 1,
+   "name": "Wood_Nunchaku",
+   "x3": 10,
+   "x5": 0
+  },
+  "NjWep5": {
+   "rawName": "NjWep5",
+   "type": 1,
+   "subType": 1,
+   "name": "Bamboo_Nunchaku",
+   "x3": 23,
+   "x5": 0
+  },
+  "NjWep6": {
+   "rawName": "NjWep6",
+   "type": 1,
+   "subType": 1,
+   "name": "Charcoal_Nunchaku",
+   "x3": 45,
+   "x5": 0
+  },
+  "NjWep7": {
+   "rawName": "NjWep7",
+   "type": 1,
+   "subType": 1,
+   "name": "Ignited_Nunchaku",
+   "x3": 80,
+   "x5": 0
+  },
+  "NjWep8": {
+   "rawName": "NjWep8",
+   "type": 1,
+   "subType": 1,
+   "name": "Spiral_Nunchaku",
+   "x3": 110,
+   "x5": 0
+  },
+  "NjWep1": {
+   "rawName": "NjWep1",
+   "type": 1,
+   "subType": 2,
+   "name": "Basic_Kunai",
+   "x3": 5,
+   "x5": 0
+  },
+  "NjWep2": {
+   "rawName": "NjWep2",
+   "type": 1,
+   "subType": 2,
+   "name": "Jagged_Kunai",
+   "x3": 9,
+   "x5": 0
+  },
+  "NjWep3": {
+   "rawName": "NjWep3",
+   "type": 1,
+   "subType": 2,
+   "name": "Serrated_Kunai",
+   "x3": 16,
+   "x5": 0
+  },
+  "NjWep4": {
+   "rawName": "NjWep4",
+   "type": 1,
+   "subType": 2,
+   "name": "Damascus_Kunai",
+   "x3": 28,
+   "x5": 0
+  },
+  "NjGl0": {
+   "rawName": "NjGl0",
+   "type": 1,
+   "subType": 0,
+   "name": "Leather_Gloves",
+   "x3": 5,
+   "x5": 0
+  },
+  "NjGl1": {
+   "rawName": "NjGl1",
+   "type": 1,
+   "subType": 0,
+   "name": "Chainmail_Gloves",
+   "x3": 7,
+   "x5": 0
+  },
+  "NjGl2": {
+   "rawName": "NjGl2",
+   "type": 1,
+   "subType": 0,
+   "name": "Thundergloves",
+   "x3": 10,
+   "x5": 0
+  },
+  "NjTr0": {
+   "rawName": "NjTr0",
+   "type": 2,
+   "subType": 0,
+   "name": "Ninja_Log",
+   "x3": 8,
+   "x5": 13
+  },
+  "NjTr1": {
+   "rawName": "NjTr1",
+   "type": 2,
+   "subType": 1,
+   "name": "Taunting_Mark",
+   "x3": 10,
+   "x5": 40
+  },
+  "NjTr2": {
+   "rawName": "NjTr2",
+   "type": 2,
+   "subType": 2,
+   "name": "Yellow_Belt",
+   "x3": 5,
+   "x5": 30
+  },
+  "NjTr3": {
+   "rawName": "NjTr3",
+   "type": 2,
+   "subType": 3,
+   "name": "Strange_Comb",
+   "x3": 5,
+   "x5": 50
+  },
+  "NjTr4": {
+   "rawName": "NjTr4",
+   "type": 2,
+   "subType": 4,
+   "name": "Silk_Veil",
+   "x3": 20,
+   "x5": 1000
+  },
+  "NjTr5": {
+   "rawName": "NjTr5",
+   "type": 2,
+   "subType": 5,
+   "name": "Meteorite",
+   "x3": 15,
+   "x5": 50
+  },
+  "NjTr6": {
+   "rawName": "NjTr6",
+   "type": 2,
+   "subType": 6,
+   "name": "Shiny_Smoke",
+   "x3": 20,
+   "x5": 200
+  },
+  "NjTr7": {
+   "rawName": "NjTr7",
+   "type": 2,
+   "subType": 7,
+   "name": "Scroll_of_Power",
+   "x3": 30,
+   "x5": 300
+  },
+  "NjTr8": {
+   "rawName": "NjTr8",
+   "type": 2,
+   "subType": 8,
+   "name": "Smoke_Bomb",
+   "x3": 15,
+   "x5": 400
+  },
+  "NjTr9": {
+   "rawName": "NjTr9",
+   "type": 2,
+   "subType": 9,
+   "name": "Gold_Coin",
+   "x3": 5,
+   "x5": 100
+  },
+  "NjTr10": {
+   "rawName": "NjTr10",
+   "type": 2,
+   "subType": 10,
+   "name": "Gold_Eye",
+   "x3": 3,
+   "x5": 200
+  },
+  "NjTr11": {
+   "rawName": "NjTr11",
+   "type": 2,
+   "subType": 11,
+   "name": "Gold_Coupon",
+   "x3": 3,
+   "x5": 60
+  },
+  "NjTr12": {
+   "rawName": "NjTr12",
+   "type": 2,
+   "subType": 12,
+   "name": "Gold_Scroll",
+   "x3": 3,
+   "x5": 125
+  },
+  "NjTr13": {
+   "rawName": "NjTr13",
+   "type": 2,
+   "subType": 13,
+   "name": "Blue_Belt",
+   "x3": 10,
+   "x5": 200
+  },
+  "NjTr14": {
+   "rawName": "NjTr14",
+   "type": 2,
+   "subType": 14,
+   "name": "Green_Belt",
+   "x3": 10,
+   "x5": 200
+  },
+  "NjTr15": {
+   "rawName": "NjTr15",
+   "type": 2,
+   "subType": 15,
+   "name": "Goodie_Bag",
+   "x3": 25,
+   "x5": 250
+  },
+  "NjTr16": {
+   "rawName": "NjTr16",
+   "type": 2,
+   "subType": 16,
+   "name": "Lotus_Flower",
+   "x3": 25,
+   "x5": 700
+  },
+  "NjTr17": {
+   "rawName": "NjTr17",
+   "type": 2,
+   "subType": 17,
+   "name": "Rosaries",
+   "x3": 35,
+   "x5": 1700
+  },
+  "NjTr18": {
+   "rawName": "NjTr18",
+   "type": 2,
+   "subType": 18,
+   "name": "Gold_Dagger",
+   "x3": 5,
+   "x5": 200
+  },
+  "NjTr19": {
+   "rawName": "NjTr19",
+   "type": 2,
+   "subType": 19,
+   "name": "Black_Belt",
+   "x3": 20,
+   "x5": 400
+  },
+  "NjTr20": {
+   "rawName": "NjTr20",
+   "type": 2,
+   "subType": 20,
+   "name": "Gold_Beads",
+   "x3": 25,
+   "x5": 500
+  },
+  "NjTr21": {
+   "rawName": "NjTr21",
+   "type": 2,
+   "subType": 21,
+   "name": "Gold_Star",
+   "x3": 2,
+   "x5": 25
+  },
+  "NjTr22": {
+   "rawName": "NjTr22",
+   "type": 2,
+   "subType": 22,
+   "name": "Gold_Sai",
+   "x3": 4,
+   "x5": 25
+  },
+  "NjTr23": {
+   "rawName": "NjTr23",
+   "type": 2,
+   "subType": 23,
+   "name": "Gold_Envelope",
+   "x3": 5,
+   "x5": 50
+  },
+  "NjTr24": {
+   "rawName": "NjTr24",
+   "type": 2,
+   "subType": 24,
+   "name": "Gold_Q_Mark",
+   "x3": 3,
+   "x5": 30
+  },
+  "NjGem0": {
+   "rawName": "NjGem0",
+   "type": 4,
+   "subType": 130,
+   "name": "Aquamarine",
+   "x3": 40,
+   "x5": 10000
+  },
+  "NjGem1": {
+   "rawName": "NjGem1",
+   "type": 4,
+   "subType": 70,
+   "name": "Malachite",
+   "x3": 15,
+   "x5": 5000
+  },
+  "NjGem2": {
+   "rawName": "NjGem2",
+   "type": 4,
+   "subType": 285,
+   "name": "Garnet",
+   "x3": 12,
+   "x5": 2500
+  },
+  "NjGem3": {
+   "rawName": "NjGem3",
+   "type": 4,
+   "subType": 0,
+   "name": "Starite",
+   "x3": 5,
+   "x5": 200
+  },
+  "NjGem4": {
+   "rawName": "NjGem4",
+   "type": 4,
+   "subType": -35,
+   "name": "Topaz",
+   "x3": 10,
+   "x5": 1000
+  },
+  "NjGem5": {
+   "rawName": "NjGem5",
+   "type": 4,
+   "subType": 230,
+   "name": "Moissanite",
+   "x3": 3,
+   "x5": 300
+  },
+  "NjGem6": {
+   "rawName": "NjGem6",
+   "type": 4,
+   "subType": 70,
+   "name": "Emerald",
+   "x3": 1,
+   "x5": 2500
+  },
+  "NjGem7": {
+   "rawName": "NjGem7",
+   "type": 4,
+   "subType": 290,
+   "name": "Firefrost",
+   "x3": 1,
+   "x5": 30
+  },
+  "NjSym0": {
+   "rawName": "NjSym0",
+   "type": 5,
+   "subType": 4,
+   "name": "Lesser_Symbol",
+   "x3": 1,
+   "x5": 1
+  },
+  "NjSym1": {
+   "rawName": "NjSym1",
+   "type": 5,
+   "subType": 4,
+   "name": "Modest_Symbol",
+   "x3": 5,
+   "x5": 1
+  },
+  "NjSym2": {
+   "rawName": "NjSym2",
+   "type": 5,
+   "subType": 4,
+   "name": "Grand_Symbol",
+   "x3": 20,
+   "x5": 1
+  },
+  "NjSym3": {
+   "rawName": "NjSym3",
+   "type": 5,
+   "subType": 4,
+   "name": "Supra_Symbol",
+   "x3": 50,
+   "x5": 1
+  }
+ },
+ "pristineCharms": [
+  {
+   "rawName": "NjTrP0",
+   "name": "Sparkle_Log",
+   "x3": 20,
+   "bonus": "}x_Total_DMG"
+  },
+  {
+   "rawName": "NjTrP1",
+   "name": "Fruit_Rolle",
+   "x3": 20,
+   "bonus": "+{%_AGI"
+  },
+  {
+   "rawName": "NjTrP2",
+   "name": "Glowing_Veil",
+   "x3": 40,
+   "bonus": "}x_Artifact_Find_Chance"
+  },
+  {
+   "rawName": "NjTrP3",
+   "name": "Cotton_Candy",
+   "x3": 15,
+   "bonus": "}x_Drop_Rate"
+  },
+  {
+   "rawName": "NjTrP4",
+   "name": "Sugar_Bomb",
+   "x3": 20,
+   "bonus": "+{%_STR"
+  },
+  {
+   "rawName": "NjTrP5",
+   "name": "Gumm_Eye",
+   "x3": 20,
+   "bonus": "+{%_LUK"
+  },
+  {
+   "rawName": "NjTrP6",
+   "name": "Bubblegum_Law",
+   "x3": 25,
+   "bonus": "}x_Kill_per_Kill"
+  },
+  {
+   "rawName": "NjTrP7",
+   "name": "Sour_Wowzer",
+   "x3": 50,
+   "bonus": "+{%_Sneaking_EXP_gain"
+  },
+  {
+   "rawName": "NjTrP8",
+   "name": "Crystal_Comb",
+   "x3": 30,
+   "bonus": "}x_Bigger_Summoning_Winner_Bonuses"
+  },
+  {
+   "rawName": "NjTrP9",
+   "name": "Rock_Candy",
+   "x3": 50,
+   "bonus": "+{%_Farming_EXP_gain"
+  },
+  {
+   "rawName": "NjTrP10",
+   "name": "Lollipop_Law",
+   "x3": 20,
+   "bonus": "+{%_WIS"
+  },
+  {
+   "rawName": "NjTrP11",
+   "name": "Taffy_Disc",
+   "x3": 50,
+   "bonus": "}x_Higher_Overgrowth_Chance"
+  },
+  {
+   "rawName": "NjTrP12",
+   "name": "Stick_of_Chew",
+   "x3": 30,
+   "bonus": "}x_All_Essence_Generation"
+  },
+  {
+   "rawName": "NjTrP13",
+   "name": "Treat_Sack",
+   "x3": 40,
+   "bonus": "}x_Jade_Coin_gain"
+  },
+  {
+   "rawName": "NjTrP14",
+   "name": "Gumm_Stick",
+   "x3": 50,
+   "bonus": "+{%_Golden_Food_bonus"
+  },
+  {
+   "rawName": "NjTrP15",
+   "name": "Lolly_Flower",
+   "x3": 25,
+   "bonus": "+{%_Printer_Output"
+  },
+  {
+   "rawName": "NjTrP16",
+   "name": "Gumball_Necklace",
+   "x3": 40,
+   "bonus": "}x_Money_from_Monsters"
+  },
+  {
+   "rawName": "NjTrP17",
+   "name": "Liqorice_Rolle",
+   "x3": 25,
+   "bonus": "}x_Bigger_Bonuses_of_Non_Misc_Stamps"
+  },
+  {
+   "rawName": "NjTrP18",
+   "name": "Glimmerchain",
+   "x3": 30,
+   "bonus": "}x_Extra_Deathbringer_Bones"
+  },
+  {
+   "rawName": "NjTrP19",
+   "name": "Twinkle_Taffy",
+   "x3": 30,
+   "bonus": "}x_Extra_Windwalker_Dust"
+  },
+  {
+   "rawName": "NjTrP20",
+   "name": "Jellypick",
+   "x3": 20,
+   "bonus": "+{%_Stamp_Doubler_Bonus"
+  },
+  {
+   "rawName": "NjTrP21",
+   "name": "Candy_Cache",
+   "x3": 40,
+   "bonus": "}x_Villager_EXP"
+  },
+  {
+   "rawName": "NjTrP22",
+   "name": "Mystery_Fizz",
+   "x3": 30,
+   "bonus": "}x_Extra_Arcane_Cultist_Tachyons"
+  }
+ ],
+ "masteryBonuses": [
+  "Gemstone_Ninja_Knowledge_{_+30%_DROP_RATE",
+  "New_Gold_Charms_added_{_+10%_ALL_STAT",
+  "Bargain_Ninja_Knowledge_{_+5_All_Talent_LV",
+  "+30_Max_LV_for_Sneaking_Items_{_1.10#_DMG_MULTI",
+  "Centurion_Ninja_Knowledge_{_+10%_DAILY_CORAL",
+  "Haha_yea_there's_no_bonus_here_yet.",
+  "Haha_yea_there's_no_bonus_here_yet.",
+  "Haha_yea_there's_no_bonus_here_yet."
+ ],
+ "gemstoneDescriptions": [
+  "{}%_Stealth_@_for_all_Ninjas",
+  "{}%_Jade_@_Gain",
+  "{}%_Damage_@_to_Doors",
+  "+}%_Gold_@_Charm_Bonus",
+  "{}%_Sneak_@_EXP_Gain",
+  "{}%_Bonuses_@_from_Gemstones",
+  "$%_Cheaper_@_Upgrades",
+  "{}_Higher_@_Charm_LVs"
+ ]
+}

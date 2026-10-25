@@ -1,0 +1,7 @@
+{
+ "gameVersion": 143,
+ "source": "https://github.com/Morta1/IdleonToolbox",
+ "sourceCommit": "265e1c55d3fddc9da7210aae895dd08bb35e96ac",
+ "fetchedAt": "2026-10-25T03:08:10.301Z",
+ "note": "Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version."
+}
