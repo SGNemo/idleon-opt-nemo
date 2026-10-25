@@ -2,7 +2,7 @@ import { describe, expect, it } from 'vitest';
 import { loadGameData, loadRules } from '../../data/load-node';
 import { miniSave } from '../__fixtures__/mini-save';
 import { buildTasks, computeFacts, parseSave } from '..';
-import { mineheadUpgradeCost } from '../formulas/minehead';
+import { mineheadUpgradeCost, mineheadOpponentHp } from '../formulas/minehead';
 import { villagerExpReq } from '../formulas/hole';
 
 const data = loadGameData(143);
@@ -117,5 +117,16 @@ describe('jelly operator', () => {
     expect(String(facts['jelly.nextObstruction'])).toMatch(/^#39 /);
     const tasks = buildTasks(rules, facts);
     expect(tasks.some((t) => t.id === 'jelly.operations')).toBe(true);
+  });
+});
+
+describe('minehead formulas vs. game screens', () => {
+  it('MH-03: Brainhead (index 20) shows 22B HP in game, A_MineHP 1.01', () => {
+    expect(Math.abs(mineheadOpponentHp(20, 1.01) / 22e9 - 1)).toBeLessThan(0.01);
+  });
+  it('MH-01: Mega Damage II Lv6 costs 214M in game', () => {
+    const u = data.minehead.upgrades[21];
+    const cost = mineheadUpgradeCost({ index: 21, level: 6, costExponent: u.costExponent, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });
+    expect(Math.abs(cost / 214e6 - 1)).toBeLessThan(0.005);
   });
 });

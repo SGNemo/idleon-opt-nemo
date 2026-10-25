@@ -14,7 +14,7 @@ export interface MineheadCalibration {
 }
 
 export const DEFAULT_MINEHEAD_CALIBRATION: MineheadCalibration = {
-  doublers: { 0: 2, 4: 2, 5: 1, 7: 2 },
+  doublers: { 0: 2, 4: 2, 5: 1, 7: 2, 21: 1 },
   baseOffset: 655,
   incomeOffset: 0,
   incomePerHour: 62_194_730,

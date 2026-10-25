@@ -22,7 +22,7 @@ Notation: `QTY(i)` = upgrade effect of Minehead upgrade `i` = `doubler(i) * effe
 |---|---|---|---|
 | MH-01 | Upgrade cost ("handleUpgCost") | `cost(i, lvl) = (5 + i + max(0,i-2)^1.3) * 2^max(0,i-4) * A_MineCost^max(0,i-9) / (1 + QTY(26)/100) * exponent[i]^lvl * max(0.1, 1 - max(sushi(1), sushi(16))/100)` | verified (scope: no Menagerie doubler on upgrade 26; 7 test values: indices 0-5, see Test values) |
 | MH-02 | Research level required | `req(i) = 1 + 3i + floor(i/3) + floor(i/11)` | TODO |
-| MH-03 | Opponent max HP ("handleMaxHP_Opp") | `hp(t) = (5 + 2t + t²) * 1.8^t * 1.85^floor(max(0,t-4)/3) * 4^floor(max(0,t-5)/7) * A_MineHP^max(0,t-9)` | TODO |
+| MH-03 | Opponent max HP ("handleMaxHP_Opp") | `hp(t) = (5 + 2t + t²) * 1.8^t * 1.85^floor(max(0,t-4)/3) * 4^floor(max(0,t-5)/7) * A_MineHP^max(0,t-9)` | verified (scope: t=20 only, 1 test value: Brainhead 22B HP in game, formula 21.94B) |
 | MH-04 | Opponent mine count ("Minehead:Mines_Opp") | `round(clamp(1 - R + floor(t/3)+floor(t/7)+floor(t/13)+min(1,floor(t/15))+floor(t/17), 1, 40))`, `R` = superbit(Less_Charge) + equinox cloud 41 + jade(Depth_Charge_Disposal) + min(3, ceil(spelunk[18][40]/2)); each of the first three capped at 1 | TODO |
 | MH-05 | Lives | `3 + QTY(6)` | TODO |
 | MH-06 | Daily tries max | `3 + grid(147, 1)` | TODO |
@@ -131,3 +131,7 @@ Observed doublers so far: idx 0 x2, idx 4 x2, idx 7 x2, idx 5 x1. Others unknown
 Screens: Base DMG 1,064,049 (Base II Lv132, +792) -> 1,078,493 (Lv136, +816); currency 1.8B -> 1.69B (spent 108M, matches MH-01).
 Ratio 1.01357 implies an additive base term of 1768 = 1 + 320 (Base I) + 792 (Base II) + 655 other.
 The 655 is calibrated, not derived (candidate: Aegean Coral / shrine bonus). Status: calibrated, TODO to derive.
+
+### Update: Mega Damage II, Brainhead
+Mega Damage II Lv6 shows +120 % (data 20/level, no doubler -> x1) and costs 214M (formula 213.4M). Brainhead (20th index, "twenty first opponent")
+shows 22B HP (MH-03 gives 21.94B with A_MineHP 1.01). Jelly Operator state lives in Research[7]: [9] obstructions defeated, [10] operations left today.
