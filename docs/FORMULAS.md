@@ -122,3 +122,7 @@ Displayed next-level costs vs. formula (mineCost 1.31, sushi 50 %): Base Damage 
 Grid Expansion Lv11 14.8B, Bettah Numbahs Lv112 28.3M, Mega Damage I Lv153 195M, Miney Farmey I Lv152 27.8M.
 All within 0.4 % (display rounding). Displayed effects hint at Menagerie doublers: Base Damage I Lv160 shows +320 (data 1/level → x2),
 Mega Damage I Lv153 +1530 % (data 5/level → x2), Miney Farmey I Lv152 +1520 % (data 10/level → x1). Doublers not parsed yet.
+
+### Update: Menagerie doublers (Minehead screen)
+Base Damage II Lv132 shows +792 (data 3/level -> x2); its next-level cost 23.4M matches MH-01 (upgrade index 7).
+Observed doublers so far: idx 0 x2, idx 4 x2, idx 7 x2, idx 5 x1. Others unknown (default x1 in the optimizer).
