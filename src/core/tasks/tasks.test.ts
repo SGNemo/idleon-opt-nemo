@@ -130,3 +130,21 @@ describe('minehead formulas vs. game screens', () => {
     expect(Math.abs(cost / 214e6 - 1)).toBeLessThan(0.005);
   });
 });
+
+describe('menagerie facts', () => {
+  it('counts owned vs. placed Minehead doublers and flags claimable missions', () => {
+    const account = parseSave(miniSave);
+    account.menagerie.rank = 25;
+    account.menagerie.lumi = 12e6;
+    account.menagerie.boostLevels = [21, 19, 4, 31, 30, 3, 5, 7, 2];
+    account.menagerie.bundleDoublers = true;
+    account.menagerie.mineheadDoublersPlaced = [11, 7, 9, 0, 4];
+    account.menagerie.missionProgress[7] = 150; // Turkey Meal Lv 150 reached
+    account.menagerie.claims[7] = 5;
+    const facts = computeFacts(account, data);
+    expect(facts['menagerie.mineheadDoublersOwned']).toBe(5);
+    expect(facts['menagerie.mineheadDoublersLeft']).toBe(0);
+    expect(facts['menagerie.doublerBoostAffordable']).toBe(true);
+    expect(facts['menagerie.claimable']).toContain('Turkey Meal LVs');
+  });
+});

@@ -1,4 +1,4 @@
-// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements,jelly}.json from the Toolbox website-data tables.
+// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements,jelly,menagerie}.json from the Toolbox website-data tables.
 // The Toolbox tables are used as a data SOURCE only (numbers/names generated from the game); no code is reused.
 //
 // Usage: npm run data:update -- [--game-version 143] [--sha <toolbox commit>]
@@ -173,6 +173,23 @@ const jelly = (research[45] as string[]).map((name, index) => ({
   bonusValue: num(research[47][index]),
 }));
 
+// Menagerie (research[52..58], [59]; shared-data gameTables.menagerieCostExponent)
+const costExp = (shared.gameTables as any).menagerieCostExponent;
+const menagerie = {
+  missions: (research[52] as string[]).map((text, index) => ({
+    index,
+    text,
+    shortName: research[55][index] ?? '',
+    baseReq: num(research[54][index]),
+    increment: num(research[53][index]),
+  })),
+  unlocks: (research[56] as string[]).map((name, index) => ({ index, name })),
+  boosts: (research[57] as string[]).map((description, index) => ({ index, description, perLevel: num(research[58][index]) })),
+  costExponentGroups: costExp.groups.map((g: any) => ({ indices: g.indices.map(Number), exponent: num(g.exponent) })),
+  costExponentOtherwise: num(costExp.otherwise),
+  mineheadDoublerEligible: (research[59] as string[]).map(Number),
+};
+
 const meta = {
   gameVersion,
   source: `https://github.com/${REPO}`,
@@ -181,7 +198,7 @@ const meta = {
   note: 'Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version.',
 };
 
-const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements, jelly });
+const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements, jelly, menagerie });
 
 const outDir = join('data', String(gameVersion));
 mkdirSync(outDir, { recursive: true });

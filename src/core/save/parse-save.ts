@@ -1,5 +1,7 @@
 import { Account, AccountSchema } from '../model/account';
 import { toArray, toNumber, toNumberArray } from './json';
+import { computeMissionProgress } from './menagerie-progress';
+import { uniqueSushiCount } from '../formulas/sushi';
 import { normalizeSave, readKey, readServerVars, RawSave } from './normalize';
 
 const TRACKED_KEYS = ['Research', 'Ninja', 'Holes', 'Sushi', 'AchieveReg', 'Spelunk', 'OptLacc', 'playerNames'];
@@ -32,6 +34,8 @@ export const parseSave = (input: string | object): Account => {
   const holes = readKey(save, 'Holes');
   const sushi = readKey(save, 'Sushi');
   const options = toArray(readKey(save, 'OptLacc'));
+  const menagerie = readKey(save, 'Menagerie');
+  const spelunk = readKey(save, 'Spelunk');
 
   const account: Account = {
     gameVersion: serverVars['GameVERSION'] === undefined ? null : toNumber(serverVars['GameVERSION']),
@@ -64,6 +68,18 @@ export const parseSave = (input: string | object): Account => {
     },
     achievements: { registry: toNumberArray(toArray(readKey(save, 'AchieveReg'))), steam: toNumberArray(toArray(readKey(save, 'SteamAchieve'))) },
     sushi: { uniqueSushiTracking: toNumberArray(sub(sushi, 5)) },
+    menagerie: {
+      lumi: toNumber(sub(menagerie, 0)[0]),
+      shells: toNumber(sub(menagerie, 0)[1]),
+      rank: toNumber(sub(menagerie, 0)[2]),
+      claims: toNumberArray(sub(menagerie, 1)),
+      unlocksOwned: toNumberArray(sub(menagerie, 2)),
+      boostLevels: toNumberArray(sub(menagerie, 3)),
+      missionProgress: computeMissionProgress(save, characters.reduce((a, c) => a + c.level, 0), uniqueSushiCount(toNumberArray(sub(sushi, 5)), 200)),
+      mineheadDoublersPlaced: toNumberArray(sub(spelunk, 51)),
+      bundleDoublers: toNumber((readKey(save, 'BundlesReceived') as Record<string, unknown> | undefined)?.['ban_l']) === 1,
+      bundleMissions: toNumber((readKey(save, 'BundlesReceived') as Record<string, unknown> | undefined)?.['ban_k']) === 1,
+    },
     jelly: { obstructionsDefeated: toNumber(mineState[9]), operationsLeft: toNumber(mineState[10]) },
     hole: {
       villagerLevels: toNumberArray(sub(holes, 1)),

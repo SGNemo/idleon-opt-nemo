@@ -50,6 +50,25 @@ export const AccountSchema = z.object({
     /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered. */
     uniqueSushiTracking: numArray,
   }),
+  menagerie: z.object({
+    lumi: z.number(),
+    shells: z.number(),
+    rank: z.number(),
+    /** Menagerie[1]: claims per mission. */
+    claims: numArray,
+    /** Menagerie[2]: unlock owned flags. */
+    unlocksOwned: numArray,
+    /** Menagerie[3]: boost levels. */
+    boostLevels: numArray,
+    /** Current value per mission (MenagerieStuff:MissionProg), null when it cannot be derived from the save. */
+    missionProgress: z.array(z.number().nullable()),
+    /** Spelunk[51]: Minehead upgrade ids that carry a Menagerie doubler. */
+    mineheadDoublersPlaced: numArray,
+    /** BundlesReceived.ban_l: grants 3 extra doublers per kind. */
+    bundleDoublers: z.boolean(),
+    /** BundlesReceived.ban_k: grants 3 extra missions. */
+    bundleMissions: z.boolean(),
+  }),
   jelly: z.object({
     /** Research[7][9]: Jelly Operator obstructions defeated. */
     obstructionsDefeated: z.number(),

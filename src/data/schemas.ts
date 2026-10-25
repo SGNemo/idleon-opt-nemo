@@ -130,6 +130,17 @@ export const JellyDataSchema = z.array(
   }),
 );
 
+export const MenagerieDataSchema = z.object({
+  missions: z.array(z.object({ index: z.number().int(), text: z.string(), shortName: z.string(), baseReq: z.number(), increment: z.number() })),
+  unlocks: z.array(z.object({ index: z.number().int(), name: z.string() })),
+  boosts: z.array(z.object({ index: z.number().int(), description: z.string(), perLevel: z.number() })),
+  /** MenagerieStuff:CostExponent: first group holding the boost index wins, else `otherwise`. */
+  costExponentGroups: z.array(z.object({ indices: z.array(z.number().int()), exponent: z.number() })),
+  costExponentOtherwise: z.number(),
+  /** Upgrade ids a Minehead doubler may sit on. */
+  mineheadDoublerEligible: z.array(z.number().int()),
+});
+
 export const DataMetaSchema = z.object({
   gameVersion: z.number(),
   source: z.string(),
@@ -146,8 +157,10 @@ export const GameDataSchema = z.object({
   sushi: SushiDataSchema,
   achievements: AchievementsDataSchema,
   jelly: JellyDataSchema,
+  menagerie: MenagerieDataSchema,
 });
 
+export type MenagerieData = z.infer<typeof MenagerieDataSchema>;
 export type MineheadData = z.infer<typeof MineheadDataSchema>;
 export type SneakingData = z.infer<typeof SneakingDataSchema>;
 export type SushiData = z.infer<typeof SushiDataSchema>;

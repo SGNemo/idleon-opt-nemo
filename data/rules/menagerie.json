@@ -1,0 +1,122 @@
+[
+  {
+    "id": "menagerie.claim",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: {menagerie.claimableCount} Missionen abholbar",
+    "reason": "Abholbar: {menagerie.claimable}. Jeder Claim gibt eine Shell. Sichtbarkeit nur als Untergrenze geprüft; manche Missionen sind aus dem Save nicht ableitbar.",
+    "effort": "low",
+    "gain": "Shells / Lumi-Rang",
+    "status": "todo-formula",
+    "priority": 80,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "menagerie.claimableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "menagerie.missions-close",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: Missionen kurz vor Abschluss",
+    "reason": "Nächste: {menagerie.missionsClosest}.",
+    "effort": "medium",
+    "gain": "Shells",
+    "status": "todo-formula",
+    "priority": 45,
+    "when": [
+      {
+        "fact": "menagerie.rank",
+        "op": ">",
+        "value": 0
+      },
+      {
+        "fact": "menagerie.missionsClosestCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "menagerie.doubler-place",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Minehead-Doppler frei: {menagerie.mineheadDoublersLeft} unplatziert",
+    "reason": "Auf Miney Farmey I platziert wird dein Einkommen fast verdoppelt. Aktuell platziert auf: {menagerie.doublerPlacedOn}.",
+    "effort": "low",
+    "gain": "Schneller zum Boss",
+    "status": "todo-formula",
+    "priority": 88,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "menagerie.mineheadDoublersLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "menagerie.doubler-buy",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: Minehead-Doppler kaufen ({menagerie.doublerBoostCost} Lumi)",
+    "reason": "Bezahlbar mit deinen Lumi. Ein zusätzlicher Doppler auf Miney Farmey I spart laut Modell etwa {menagerie.doublerOnIncomeSavedHours} h bis zum Boss ({menagerie.doublerOnIncomeHours} h statt {minehead.hoursToTarget} h).",
+    "effort": "low",
+    "gain": "Schneller zum Boss",
+    "status": "todo-formula",
+    "priority": 87,
+    "when": [
+      {
+        "fact": "menagerie.doublerBoostAffordable",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "menagerie.doublerOnIncomeSavedHours",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "menagerie.unlocks",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: Unlocks bezahlbar",
+    "reason": "{menagerie.affordableUnlocks}",
+    "effort": "low",
+    "gain": "Neue Mechaniken",
+    "status": "todo-formula",
+    "priority": 50,
+    "when": [
+      {
+        "fact": "menagerie.affordableUnlocksCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "menagerie.boosts",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: {menagerie.affordableBoostCount} Boosts bezahlbar",
+    "reason": "Günstigste: {menagerie.affordableBoosts}.",
+    "effort": "low",
+    "gain": "Dauerhafte Boni",
+    "status": "todo-formula",
+    "priority": 42,
+    "when": [
+      {
+        "fact": "menagerie.affordableBoostCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

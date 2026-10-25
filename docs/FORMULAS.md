@@ -135,3 +135,13 @@ The 655 is calibrated, not derived (candidate: Aegean Coral / shrine bonus). Sta
 ### Update: Mega Damage II, Brainhead
 Mega Damage II Lv6 shows +120 % (data 20/level, no doubler -> x1) and costs 214M (formula 213.4M). Brainhead (20th index, "twenty first opponent")
 shows 22B HP (MH-03 gives 21.94B with A_MineHP 1.01). Jelly Operator state lives in Research[7]: [9] obstructions defeated, [10] operations left today.
+
+## Menagerie (MENA-*)
+| ID | What | Formula | Status |
+|---|---|---|---|
+| MENA-01 | Boost cost at level L | `3L + L^1.5 + (5 + i^1.5) * max(1.45, 2.25 - 0.0375 i)^i * exp(i)^L`, exp from data (groups, else 1.3) | verified (15 of 15 visible boosts match to the Lumi) |
+| MENA-02 | Mission requirement | `floor(baseReq + increment * claims)` | verified (14 of 14 visible missions) |
+| MENA-03 | Unlock cost | `(10 + i^2) * max(1.6, 2.5 - 0.0375 i)^i` | TODO (no test value yet) |
+| MENA-04 | Minehead doublers owned | `boost[8] level + 3 (bundle ban_l) + companion Ancientfish`; placed list = Spelunk[51] | consistent: boost lv 2 + 3 = 5 owned = 5 ids placed (11,7,9,0,4) |
+| MENA-05 | Mission progress sources | see `src/core/save/menagerie-progress.ts` (Opals, Tome, miniboss rank not derivable yet) | TODO (Turkey Meal 148 matches Meals[0][0]) |
+Save keys: Menagerie[0] scalars (0 Lumi, 1 shells, 2 rank), [1] mission claims, [2] unlocks owned, [3] boost levels. Spelunk[51/52/53] doubler placement for Minehead/Sushi/Jelly.

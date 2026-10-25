@@ -20,3 +20,17 @@ describe('minehead optimizer (model MH-07, unverified)', () => {
     expect(planMineheadPurchases({ ...base, currency: 0 }).steps).toHaveLength(0);
   });
 });
+
+import { planTimeToTarget } from './minehead-optimizer';
+
+describe('time-to-target planner', () => {
+  const lv = Array.from({ length: 30 }, () => 0);
+  lv[0] = 160; lv[4] = 153; lv[5] = 152; lv[7] = 136; lv[21] = 6;
+  const common = { upgrades: ups, levels: lv, baseOffset: 655, currency: 1.69e9, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50, targetMultiplier: 1.29, incomePerHour: 62_194_730, incomeOffset: 0, bestHit: 1.7e10 };
+  const baseline = { 0: 2, 4: 2, 7: 2 };
+  it('a doubler on the income upgrade shortens the time to the target', () => {
+    const without = planTimeToTarget({ ...common, doublers: baseline, baselineDoublers: baseline });
+    const withIncome = planTimeToTarget({ ...common, doublers: { ...baseline, 5: 2 }, baselineDoublers: baseline });
+    expect(withIncome.hoursTotal).toBeLessThan(without.hoursTotal * 0.7);
+  });
+});

@@ -108,6 +108,8 @@ export function planMineheadPurchases(input: OptimizerInput, maxSteps = 5000) {
 export const INCOME_UPGRADES = [5, 22, 28];
 
 export interface TimePlanInput extends OptimizerInput {
+  /** Doublers that were active when `incomePerHour` was observed (default: `doublers`). */
+  baselineDoublers?: Record<number, number>;
   incomePerHour: number;
   incomeOffset: number;
   bestHit: number;
@@ -124,10 +126,12 @@ export function planTimeToTarget(input: TimePlanInput, maxSteps = 4000) {
   const levels = [...input.levels];
   const ups = input.upgrades;
   const byIndex = (i: number) => ups.find((u) => u.index === i);
-  const incomeEff = (u: OptimizerUpgrade) =>
-    u.index === 28 ? u.effectPerLevel * Math.log10(Math.max(1, input.bestHit)) : u.effectPerLevel * (input.doublers[u.index] ?? 1);
-  const incomeTerm = () => input.incomeOffset + INCOME_UPGRADES.reduce((a, i) => { const u = byIndex(i); return a + (u ? (levels[i] ?? 0) * incomeEff(u) : 0); }, 0);
-  const income0Term = incomeTerm();
+  const incomeEff = (u: OptimizerUpgrade, doublers: Record<number, number>) =>
+    u.index === 28 ? u.effectPerLevel * Math.log10(Math.max(1, input.bestHit)) : u.effectPerLevel * (doublers[u.index] ?? 1);
+  const incomeTermWith = (doublers: Record<number, number>) =>
+    input.incomeOffset + INCOME_UPGRADES.reduce((a, i) => { const u = byIndex(i); return a + (u ? (levels[i] ?? 0) * incomeEff(u, doublers) : 0); }, 0);
+  const incomeTerm = () => incomeTermWith(input.doublers);
+  const income0Term = incomeTermWith(input.baselineDoublers ?? input.doublers);
   const incomeNow = () => input.incomePerHour * (1 + incomeTerm() / 100) / (1 + income0Term / 100);
   const dmg = () => { const t = terms(levels, ups, input.doublers, input.baseOffset); return t.base * t.mega; };
   const dmg0 = dmg();

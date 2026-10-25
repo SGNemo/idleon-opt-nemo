@@ -1,0 +1,519 @@
+{
+ "missions": [
+  {
+   "index": 0,
+   "text": "Reach_a_Total_Account_LV_of_{",
+   "shortName": "Account_LV",
+   "baseReq": 4000,
+   "increment": 2000
+  },
+  {
+   "index": 1,
+   "text": "Reach_Sneaking_Mastery_{",
+   "shortName": "Sneaking_Mastery",
+   "baseReq": 1,
+   "increment": 1
+  },
+  {
+   "index": 2,
+   "text": "Achieve_{_Total_Spelunking_Depths",
+   "shortName": "Total_Depths,_including_Manic",
+   "baseReq": 500,
+   "increment": 500
+  },
+  {
+   "index": 3,
+   "text": "Discover_{_different_Farming_Crop_types",
+   "shortName": "Crops_Discovered",
+   "baseReq": 200,
+   "increment": 25
+  },
+  {
+   "index": 4,
+   "text": "Achieve_{_Endless_Summoning_victories",
+   "shortName": "Victories",
+   "baseReq": 50,
+   "increment": 50
+  },
+  {
+   "index": 5,
+   "text": "Reach_{_total_Best_Waves_in_Worship",
+   "shortName": "Best_Waves",
+   "baseReq": 500,
+   "increment": 200
+  },
+  {
+   "index": 6,
+   "text": "Reach_a_God_Rank_of_{_in_Divinity",
+   "shortName": "God_Ranks",
+   "baseReq": 5,
+   "increment": 5
+  },
+  {
+   "index": 7,
+   "text": "Level_up_your_Turkey_Meal_to_Lv.{",
+   "shortName": "Turkey_Meal_LVs",
+   "baseReq": 100,
+   "increment": 10
+  },
+  {
+   "index": 8,
+   "text": "Reach_Worker_Class_Lv.{_in_The_Clamworks",
+   "shortName": "Worker_Class",
+   "baseReq": 3,
+   "increment": 1
+  },
+  {
+   "index": 9,
+   "text": "Defeat_{_Mr._Minehead_Depth_Charge_opponents",
+   "shortName": "Minehead_wins",
+   "baseReq": 9,
+   "increment": 3
+  },
+  {
+   "index": 10,
+   "text": "Cook_up_{_different_Sushi_Types",
+   "shortName": "Sushi_Types_Cooked",
+   "baseReq": 40,
+   "increment": 5
+  },
+  {
+   "index": 11,
+   "text": "Remove_{_obstructions_in_Jelly_Operator",
+   "shortName": "Successful_Operations",
+   "baseReq": 14,
+   "increment": 4
+  },
+  {
+   "index": 12,
+   "text": "Earn_{_total_Opals_from_The_Hole",
+   "shortName": "Opals_Earned",
+   "baseReq": 400,
+   "increment": 50
+  },
+  {
+   "index": 13,
+   "text": "Make_{_Glimbo_Trades",
+   "shortName": "Glimbo_Trades",
+   "baseReq": 1000,
+   "increment": 200
+  },
+  {
+   "index": 14,
+   "text": "Press_the_giant_green_Button_{_times_in_W7",
+   "shortName": "Button_Presses",
+   "baseReq": 150,
+   "increment": 25
+  },
+  {
+   "index": 15,
+   "text": "Find_{_Farming_Stickers",
+   "shortName": "Farming_Stickers",
+   "baseReq": 80,
+   "increment": 10
+  },
+  {
+   "index": 16,
+   "text": "Achieve_a_Tome_Score_of_{",
+   "shortName": "Tome_Score",
+   "baseReq": 35000,
+   "increment": 5000
+  },
+  {
+   "index": 17,
+   "text": "Collect_{_of_the_Rat_King's_Crowns_in_Gaming",
+   "shortName": "Rat_King_Crowns",
+   "baseReq": 60,
+   "increment": 5
+  },
+  {
+   "index": 18,
+   "text": "Find_{_total_Artifact_findings_in_Sailing",
+   "shortName": "Artifact_Findings",
+   "baseReq": 210,
+   "increment": 15
+  },
+  {
+   "index": 19,
+   "text": "Find_{_unique_items_as_shown_in_The_Slab",
+   "shortName": "Slab_Items",
+   "baseReq": 1700,
+   "increment": 50
+  },
+  {
+   "index": 20,
+   "text": "Take_a_Copper_3d_Printer_Sample_of_$",
+   "shortName": "Copper_Sample_Digits",
+   "baseReq": 10,
+   "increment": 2
+  },
+  {
+   "index": 21,
+   "text": "Greenstack_{_different_items",
+   "shortName": "Greenstacks",
+   "baseReq": 250,
+   "increment": 30
+  },
+  {
+   "index": 22,
+   "text": "Reach_Showdown_{_in_the_Emperors_Castle",
+   "shortName": "Emperor_Showdown",
+   "baseReq": 100,
+   "increment": 25
+  },
+  {
+   "index": 23,
+   "text": "Work_through_{_layers_across_all_Resource_Caverns",
+   "shortName": "Cavern_Layer_Removals",
+   "baseReq": 60,
+   "increment": 20
+  },
+  {
+   "index": 24,
+   "text": "Own_at_least_$_Gaming_Bits",
+   "shortName": "Gaming_Bits_owned",
+   "baseReq": 80,
+   "increment": 10
+  },
+  {
+   "index": 25,
+   "text": "Collect_{_Orion's_Fractal_Megafeathers",
+   "shortName": "Fractal_Megafeathers",
+   "baseReq": 20,
+   "increment": 5
+  },
+  {
+   "index": 26,
+   "text": "Collect_{_Poppy's_Eclectic_Megafish",
+   "shortName": "Eclectic_Megafish",
+   "baseReq": 6,
+   "increment": 3
+  },
+  {
+   "index": 27,
+   "text": "Collect_{_of_Bubba's_Chromatic_Megaflesh",
+   "shortName": "Chromatic_Megaflesh",
+   "baseReq": 1,
+   "increment": 2
+  },
+  {
+   "index": 28,
+   "text": "Achieve_a_total_Palette_LV_of_{",
+   "shortName": "Palette_LVs",
+   "baseReq": 1500,
+   "increment": 150
+  },
+  {
+   "index": 29,
+   "text": "Defeat_{_Summoning_Bosses",
+   "shortName": "Summoning_Boss_Kills",
+   "baseReq": 25,
+   "increment": 5
+  },
+  {
+   "index": 30,
+   "text": "Achieve_{_Deathnote_PTS_for_the_Bosses_Page",
+   "shortName": "Deathnote_Boss_PTS",
+   "baseReq": 25,
+   "increment": 15
+  },
+  {
+   "index": 31,
+   "text": "Achieve_a_total_Sigil_LV_of_{",
+   "shortName": "Sigil_LVs",
+   "baseReq": 80,
+   "increment": 10
+  },
+  {
+   "index": 32,
+   "text": "Achieve_{_total_Killroy_Prime_kills",
+   "shortName": "total_Killroy_Prime_kills",
+   "baseReq": 150000,
+   "increment": 50000
+  }
+ ],
+ "unlocks": [
+  {
+   "index": 0,
+   "name": "You_can_now_find_the_Verisimilitude_Artifacts_膛"
+  },
+  {
+   "index": 1,
+   "name": "Spelunking_Caverns_get_a_Shortcut_every_50_Depths"
+  },
+  {
+   "index": 2,
+   "name": "Unlock_Singularity_Mode_for_the_Coral_Kid_膛"
+  },
+  {
+   "index": 3,
+   "name": "Unlock_the_Pink_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 4,
+   "name": "New_Musselini_Upgrades_at_The_Clamworks"
+  },
+  {
+   "index": 5,
+   "name": "Unlock_the_Blue_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 6,
+   "name": "Mobs_drop_Omega_Arcade_Balls,_1_in_$_chance_膛"
+  },
+  {
+   "index": 7,
+   "name": "Unlock_the_Red_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 8,
+   "name": "Unlock_the_Crucible_Mode_in_the_Breeding_Arena_膛"
+  },
+  {
+   "index": 9,
+   "name": "Increases_Max_LV_of_the_'Pillar'_Coral_Reef_by_+3"
+  },
+  {
+   "index": 10,
+   "name": "Unlock_the_Silver_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 11,
+   "name": "+10_Max_Shiny_LV_in_Breeding_膛"
+  },
+  {
+   "index": 12,
+   "name": "Unlock_the_Yellow_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 13,
+   "name": "Lv.600+_Sailing_Ships_become_Nightmariners_膛"
+  },
+  {
+   "index": 14,
+   "name": "Adds_2_new_White_Legend_Talents_to_Whallamus"
+  },
+  {
+   "index": 15,
+   "name": "Never_lose_Stim_from_starting_Spelunking_Delves"
+  },
+  {
+   "index": 16,
+   "name": "Adds_a_new_Atom_type_to_the_Atom_Collider"
+  },
+  {
+   "index": 17,
+   "name": "Boosts_max_Flair_LV_of_Statues_to_Elegant"
+  },
+  {
+   "index": 18,
+   "name": "Doubles_the_1st_trait_for_Wizards_膛"
+  },
+  {
+   "index": 19,
+   "name": "Boost_the_Max_LV_of_various_Legend_Talents"
+  },
+  {
+   "index": 20,
+   "name": "Boost_the_Max_Cooking_LV_by_+10"
+  },
+  {
+   "index": 21,
+   "name": "Boost_the_Max_Tiny_Cog_Tier_to_T11_膛"
+  },
+  {
+   "index": 22,
+   "name": "Maize_and_Muffin_Sticker_Bonuses_are_now_Multi_膛"
+  },
+  {
+   "index": 23,
+   "name": "Unlock_the_Green_Jellyfish_within_the_Menagerie_膛"
+  },
+  {
+   "index": 24,
+   "name": "Adds_a_new_Magnifier_to_use_on_Research_Observations"
+  }
+ ],
+ "boosts": [
+  {
+   "index": 0,
+   "description": "+{_more_Menagerie_Missions",
+   "perLevel": 1
+  },
+  {
+   "index": 1,
+   "description": "Each_Menagerie_Rank_boosts_Lumi/hr_by_+{%",
+   "perLevel": 25
+  },
+  {
+   "index": 2,
+   "description": "+{_Black_Stars_to_use_in_your_Gaming_Palette",
+   "perLevel": 1
+  },
+  {
+   "index": 3,
+   "description": "}x_Research_EXP_gains",
+   "perLevel": 10
+  },
+  {
+   "index": 4,
+   "description": "}x_Cooking_Speed",
+   "perLevel": 500
+  },
+  {
+   "index": 5,
+   "description": "+{_Max_LV_for_all_Shrines_in_Construction",
+   "perLevel": 10
+  },
+  {
+   "index": 6,
+   "description": "+{_Organic_Labels_to_use_in_the_Exotic_Market",
+   "perLevel": 1
+  },
+  {
+   "index": 7,
+   "description": "}x_cheaper_summoning_upgrades_per_50_upg_LVs",
+   "perLevel": 100
+  },
+  {
+   "index": 8,
+   "description": "+{_Minehead_Upgrade_Doublers",
+   "perLevel": 1
+  },
+  {
+   "index": 9,
+   "description": "}x_extra_value_for_all_Sailing_Treasure",
+   "perLevel": 20
+  },
+  {
+   "index": 10,
+   "description": "+{_Sushi_Station_Upgrade_Doublers",
+   "perLevel": 1
+  },
+  {
+   "index": 11,
+   "description": "}x_Forge_Speed_all_the_way_back_in_World_1",
+   "perLevel": 75
+  },
+  {
+   "index": 12,
+   "description": "+{_Jelly_Operator_Upgrade_Doublers",
+   "perLevel": 1
+  },
+  {
+   "index": 13,
+   "description": "All_Shiny_Critters_are_worth_}x_more",
+   "perLevel": 100
+  },
+  {
+   "index": 14,
+   "description": "}x_all_Summoning_Essence_gain",
+   "perLevel": 25
+  },
+  {
+   "index": 15,
+   "description": "Slow_Roast_Wiz_starts_at_{_sec_every_wave",
+   "perLevel": 600
+  },
+  {
+   "index": 16,
+   "description": "Orion's_first_upgrade_is_}x_cheaper",
+   "perLevel": 500
+  },
+  {
+   "index": 17,
+   "description": "+{_Max_LVs_for_all_Atoms",
+   "perLevel": 1
+  },
+  {
+   "index": 18,
+   "description": "Poppy's_first_upgrade_is_}x_cheaper",
+   "perLevel": 400
+  },
+  {
+   "index": 19,
+   "description": "}x_Land_Rank_EXP_for_all_Farming_Plots",
+   "perLevel": 50
+  },
+  {
+   "index": 20,
+   "description": "Bubba's_first_upgrade_is_}x_cheaper",
+   "perLevel": 300
+  },
+  {
+   "index": 21,
+   "description": "}x_Cooking_Mastery_EXP_gains",
+   "perLevel": 1
+  },
+  {
+   "index": 22,
+   "description": "}x_Spelunking_POW",
+   "perLevel": 25
+  },
+  {
+   "index": 23,
+   "description": "}x_Class_EXP_gain",
+   "perLevel": 5
+  },
+  {
+   "index": 24,
+   "description": "}x_Drop_Rate",
+   "perLevel": 1
+  }
+ ],
+ "costExponentGroups": [
+  {
+   "indices": [
+    8,
+    10,
+    12
+   ],
+   "exponent": 35
+  },
+  {
+   "indices": [
+    17,
+    5,
+    2
+   ],
+   "exponent": 22.8
+  },
+  {
+   "indices": [
+    6
+   ],
+   "exponent": 3.5
+  },
+  {
+   "indices": [
+    0,
+    1,
+    7
+   ],
+   "exponent": 2.1
+  }
+ ],
+ "costExponentOtherwise": 1.3,
+ "mineheadDoublerEligible": [
+  0,
+  3,
+  4,
+  5,
+  7,
+  8,
+  9,
+  10,
+  11,
+  13,
+  14,
+  15,
+  16,
+  18,
+  21,
+  22,
+  23,
+  25,
+  26,
+  27
+ ]
+}
