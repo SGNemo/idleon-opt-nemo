@@ -2,6 +2,8 @@ import { Account } from '../model/account';
 import { GameData } from '../../data/schemas';
 import { mineheadUpgradeCost } from '../formulas/minehead';
 import { sushiRestOfGameBonus, uniqueSushiCount } from '../formulas/sushi';
+import { jadeEmporiumCost } from '../formulas/sneaking';
+import { NUMBER_TO_LETTER } from '../save/letters';
 import { VILLAGER_NAMES, villagerExpReq } from '../formulas/hole';
 import { Facts } from './types';
 
@@ -51,6 +53,26 @@ export const computeFacts = (account: Account, data: GameData): Facts => {
   facts['minehead.affordableTop'] = affordable.slice(0, 3).map((u) => `${u.name} (Lv ${u.level}, ${fmtCost(u.cost)})`);
   facts['minehead.currency'] = m.currency;
 
+  // ---- Sneaking: Jade Emporium
+  const emporium = data.sneaking.emporium;
+  const owned = (index: number): boolean => account.sneaking.jadeEmporiumUnlocks.includes(NUMBER_TO_LETTER[index] ?? '\u0000');
+  // The game ships unreleased placeholder rows named UNDER_CONSTRUCTION; they are not purchasable.
+  const released = emporium.upgrades.filter((u) => !/^UNDER[_ ]CONSTRUCTION/i.test(u.name));
+  const locked = released
+    .filter((u) => !owned(u.index))
+    .map((u) => {
+      const row = emporium.displayOrder.indexOf(u.index);
+      return { name: u.name.replace(/_/g, ' '), row, cost: jadeEmporiumCost(row) };
+    })
+    .sort((a, b) => a.row - b.row);
+  const buyable = locked.filter((u) => u.cost <= account.sneaking.jadeCoins);
+  facts['sneaking.jadeTotal'] = released.length;
+  facts['sneaking.jadeUnlocked'] = released.length - locked.length;
+  facts['sneaking.jadeBuyableCount'] = buyable.length;
+  facts['sneaking.jadeBuyable'] = buyable.slice(0, 3).map((u) => `${u.name} (${fmtCost(u.cost)})`);
+  if (locked[0]) facts['sneaking.jadeNext'] = `${locked[0].name} (${fmtCost(locked[0].cost)})`;
+  facts['sneaking.jadeCoins'] = account.sneaking.jadeCoins;
+
   // ---- Hole villagers
   const ready: string[] = [];
   VILLAGER_NAMES.forEach((name, i) => {
@@ -60,6 +82,9 @@ export const computeFacts = (account: Account, data: GameData): Facts => {
   });
   facts['hole.villagersReadyCount'] = ready.length;
   facts['hole.villagersReady'] = ready;
+
+  // ---- Hole: daily Blinding Lanterns (cap 12 per day)
+  facts['hole.lanternsLeft'] = Math.max(0, 12 - Math.min(12, account.hole.blindingLanternsUsed));
 
   return facts;
 };

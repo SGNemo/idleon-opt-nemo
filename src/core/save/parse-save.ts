@@ -57,6 +57,7 @@ export const parseSave = (input: string | object): Account => {
       doorHp: toNumberArray(sub(ninja, NINJA.doorHp)),
       upgradeLevels: toNumberArray(sub(ninja, NINJA.upgrades)),
       jadeCoins: toNumber(sub(ninja, NINJA.jade)[1]),
+      jadeEmporiumUnlocks: String(sub(ninja, NINJA.jade)[9] ?? ''),
       selectedMastery: toNumber(options[231]),
       highestMastery: toNumber(options[232]),
       ninjas: characters.map((c) => ({ floor: toNumber(sub(ninja, c.index)[0]) })),
@@ -65,6 +66,7 @@ export const parseSave = (input: string | object): Account => {
     hole: {
       villagerLevels: toNumberArray(sub(holes, 1)),
       villagerExp: toNumberArray(sub(holes, 2)),
+      blindingLanternsUsed: toNumber(sub(holes, 11)[84]),
       opalsInvested: toNumberArray(sub(holes, 3)),
     },
   };

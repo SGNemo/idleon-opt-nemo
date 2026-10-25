@@ -10,6 +10,31 @@
     "status": "todo-formula",
     "priority": 80,
     "urgent": true,
-    "when": [{ "fact": "hole.villagersReadyCount", "op": ">", "value": 0 }]
+    "when": [
+      {
+        "fact": "hole.villagersReadyCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "hole.lanterns",
+    "system": "Hole",
+    "world": 5,
+    "title": "{hole.lanternsLeft} Blinding Lanterns heute übrig",
+    "reason": "Tageslimit 12; der Zähler wird beim Daily-Reset zurückgesetzt.",
+    "effort": "low",
+    "gain": "Layer-Fortschritt (Daily)",
+    "status": "verified",
+    "priority": 40,
+    "urgent": false,
+    "when": [
+      {
+        "fact": "hole.lanternsLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
   }
 ]

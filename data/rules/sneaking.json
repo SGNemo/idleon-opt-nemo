@@ -1,0 +1,15 @@
+[
+  {
+    "id": "sneaking.jade-buyable",
+    "system": "Sneaking",
+    "world": 6,
+    "title": "{sneaking.jadeBuyableCount} Jade-Emporium-Upgrades kaufbar",
+    "reason": "Jade {sneaking.jadeCoins}. Nächste freischaltbare: {sneaking.jadeBuyable}. {sneaking.jadeUnlocked} von {sneaking.jadeTotal} gekauft.",
+    "effort": "low",
+    "gain": "Dauerhafte Sneaking-Boni",
+    "status": "todo-formula",
+    "priority": 75,
+    "progress": { "current": "sneaking.jadeUnlocked", "max": "sneaking.jadeTotal" },
+    "when": [{ "fact": "sneaking.jadeBuyableCount", "op": ">", "value": 0 }]
+  }
+]

@@ -32,6 +32,8 @@ export const AccountSchema = z.object({
     doorHp: numArray,
     upgradeLevels: numArray,
     jadeCoins: z.number(),
+    /** Ninja[102][9]: letters of unlocked Jade Emporium upgrades (see NUMBER_TO_LETTER). */
+    jadeEmporiumUnlocks: z.string(),
     /** Selected / highest Ninja Mastery (OptLacc 231 / 232). */
     selectedMastery: z.number(),
     highestMastery: z.number(),
@@ -45,6 +47,8 @@ export const AccountSchema = z.object({
   hole: z.object({
     villagerLevels: numArray,
     villagerExp: numArray,
+    /** Holes[11][84]: Blinding Lanterns used today (cap 12, resets daily). */
+    blindingLanternsUsed: z.number(),
     opalsInvested: numArray,
   }),
 });

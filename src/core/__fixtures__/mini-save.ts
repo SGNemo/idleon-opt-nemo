@@ -23,7 +23,7 @@ export const miniSave = {
   ]),
   Ninja: JSON.stringify(
     Array.from({ length: 104 }, (_, i) =>
-      i === 0 ? [8, 877.6, 0, 0] : i === 1 ? [3, 1, 0, 0] : i === 100 ? [1000, '3.69e+96', 0] : i === 102 ? [2, '2.6e+92', 3] : i === 103 ? [541, 2769] : [],
+      i === 0 ? [8, 877.6, 0, 0] : i === 1 ? [3, 1, 0, 0] : i === 100 ? [1000, '3.69e+96', 0] : i === 102 ? [2, '2.6e+92', 3, 0, 0, 0, 0, 0, 0, '_lehvArqxsyampzgiwnBtcjobkfIuDHKCEFdJGLMNOPQRSTU'] : i === 103 ? [541, 2769] : [],
     ),
   ),
   Holes: JSON.stringify([[], [22, 61, 86], [1e17, 4e16, 6e17], [1, 1, 1]]),

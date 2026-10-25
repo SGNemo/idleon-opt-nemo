@@ -42,6 +42,16 @@ describe('tasks', () => {
   });
 });
 
+describe('sneaking facts', () => {
+  it('counts unlocked Jade Emporium upgrades from the letter string', () => {
+    const facts = computeFacts(parseSave(miniSave), data);
+    // 52 rows, 4 of them unreleased UNDER_CONSTRUCTION placeholders -> fully bought
+    expect(facts['sneaking.jadeUnlocked']).toBe(48);
+    expect(facts['sneaking.jadeTotal']).toBe(48);
+    expect(facts['sneaking.jadeBuyableCount']).toBe(0);
+  });
+});
+
 describe('formulas (unverified, see docs/FORMULAS.md)', () => {
   it('MH-01 reproduces the in-game cost: Base Damage I Lv 159 = 9.54M with 50% sushi discount', () => {
     const cost = mineheadUpgradeCost({ index: 0, level: 159, costExponent: 1.1, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });
