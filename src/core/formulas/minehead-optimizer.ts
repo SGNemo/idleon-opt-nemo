@@ -22,6 +22,8 @@ export interface OptimizerInput {
   upgrades: OptimizerUpgrade[];
   levels: number[];
   doublers: Record<number, number>;
+  /** additive base-damage term not coming from upgrades (calibrated, see FORMULAS.md MH-07) */
+  baseOffset?: number;
   currency: number;
   mineCost: number;
   costReductionQty: number;
@@ -39,19 +41,19 @@ export interface OptimizerStep {
   damageMultiplierAfter: number;
 }
 
-function terms(levels: number[], ups: OptimizerUpgrade[], doublers: Record<number, number>) {
+function terms(levels: number[], ups: OptimizerUpgrade[], doublers: Record<number, number>, baseOffset = 0) {
   const sum = (idxs: number[]) =>
     idxs.reduce((acc, i) => {
       const u = ups.find((x) => x.index === i);
       return acc + (u ? (levels[i] ?? 0) * u.effectPerLevel * (doublers[i] ?? 1) : 0);
     }, 0);
-  return { base: 1 + sum(BASE_UPGRADES), mega: 1 + sum(MEGA_UPGRADES) / 100 };
+  return { base: 1 + baseOffset + sum(BASE_UPGRADES), mega: 1 + sum(MEGA_UPGRADES) / 100 };
 }
 
 /** Greedy plan: repeatedly buy the damage upgrade level with the best relative gain per currency. */
 export function planMineheadPurchases(input: OptimizerInput, maxSteps = 5000) {
   const levels = [...input.levels];
-  const t0 = terms(levels, input.upgrades, input.doublers);
+  const t0 = terms(levels, input.upgrades, input.doublers, input.baseOffset);
   const start = t0.base * t0.mega;
   let budget = input.currency;
   const steps: OptimizerStep[] = [];
@@ -67,14 +69,14 @@ export function planMineheadPurchases(input: OptimizerInput, maxSteps = 5000) {
     });
   let multiplier = 1;
   for (let n = 0; n < maxSteps && multiplier < input.targetMultiplier; n++) {
-    const cur = terms(levels, input.upgrades, input.doublers);
+    const cur = terms(levels, input.upgrades, input.doublers, input.baseOffset);
     let best: { u: OptimizerUpgrade; cost: number; score: number } | null = null;
     for (const u of ups) {
       if ((levels[u.index] ?? 0) >= u.maxLevel) continue;
       const cost = costOf(u);
       if (!(cost > 0) || cost > budget) continue;
       levels[u.index] = (levels[u.index] ?? 0) + 1;
-      const next = terms(levels, input.upgrades, input.doublers);
+      const next = terms(levels, input.upgrades, input.doublers, input.baseOffset);
       levels[u.index] -= 1;
       const gain = (next.base * next.mega) / (cur.base * cur.mega) - 1;
       const score = gain / cost;
@@ -84,7 +86,7 @@ export function planMineheadPurchases(input: OptimizerInput, maxSteps = 5000) {
     const from = levels[best.u.index] ?? 0;
     levels[best.u.index] = from + 1;
     budget -= best.cost;
-    const after = terms(levels, input.upgrades, input.doublers);
+    const after = terms(levels, input.upgrades, input.doublers, input.baseOffset);
     multiplier = (after.base * after.mega) / start;
     const last = steps[steps.length - 1];
     if (last && last.index === best.u.index && last.levelTo === from) {

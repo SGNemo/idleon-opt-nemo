@@ -126,3 +126,8 @@ Mega Damage I Lv153 +1530 % (data 5/level → x2), Miney Farmey I Lv152 +1520 % 
 ### Update: Menagerie doublers (Minehead screen)
 Base Damage II Lv132 shows +792 (data 3/level -> x2); its next-level cost 23.4M matches MH-01 (upgrade index 7).
 Observed doublers so far: idx 0 x2, idx 4 x2, idx 7 x2, idx 5 x1. Others unknown (default x1 in the optimizer).
+
+### Update: MH-07 calibration (Base DMG before/after buying 4 levels of Base Damage II)
+Screens: Base DMG 1,064,049 (Base II Lv132, +792) -> 1,078,493 (Lv136, +816); currency 1.8B -> 1.69B (spent 108M, matches MH-01).
+Ratio 1.01357 implies an additive base term of 1768 = 1 + 320 (Base I) + 792 (Base II) + 655 other.
+The 655 is calibrated, not derived (candidate: Aegean Coral / shrine bonus). Status: calibrated, TODO to derive.
