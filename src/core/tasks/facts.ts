@@ -1,6 +1,8 @@
 import { Account } from '../model/account';
 import { GameData } from '../../data/schemas';
-import { mineheadUpgradeCost } from '../formulas/minehead';
+import { mineheadUpgradeCost, mineheadOpponentHp } from '../formulas/minehead';
+import { planTimeToTarget } from '../formulas/minehead-optimizer';
+import { DEFAULT_MINEHEAD_CALIBRATION, MineheadCalibration } from '../formulas/minehead-calibration';
 import { sushiRestOfGameBonus, uniqueSushiCount } from '../formulas/sushi';
 import { jadeEmporiumCost } from '../formulas/sneaking';
 import { NUMBER_TO_LETTER } from '../save/letters';
@@ -18,7 +20,7 @@ const prettyDescription = (template: string, value: number): string =>
 const fmtCost = (n: number): string => (n >= 1e6 ? n.toExponential(2).replace('e+', 'e') : String(Math.round(n)));
 
 /** Derive the values rules can reference, from the parsed account and the game data. */
-export const computeFacts = (account: Account, data: GameData): Facts => {
+export const computeFacts = (account: Account, data: GameData, calibration: MineheadCalibration = DEFAULT_MINEHEAD_CALIBRATION): Facts => {
   const facts: Facts = {};
 
   // ---- Minehead
@@ -52,6 +54,38 @@ export const computeFacts = (account: Account, data: GameData): Facts => {
   facts['minehead.affordableCount'] = affordable.length;
   facts['minehead.affordableTop'] = affordable.slice(0, 3).map((u) => `${u.name} (Lv ${u.level}, ${fmtCost(u.cost)})`);
   facts['minehead.currency'] = m.currency;
+
+  // Boss gap + purchase plan (model MH-03/MH-07/MH-08, calibrated; see docs/FORMULAS.md)
+  if (next && m.bestHit > 0) {
+    const hp = mineheadOpponentHp(m.opponentsBeaten, account.serverVars.mineHp);
+    const gap = hp / m.bestHit;
+    facts['minehead.bossGapX'] = Math.round(gap * 100) / 100;
+    if (gap > 1) {
+      const plan = planTimeToTarget({
+        upgrades: data.minehead.upgrades.map((u) => ({ index: u.index, name: u.name, effectPerLevel: u.effectPerLevel, maxLevel: u.maxLevel, costExponent: u.costExponent })),
+        levels: m.upgradeLevels,
+        doublers: calibration.doublers,
+        baseOffset: calibration.baseOffset,
+        incomeOffset: calibration.incomeOffset,
+        incomePerHour: calibration.incomePerHour,
+        bestHit: m.bestHit,
+        currency: m.currency,
+        mineCost: account.serverVars.mineCost,
+        costReductionQty,
+        sushiDiscountPct,
+        targetMultiplier: gap,
+      });
+      const first = plan.steps[0];
+      if (first) {
+        facts['minehead.nextBuy'] = `${first.name.replace(/_/g, ' ')} Lv ${first.levelFrom} → ${first.levelTo} (${fmtCost(first.cost)})`;
+        const totals = new Map<string, number>();
+        for (const st of plan.steps) totals.set(st.name.replace(/_/g, ' '), (totals.get(st.name.replace(/_/g, ' ')) ?? 0) + (st.levelTo - st.levelFrom));
+        facts['minehead.planSummary'] = [...totals].map(([n, c]) => `${n} +${c}`).join(', ');
+        facts['minehead.hoursToTarget'] = Math.round(plan.hoursTotal);
+        facts['minehead.planReached'] = plan.reached;
+      }
+    }
+  }
 
   // ---- Sneaking: Jade Emporium
   const emporium = data.sneaking.emporium;

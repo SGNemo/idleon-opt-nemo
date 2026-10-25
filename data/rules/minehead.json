@@ -10,7 +10,13 @@
     "status": "verified",
     "priority": 90,
     "urgent": true,
-    "when": [{ "fact": "minehead.triesLeft", "op": ">", "value": 0 }]
+    "when": [
+      {
+        "fact": "minehead.triesLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
   },
   {
     "id": "minehead.opponent",
@@ -22,8 +28,17 @@
     "gain": "Dauerhafter Bonus",
     "status": "verified",
     "priority": 60,
-    "progress": { "current": "minehead.opponentsBeaten", "max": "minehead.opponentsTotal" },
-    "when": [{ "fact": "minehead.opponentsBeaten", "op": "<", "value": 32 }]
+    "progress": {
+      "current": "minehead.opponentsBeaten",
+      "max": "minehead.opponentsTotal"
+    },
+    "when": [
+      {
+        "fact": "minehead.opponentsBeaten",
+        "op": "<",
+        "value": 32
+      }
+    ]
   },
   {
     "id": "minehead.upgrades",
@@ -35,6 +50,30 @@
     "gain": "Mehr Schaden / Währung",
     "status": "todo-formula",
     "priority": 70,
-    "when": [{ "fact": "minehead.affordableCount", "op": ">", "value": 0 }]
+    "when": [
+      {
+        "fact": "minehead.affordableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "minehead.next-buy",
+    "system": "Minehead",
+    "world": 7,
+    "title": "Minehead: als Nächstes kaufen: {minehead.nextBuy}",
+    "reason": "Boss-Lücke: {minehead.bossGapX}x mehr Schaden nötig für {minehead.nextOpponent}. Plan: {minehead.planSummary}. Etwa {minehead.hoursToTarget} h Einkommen bis zum Ziel (Modell, kalibriert, nicht verifiziert).",
+    "effort": "low",
+    "gain": "Näher an {minehead.nextOpponent}",
+    "status": "todo-formula",
+    "priority": 85,
+    "when": [
+      {
+        "fact": "minehead.bossGapX",
+        "op": ">",
+        "value": 1
+      }
+    ]
   }
 ]

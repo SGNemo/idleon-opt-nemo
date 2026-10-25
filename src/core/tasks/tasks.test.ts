@@ -94,3 +94,15 @@ describe('formulas (unverified, see docs/FORMULAS.md)', () => {
     for (let i = 0; i < 5; i++) expect(villagerExpReq(21, i)).toBeLessThan(villagerExpReq(22, i));
   });
 });
+
+describe('minehead plan facts', () => {
+  it('derives a boss gap and a next purchase when the opponent is stronger than the best hit', () => {
+    const account = parseSave(miniSave);
+    account.minehead.bestHit = 3e8;
+    account.minehead.currency = 1e12;
+    account.minehead.opponentsBeaten = 18;
+    const facts = computeFacts(account, data);
+    expect(Number(facts['minehead.bossGapX'])).toBeGreaterThan(1);
+    expect(typeof facts['minehead.nextBuy']).toBe('string');
+  });
+});

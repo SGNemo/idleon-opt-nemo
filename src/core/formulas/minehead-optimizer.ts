@@ -99,3 +99,96 @@ export function planMineheadPurchases(input: OptimizerInput, maxSteps = 5000) {
   }
   return { steps, reached: multiplier >= input.targetMultiplier, multiplier, budgetLeft: budget };
 }
+
+// ---------------------------------------------------------------------------
+// Time-to-target planner: damage upgrades get closer to the boss, income upgrades (Miney Farmey I/II,
+// Miney Damagey Synergy) pay back and shorten the waiting time. MH-08 income term (TODO):
+//   income ~ 1 + (QTY(5) + QTY(22) + QTY(28) * log10(bestHit) + offset) / 100
+// ---------------------------------------------------------------------------
+export const INCOME_UPGRADES = [5, 22, 28];
+
+export interface TimePlanInput extends OptimizerInput {
+  incomePerHour: number;
+  incomeOffset: number;
+  bestHit: number;
+}
+
+export interface TimeStep extends OptimizerStep {
+  kind: 'damage' | 'income';
+  /** hours waited before this purchase became affordable */
+  waitHours: number;
+  hoursTotal: number;
+}
+
+export function planTimeToTarget(input: TimePlanInput, maxSteps = 4000) {
+  const levels = [...input.levels];
+  const ups = input.upgrades;
+  const byIndex = (i: number) => ups.find((u) => u.index === i);
+  const incomeEff = (u: OptimizerUpgrade) =>
+    u.index === 28 ? u.effectPerLevel * Math.log10(Math.max(1, input.bestHit)) : u.effectPerLevel * (input.doublers[u.index] ?? 1);
+  const incomeTerm = () => input.incomeOffset + INCOME_UPGRADES.reduce((a, i) => { const u = byIndex(i); return a + (u ? (levels[i] ?? 0) * incomeEff(u) : 0); }, 0);
+  const income0Term = incomeTerm();
+  const incomeNow = () => input.incomePerHour * (1 + incomeTerm() / 100) / (1 + income0Term / 100);
+  const dmg = () => { const t = terms(levels, ups, input.doublers, input.baseOffset); return t.base * t.mega; };
+  const dmg0 = dmg();
+  const costOf = (u: OptimizerUpgrade) =>
+    mineheadUpgradeCost({ index: u.index, level: levels[u.index] ?? 0, costExponent: u.costExponent, mineCost: input.mineCost, costReductionQty: input.costReductionQty, sushiDiscountPct: input.sushiDiscountPct });
+  const open = (u: OptimizerUpgrade) => (levels[u.index] ?? 0) < u.maxLevel;
+
+  let wallet = input.currency;
+  let hours = 0;
+  const steps: TimeStep[] = [];
+  const damageUps = ups.filter((u) => (BASE_UPGRADES.includes(u.index) || MEGA_UPGRADES.includes(u.index)) && open(u));
+  const incomeUps = ups.filter((u) => INCOME_UPGRADES.includes(u.index) && open(u));
+
+  // damage-only completion cost, used to decide whether an income upgrade can still pay back in time
+  const remainingDamageHours = (): number => {
+    const sim = planMineheadPurchases({ ...input, levels: [...levels], currency: 1e30, targetMultiplier: input.targetMultiplier / (dmg() / dmg0) }, 2000);
+    const cost = sim.steps.reduce((a, s) => a + s.cost, 0);
+    return Math.max(0, cost - wallet) / incomeNow();
+  };
+
+  for (let n = 0; n < maxSteps && dmg() / dmg0 < input.targetMultiplier; n++) {
+    const horizon = remainingDamageHours();
+    let pick: { u: OptimizerUpgrade; cost: number; kind: 'damage' | 'income' } | null = null;
+    // income candidate with the shortest payback that still pays back before the horizon
+    let bestPayback = Infinity;
+    for (const u of incomeUps) {
+      if (!open(u)) continue;
+      const cost = costOf(u);
+      const before = incomeNow();
+      levels[u.index] = (levels[u.index] ?? 0) + 1;
+      const delta = incomeNow() - before;
+      levels[u.index] -= 1;
+      const payback = delta > 0 ? cost / delta : Infinity;
+      if (payback < bestPayback) { bestPayback = payback; pick = { u, cost, kind: 'income' }; }
+    }
+    if (!pick || bestPayback >= horizon) {
+      // best damage gain per cost
+      let bestScore = -1;
+      pick = null;
+      const cur = dmg();
+      for (const u of damageUps) {
+        if (!open(u)) continue;
+        const cost = costOf(u);
+        levels[u.index] = (levels[u.index] ?? 0) + 1;
+        const score = (dmg() / cur - 1) / cost;
+        levels[u.index] -= 1;
+        if (score > bestScore) { bestScore = score; pick = { u, cost, kind: 'damage' }; }
+      }
+    }
+    if (!pick) break;
+    let wait = 0;
+    if (pick.cost > wallet) { wait = (pick.cost - wallet) / incomeNow(); hours += wait; wallet = pick.cost; }
+    const from = levels[pick.u.index] ?? 0;
+    levels[pick.u.index] = from + 1;
+    wallet -= pick.cost;
+    const last = steps[steps.length - 1];
+    if (last && last.index === pick.u.index && last.levelTo === from && wait === 0) {
+      last.levelTo = from + 1; last.cost += pick.cost; last.damageMultiplierAfter = dmg() / dmg0; last.hoursTotal = hours;
+    } else {
+      steps.push({ index: pick.u.index, name: pick.u.name, levelFrom: from, levelTo: from + 1, cost: pick.cost, damageMultiplierAfter: dmg() / dmg0, kind: pick.kind, waitHours: wait, hoursTotal: hours });
+    }
+  }
+  return { steps, hoursTotal: hours, reached: dmg() / dmg0 >= input.targetMultiplier, multiplier: dmg() / dmg0 };
+}
