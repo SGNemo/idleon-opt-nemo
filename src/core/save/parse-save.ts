@@ -2,7 +2,7 @@ import { Account, AccountSchema } from '../model/account';
 import { toArray, toNumber, toNumberArray } from './json';
 import { normalizeSave, readKey, readServerVars, RawSave } from './normalize';
 
-const TRACKED_KEYS = ['Research', 'Ninja', 'Holes', 'Spelunk', 'OptLacc', 'playerNames', 'servervars', 'serverVars'];
+const TRACKED_KEYS = ['Research', 'Ninja', 'Holes', 'Spelunk', 'OptLacc', 'playerNames'];
 
 const parseCharacters = (save: RawSave): Account['characters'] => {
   const names = toArray(readKey(save, 'playerNames')) as string[];
@@ -34,7 +34,10 @@ export const parseSave = (input: string | object): Account => {
 
   const account: Account = {
     gameVersion: serverVars['GameVERSION'] === undefined ? null : toNumber(serverVars['GameVERSION']),
-    present: Object.fromEntries(TRACKED_KEYS.map((k) => [k, save[k] !== undefined])),
+    present: {
+      ...Object.fromEntries(TRACKED_KEYS.map((k) => [k, save[k] !== undefined])),
+      serverVars: Object.keys(serverVars).length > 0,
+    },
     serverVars: {
       mineCost: Math.max(1, toNumber(serverVars['A_MineCost'], 1)),
       mineHp: Math.max(1, toNumber(serverVars['A_MineHP'], 1)),
