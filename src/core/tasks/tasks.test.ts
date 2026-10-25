@@ -52,6 +52,19 @@ describe('sneaking facts', () => {
   });
 });
 
+describe('endgame facts', () => {
+  it('counts open achievements per world from AchieveReg (-1 = done)', () => {
+    const account = parseSave(miniSave);
+    const facts = computeFacts(account, data);
+    const world1 = data.achievements.filter((a) => a.world === 1);
+    // registry in the mini save: indices 0,1,4 done; 2 and 3 open (0 and 5 progress)
+    const doneInMini = world1.filter((a) => account.achievements.registry[a.index] === -1).length;
+    expect(facts['endgame.w1.total']).toBe(world1.length);
+    expect(facts['endgame.w1.done']).toBe(doneInMini);
+    expect(facts['endgame.w1.open']).toBe(world1.length - doneInMini);
+  });
+});
+
 describe('formulas (unverified, see docs/FORMULAS.md)', () => {
   it('MH-01 reproduces the in-game cost: Base Damage I Lv 159 = 9.54M with 50% sushi discount', () => {
     const cost = mineheadUpgradeCost({ index: 0, level: 159, costExponent: 1.1, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });

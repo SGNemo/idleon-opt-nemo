@@ -83,6 +83,23 @@ export const computeFacts = (account: Account, data: GameData): Facts => {
   facts['hole.villagersReadyCount'] = ready.length;
   facts['hole.villagersReady'] = ready;
 
+  // ---- Endgame check: achievements per world (done = AchieveReg[i] === -1)
+  for (let world = 1; world <= 6; world++) {
+    const list = data.achievements.filter((a) => a.world === world);
+    const open = list
+      .filter((a) => account.achievements.registry[a.index] !== -1)
+      .map((a) => {
+        const raw = a.steamIndex !== undefined ? account.achievements.steam[a.steamIndex] : account.achievements.registry[a.index];
+        const current = Math.max(0, raw ?? 0);
+        return { name: a.name.replace(/_/g, ' '), current, quantity: a.quantity, ratio: a.quantity > 0 ? Math.min(1, current / a.quantity) : 0 };
+      })
+      .sort((a, b) => b.ratio - a.ratio);
+    facts[`endgame.w${world}.total`] = list.length;
+    facts[`endgame.w${world}.done`] = list.length - open.length;
+    facts[`endgame.w${world}.open`] = open.length;
+    facts[`endgame.w${world}.closest`] = open.slice(0, 4).map((o) => `${o.name} (${fmtCost(o.current)}/${fmtCost(o.quantity)})`);
+  }
+
   // ---- Hole: daily Blinding Lanterns (cap 12 per day)
   facts['hole.lanternsLeft'] = Math.max(0, 12 - Math.min(12, account.hole.blindingLanternsUsed));
 

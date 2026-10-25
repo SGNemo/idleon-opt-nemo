@@ -105,6 +105,21 @@ export const SushiDataSchema = z.object({
   restOfGameDescriptions: z.array(z.string()),
 });
 
+export const AchievementsDataSchema = z.array(
+  z.object({
+    /** Position in AchieveReg. */
+    index: z.number().int(),
+    /** 1-based world (70 slots per world). */
+    world: z.number().int(),
+    name: z.string(),
+    description: z.string(),
+    /** Amount needed to complete. */
+    quantity: z.number(),
+    /** Set for Steam-linked entries: progress is then read from SteamAchieve[steamIndex]. */
+    steamIndex: z.number().int().optional(),
+  }),
+);
+
 export const DataMetaSchema = z.object({
   gameVersion: z.number(),
   source: z.string(),
@@ -119,6 +134,7 @@ export const GameDataSchema = z.object({
   sneaking: SneakingDataSchema,
   hole: HoleDataSchema,
   sushi: SushiDataSchema,
+  achievements: AchievementsDataSchema,
 });
 
 export type MineheadData = z.infer<typeof MineheadDataSchema>;

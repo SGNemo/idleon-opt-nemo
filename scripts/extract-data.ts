@@ -1,4 +1,4 @@
-// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi}.json from the Toolbox website-data tables.
+// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements}.json from the Toolbox website-data tables.
 // The Toolbox tables are used as a data SOURCE only (numbers/names generated from the game); no code is reused.
 //
 // Usage: npm run data:update -- [--game-version 143] [--sha <toolbox commit>]
@@ -10,7 +10,7 @@ import { join } from 'node:path';
 import { GameDataSchema } from '../src/data/schemas';
 
 const REPO = 'Morta1/IdleonToolbox';
-const FILES = ['shared-data', 'research', 'holesInfo', 'randomList'] as const;
+const FILES = ['shared-data', 'research', 'holesInfo', 'randomList', 'achievements'] as const;
 
 const args = process.argv.slice(2);
 const flag = (name: string): string | undefined => {
@@ -50,7 +50,7 @@ const num = (v: unknown): number => Number(v);
 const nums = (v: unknown[]): number[] => v.map(num);
 
 async function main(): Promise<void> {
-const [shared, research, holesInfo, randomList] = await Promise.all(FILES.map(load));
+const [shared, research, holesInfo, randomList, achievementsSrc] = await Promise.all(FILES.map(load));
 
 // ---- Minehead. Source names are misleading: baseCost = max level, levelReq = effect per level, exponent = cost growth.
 const mineheadSrc = shared.mineheadUpgrades as any[];
@@ -152,6 +152,19 @@ const sushi = {
   restOfGameDescriptions: research[36],
 };
 
+// 70 slots per world; unused slots are fillers the game never shows.
+const achievements = (achievementsSrc as any[])
+  .map((a, index) => ({ a, index }))
+  .filter(({ a }) => a.visualIndex !== -1 && !String(a.name).includes('FILLER'))
+  .map(({ a, index }) => ({
+    index,
+    world: Math.floor(index / 70) + 1,
+    name: a.name,
+    description: a.desc ?? '',
+    quantity: num(a.quantity),
+    ...(a.steamIndex ? { steamIndex: num(a.steamIndex) } : {}),
+  }));
+
 const meta = {
   gameVersion,
   source: `https://github.com/${REPO}`,
@@ -160,7 +173,7 @@ const meta = {
   note: 'Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version.',
 };
 
-const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi });
+const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements });
 
 const outDir = join('data', String(gameVersion));
 mkdirSync(outDir, { recursive: true });

@@ -40,6 +40,12 @@ export const AccountSchema = z.object({
     /** Per character: [floor, ...] as stored. */
     ninjas: z.array(z.object({ floor: z.number() })),
   }),
+  achievements: z.object({
+    /** AchieveReg: -1 = completed, otherwise the current progress counter. */
+    registry: numArray,
+    /** SteamAchieve: progress counters of Steam-linked entries. */
+    steam: numArray,
+  }),
   sushi: z.object({
     /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered. */
     uniqueSushiTracking: numArray,

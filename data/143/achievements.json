@@ -1,0 +1,1937 @@
+[
+ {
+  "index": 0,
+  "world": 1,
+  "name": "Learn_2_Forge",
+  "description": "Get_the_mining_certificate_from_Glumlee.",
+  "quantity": 1,
+  "steamIndex": 42
+ },
+ {
+  "index": 1,
+  "world": 1,
+  "name": "Another_Me!",
+  "description": "Create_a_2nd_character._Trust_me,_you_wanna_do_this_ASAP.",
+  "quantity": 1,
+  "steamIndex": 14
+ },
+ {
+  "index": 2,
+  "world": 1,
+  "name": "Sleepy_Gamer",
+  "description": "Claim_100+_hours_of_AFK_rewards.",
+  "quantity": 1,
+  "steamIndex": 46
+ },
+ {
+  "index": 3,
+  "world": 1,
+  "name": "Classy!",
+  "description": "Choose_one_of_the_3_starting_classes_from_Promotheus.",
+  "quantity": 1,
+  "steamIndex": 45
+ },
+ {
+  "index": 4,
+  "world": 1,
+  "name": "Hitting_the_Mark",
+  "description": "Chop_15_yellow_sections_in_a_row_during_the_Choppin'_Minigame.",
+  "quantity": 1
+ },
+ {
+  "index": 5,
+  "world": 1,
+  "name": "Learn_2_Entertain",
+  "description": "Get_the_golden_jam_from_the_Picnic_Stowaway.",
+  "quantity": 1,
+  "steamIndex": 43
+ },
+ {
+  "index": 6,
+  "world": 1,
+  "name": "5_'hunned_Copper",
+  "description": "Have_a_stack_of_exactly_500_Copper_Ore_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 7,
+  "world": 1,
+  "name": "Rookie_Player",
+  "description": "Reach_level_20_on_any_character.",
+  "quantity": 1,
+  "steamIndex": 3
+ },
+ {
+  "index": 8,
+  "world": 1,
+  "name": "1.5_Ki'log'grams",
+  "description": "Have_a_stack_of_exactly_1500_Oak_Logs_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 9,
+  "world": 1,
+  "name": "Small_Savings",
+  "description": "Save_up_10000_coins.",
+  "quantity": 1,
+  "steamIndex": 9
+ },
+ {
+  "index": 10,
+  "world": 1,
+  "name": "Copper_Quipment",
+  "description": "Equip_the_Copper_Helmet_and_Copper_Platebody",
+  "quantity": 1
+ },
+ {
+  "index": 11,
+  "world": 1,
+  "name": "The_Sculpture_Within",
+  "description": "Buy_the_Sculpting_Tools_from_the_Blunder_Hills_town_shop",
+  "quantity": 1
+ },
+ {
+  "index": 12,
+  "world": 1,
+  "name": "Card_Collector",
+  "description": "Collect_10_unique_cards._They_drop_randomly_from_monsters!",
+  "quantity": 1,
+  "steamIndex": 20
+ },
+ {
+  "index": 13,
+  "world": 1,
+  "name": "Do_What_You're_Told",
+  "description": "Complete_25_unique_quests._Unique_here_means_different,_not_interesting_btw_lol",
+  "quantity": 1,
+  "steamIndex": 17
+ },
+ {
+  "index": 14,
+  "world": 1,
+  "name": "Learn_2_Translate",
+  "description": "Get_the_scouting_report_from_Stiltzcho,_the_friendly_jungle_leaf",
+  "quantity": 1,
+  "steamIndex": 44
+ },
+ {
+  "index": 15,
+  "world": 1,
+  "name": "Wode_Together",
+  "description": "Defeat_250_Wode_Boards_with_at_least_1_other_party_member",
+  "quantity": 250
+ },
+ {
+  "index": 16,
+  "world": 1,
+  "name": "2_Tons_of_Iron",
+  "description": "Have_a_stack_of_exactly_2,000_Iron_Ore_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 17,
+  "world": 1,
+  "name": "Giga_Decimation",
+  "description": "Defeat_all_Giga_Frogs_before_any_respawn.",
+  "quantity": 1
+ },
+ {
+  "index": 18,
+  "world": 1,
+  "name": "Shut_it_Poochy",
+  "description": "Defeat_Amarok,_the_stone_golem_wolf_of_the_Encroaching_Forest.",
+  "quantity": 1
+ },
+ {
+  "index": 19,
+  "world": 1,
+  "name": "Average_Player",
+  "description": "Reach_level_40_on_any_character",
+  "quantity": 1,
+  "steamIndex": 4
+ },
+ {
+  "index": 20,
+  "world": 1,
+  "name": "Slimeicidal_Endeavor",
+  "description": "Defeat_25,000_slimes_in_total._This_counts_kills_from_all_your_characters!",
+  "quantity": 1
+ },
+ {
+  "index": 21,
+  "world": 1,
+  "name": "Right_to_Bear_Iron",
+  "description": "Equip_an_Iron_Helmet,_Iron_Chestplate,_Iron_Pants,_and_one_Iron_Tool.",
+  "quantity": 1
+ },
+ {
+  "index": 22,
+  "world": 1,
+  "name": "5-6_Pick_up_Sticks",
+  "description": "Have_a_stack_of_exactly_20,000_Sticks_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 23,
+  "world": 1,
+  "name": "20_Bundles_of_Jungle",
+  "description": "Have_a_stack_of_exactly_20,000_Forest_Fibers_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 24,
+  "world": 1,
+  "name": "Colosseum_Contender",
+  "description": "Get_a_score_of_25,000_or_more_in_the_Dewdrop_Colosseum.",
+  "quantity": 1
+ },
+ {
+  "index": 25,
+  "world": 1,
+  "name": "Crystal_Beatdown",
+  "description": "Defeat_a_Crystal_monster,_who_have_a_1_in_2000_chance_of_spawning_when_a_monster_dies.",
+  "quantity": 1,
+  "steamIndex": 33
+ },
+ {
+  "index": 26,
+  "world": 1,
+  "name": "Ten_Trips_of_Gold",
+  "description": "Have_a_stack_of_exactly_30,000_Gold_Ore_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 27,
+  "world": 1,
+  "name": "Minecart_Maniac",
+  "description": "Slam_on_a_yellow_ore_vein_in_the_Mining_Minigame,_which_gives_3_points!",
+  "quantity": 1
+ },
+ {
+  "index": 28,
+  "world": 1,
+  "name": "Spike_Minigame_Master",
+  "description": "Get_a_score_of_13_in_the_spike_minigame._Remember_to_say_'If_u_love_me_let_me_go'",
+  "quantity": 1,
+  "steamIndex": 27
+ },
+ {
+  "index": 29,
+  "world": 1,
+  "name": "Anvil_Expansion",
+  "description": "Craft_the_anvil_expander,_and_unlock_a_new_tab_of_item_recipes!",
+  "quantity": 1,
+  "steamIndex": 23
+ },
+ {
+  "index": 30,
+  "world": 1,
+  "name": "Steppin'_on_the_Rats",
+  "description": "Defeat_500_Rats_with_at_least_1_other_party_member",
+  "quantity": 500
+ },
+ {
+  "index": 31,
+  "world": 1,
+  "name": "Tree_Top_Dropout",
+  "description": "Reach_the_top_of_the_Giant_Tree_in_Blunder_Hills",
+  "quantity": 1,
+  "steamIndex": 28
+ },
+ {
+  "index": 32,
+  "world": 1,
+  "name": "Naked_and_Unafraid",
+  "description": "Enter_the_Sewers_with_no_equipment_or_weapon,_and_defeat_a_sewer_poop._Don't_want_to_get_your_stuff_dirty!",
+  "quantity": 1
+ },
+ {
+  "index": 33,
+  "world": 1,
+  "name": "House_Flipper",
+  "description": "Defeat_Baba_Yaga_in_under_25_seconds_after_they_spawn_in_the_Birch_Enclave",
+  "quantity": 1
+ },
+ {
+  "index": 34,
+  "world": 1,
+  "name": "Platinum_200G",
+  "description": "Have_a_stack_of_exactly_200,000_Platinum_Ore_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 35,
+  "world": 1,
+  "name": "Guild_Member",
+  "description": "Claim_500_GP_for_your_guild.",
+  "quantity": 1,
+  "steamIndex": 12
+ },
+ {
+  "index": 36,
+  "world": 1,
+  "name": "Boss_Buster",
+  "description": "Defeat_both_minibosses_in_Blunder_Hills",
+  "quantity": 1,
+  "steamIndex": 25
+ },
+ {
+  "index": 37,
+  "world": 1,
+  "name": "Nutty_Crafter",
+  "description": "Craft_42_golden_peanuts,_whatever_those_might_be!",
+  "quantity": 42
+ },
+ {
+  "index": 38,
+  "world": 1,
+  "name": "Minecart_Master",
+  "description": "Get_a_score_of_103+_in_the_Mining_Minigame,_beating_the_developers_highscore!",
+  "quantity": 1,
+  "steamIndex": 29
+ },
+ {
+  "index": 39,
+  "world": 1,
+  "name": "Choppin'_to_the_Beat",
+  "description": "Get_a_score_of_141+_in_the_Choppin'_Minigame,_beating_the_developers_highscore!",
+  "quantity": 1,
+  "steamIndex": 30
+ },
+ {
+  "index": 40,
+  "world": 1,
+  "name": "Decked_Out_in_Gold",
+  "description": "Equip_Golden_Helmet,_Chestplate,_Pants,_Shoes,_two_Golden_tools,_and_the_Defenders_Dignity_ring.",
+  "quantity": 1
+ },
+ {
+  "index": 41,
+  "world": 1,
+  "name": "Nice_Fur_Suit",
+  "description": "Equip_all_4_pieces_of_Amarok_armor.",
+  "quantity": 1
+ },
+ {
+  "index": 42,
+  "world": 1,
+  "name": "Half_a_Mill-log",
+  "description": "Have_a_stack_of_exactly_500,000_Veiny_Logs_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 43,
+  "world": 1,
+  "name": "Bad_Doggy!",
+  "description": "Defeat_Chaotic_Amarok.",
+  "quantity": 1,
+  "steamIndex": 36
+ },
+ {
+  "index": 44,
+  "world": 1,
+  "name": "Two-Time_Savior",
+  "description": "Equip_the_Blunder_Hero_Trophy,_while_also_having_another_in_your_inventory.",
+  "quantity": 2
+ },
+ {
+  "index": 45,
+  "world": 1,
+  "name": "Million_Null_'n_Void",
+  "description": "Have_a_stack_of_exactly_1,000,000_Void_Ore_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 46,
+  "world": 1,
+  "name": "Lucky_7s",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Punch_a_monster,_win_the_Jackpot!_Well,_hypothetically...",
+  "quantity": 1
+ },
+ {
+  "index": 47,
+  "world": 1,
+  "name": "What_a_View!",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Climb_the_2nd_tallest_tree_in_all_of_Blunder_Hills,_and_say_'Great_view,_1_star'",
+  "quantity": 1
+ },
+ {
+  "index": 48,
+  "world": 1,
+  "name": "Cavernous_Nook",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Find_the_SECRET_mining_area!",
+  "quantity": 1
+ },
+ {
+  "index": 49,
+  "world": 1,
+  "name": "Seriousleaf-ast!",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Score_a_point_in_the_Choppin'_Minigame_while_the_leaf_is_zooming_at_hyperspeed",
+  "quantity": 1
+ },
+ {
+  "index": 50,
+  "world": 1,
+  "name": "Peanut_Pioneer",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Talk_to_the_jungle_bush,_join_the_club...",
+  "quantity": 1,
+  "steamIndex": 39
+ },
+ {
+  "index": 51,
+  "world": 1,
+  "name": "Meel_Time!",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Shake_it!_To_the_left,_to_the_left!_Oh_yea!!!",
+  "quantity": 1,
+  "steamIndex": 40
+ },
+ {
+  "index": 52,
+  "world": 1,
+  "name": "Pro_Gamer_Move",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Keep_the_oil._Precious,_precious_oil...",
+  "quantity": 1,
+  "steamIndex": 38
+ },
+ {
+  "index": 53,
+  "world": 1,
+  "name": "Meet_the_Dev",
+  "description": "SECRET_ACHIEVEMENT_------------------------_I_heard_he's_12_feet_tall_and_can_spawn_bosses_just_by_talking...",
+  "quantity": 1,
+  "steamIndex": 41
+ },
+ {
+  "index": 54,
+  "world": 1,
+  "name": "Heyo!",
+  "description": "Say_'Hi'_to_250_different_people_without_closing_the_game.",
+  "quantity": 1
+ },
+ {
+  "index": 55,
+  "world": 1,
+  "name": "Anothervil_Expansion",
+  "description": "Craft_the_Anvil_III_expander._More_things_to_craft,_hooray!",
+  "quantity": 1,
+  "steamIndex": 24
+ },
+ {
+  "index": 56,
+  "world": 1,
+  "name": "Based_Roots",
+  "description": "Reach_The_Roots,_which_is_the_map_below_the_Sticks_monsters_in_the_Giant_Tree",
+  "quantity": 20
+ },
+ {
+  "index": 57,
+  "world": 1,
+  "name": "Dungeon_Pinch",
+  "description": "Deal_100_or_more_damage_in_a_single_hit_in_any_party_dungeon.",
+  "quantity": 1
+ },
+ {
+  "index": 58,
+  "world": 1,
+  "name": "Big_Frog_Angry",
+  "description": "Defeat_Grandfrogger_on_his_1st_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 59,
+  "world": 1,
+  "name": "Big_Frog_Furious",
+  "description": "Defeat_Grandfrogger_on_his_2nd_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 60,
+  "world": 1,
+  "name": "Big_Frog_Big_Sad",
+  "description": "Defeat_Grandfrogger_on_his_3rd_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 61,
+  "world": 1,
+  "name": "2_minute_meal",
+  "description": "Spawn_Grandfrogger_within_2_minutes_of_entering_the_dungeon.",
+  "quantity": 1
+ },
+ {
+  "index": 62,
+  "world": 1,
+  "name": "Big_Frog_Big_Mad",
+  "description": "Defeat_Grandfrogger_on_his_4th_Difficulty,_and_avoid_becoming_one_with_the_soup...",
+  "quantity": 1
+ },
+ {
+  "index": 70,
+  "world": 2,
+  "name": "Down_by_the_Desert",
+  "description": "Reach_world_2!",
+  "quantity": 1,
+  "steamIndex": 1
+ },
+ {
+  "index": 71,
+  "world": 2,
+  "name": "Elite_Player",
+  "description": "Reach_level_60_on_any_character",
+  "quantity": 1,
+  "steamIndex": 5
+ },
+ {
+  "index": 72,
+  "world": 2,
+  "name": "Retirement_Fund",
+  "description": "Save_up_1,000,000_coins,_also_known_as_1_Platinum_coin!",
+  "quantity": 1,
+  "steamIndex": 10
+ },
+ {
+  "index": 73,
+  "world": 2,
+  "name": "More_and_More_Me!",
+  "description": "Create_your_4th_character,_who_will_never_appreciate_the_struggle_your_first_3_characters_had.",
+  "quantity": 1,
+  "steamIndex": 15
+ },
+ {
+  "index": 74,
+  "world": 2,
+  "name": "Golden_Fly",
+  "description": "Pass_through_the_small_golden_hoop_in_the_Catching_Minigame._It's_worth_3_points!",
+  "quantity": 1
+ },
+ {
+  "index": 75,
+  "world": 2,
+  "name": "Hammer_Bub",
+  "description": "Level_up_the_'Hammer_Hammer'_Alchemy_bubble_to_Lv._10",
+  "quantity": 1
+ },
+ {
+  "index": 76,
+  "world": 2,
+  "name": "Wassup_Yo!",
+  "description": "Say_'Hi'_to_100_unique_people_without_closing_the_game_or_changing_Servers.",
+  "quantity": 1
+ },
+ {
+  "index": 77,
+  "world": 2,
+  "name": "Gold_School",
+  "description": "Have_a_stack_of_exactly_1500_Goldfish_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 78,
+  "world": 2,
+  "name": "Buzz_Buzz",
+  "description": "Have_a_stack_of_exactly_2500_Flies_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 79,
+  "world": 2,
+  "name": "Careful,_it's_Sharp!",
+  "description": "Have_a_stack_of_exactly_15_Glass_Shards_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 80,
+  "world": 2,
+  "name": "Hybernation",
+  "description": "Leave_one_of_your_players_AFK_for_an_entire_week,_which_is_168_hours!_Anything_more_counts_too!",
+  "quantity": 1
+ },
+ {
+  "index": 81,
+  "world": 2,
+  "name": "Vial_Noob",
+  "description": "Get_3_vials_to_Lv._4,_which_are_the_green_ones",
+  "quantity": 1
+ },
+ {
+  "index": 82,
+  "world": 2,
+  "name": "Specializational!",
+  "description": "Choose_a_subclass_for_two_of_your_characters.",
+  "quantity": 2
+ },
+ {
+  "index": 83,
+  "world": 2,
+  "name": "Obols_Oh_Boy!",
+  "description": "Have_10_Silver_Obols_equipped_at_once._The_Family_tab_counts_here!",
+  "quantity": 1
+ },
+ {
+  "index": 84,
+  "world": 2,
+  "name": "Well_Learned",
+  "description": "Get_a_lv_92_or_higher_Star_Book_from_Alchemy!_The_1st_one,_specifically.",
+  "quantity": 1
+ },
+ {
+  "index": 85,
+  "world": 2,
+  "name": "B-o-B_to_Help",
+  "description": "Complete_75_unique_quests_on_a_single_character._I'm_not_sure_what_B-o-B_stands_for_either...",
+  "quantity": 1,
+  "steamIndex": 18
+ },
+ {
+  "index": 86,
+  "world": 2,
+  "name": "Card_Enthusiast",
+  "description": "Collect_30_unique_cards._If_u_wanna_trade,_I_got_some_spare_Amarok_cards!",
+  "quantity": 1,
+  "steamIndex": 21
+ },
+ {
+  "index": 87,
+  "world": 2,
+  "name": "Efaunt_Trumped",
+  "description": "Defeat_Efaunt,_the_Mummified_Elephant_God._He_will_remember_you_doing_this.",
+  "quantity": 1
+ },
+ {
+  "index": 88,
+  "world": 2,
+  "name": "Fishing_Finesse",
+  "description": "Get_a_score_of_67+_in_the_Fishing_Minigame,_beating_the_developers_highscore!",
+  "quantity": 1,
+  "steamIndex": 31
+ },
+ {
+  "index": 89,
+  "world": 2,
+  "name": "Catching_Coronation",
+  "description": "Get_a_score_of_128+_in_the_Catching_Minigame,_beating_the_developers_highscore!",
+  "quantity": 1,
+  "steamIndex": 32
+ },
+ {
+  "index": 90,
+  "world": 2,
+  "name": "Crystal_Superslam",
+  "description": "Defeat_100_Crystal_Mobs._This_could_go_a_couple_rounds...",
+  "quantity": 1,
+  "steamIndex": 34
+ },
+ {
+  "index": 91,
+  "world": 2,
+  "name": "Slumbering_Gamer",
+  "description": "Claim_2000+_hours_of_AFK_progress_across_all_characters._So_lazy!",
+  "quantity": 1,
+  "steamIndex": 47
+ },
+ {
+  "index": 92,
+  "world": 2,
+  "name": "My_First_Trophy!",
+  "description": "Equip_any_trophy,_other_than_the_limited_edition_ones_which_don't_count_lol.",
+  "quantity": 1,
+  "steamIndex": 51
+ },
+ {
+  "index": 93,
+  "world": 2,
+  "name": "A_Fish_Too_Far",
+  "description": "Catch_a_total_of_1000_fish_across_all_Fishing_Minigame_plays.",
+  "quantity": 1000
+ },
+ {
+  "index": 94,
+  "world": 2,
+  "name": "Rat-a-tat-tat",
+  "description": "Level_up_the_'FMJ'_Alchemy_bubble_to_Lv._30",
+  "quantity": 1
+ },
+ {
+  "index": 95,
+  "world": 2,
+  "name": "Pillars_of_Sand",
+  "description": "Defeat_250,000_Sandy_Pots_combined_across_all_characters._Forget_the_Pillars_of_Salt_though.",
+  "quantity": 1
+ },
+ {
+  "index": 96,
+  "world": 2,
+  "name": "Vial_Connoisseur",
+  "description": "Get_6_vials_to_Lv._7,_which_are_the_pink_ones",
+  "quantity": 1
+ },
+ {
+  "index": 97,
+  "world": 2,
+  "name": "Coarse_Cards",
+  "description": "Level_up_cards_for_Mafioso,_Sandcastle,_Pincermin,_and_Mashed_Potato,_all_up_to_1_star.",
+  "quantity": 1
+ },
+ {
+  "index": 98,
+  "world": 2,
+  "name": "Trial_by_Time",
+  "description": "Run_from_Town_to_Efaunt's_Tomb_in_under_2_minutes._No_teleporting_using_the_World_Map.",
+  "quantity": 1
+ },
+ {
+  "index": 99,
+  "world": 2,
+  "name": "Golden_Obolden!",
+  "description": "Have_15_Golden_Obols_equipped_at_once._The_Family_tab_counts_here!",
+  "quantity": 1
+ },
+ {
+  "index": 100,
+  "world": 2,
+  "name": "Monocle_No_More",
+  "description": "Defeat_160_Sand_Giants_within_10_minutes_of_entering_the_map._Auto_must_be_off.",
+  "quantity": 1
+ },
+ {
+  "index": 101,
+  "world": 2,
+  "name": "Jellyfish_Jelly",
+  "description": "Have_a_stack_of_exactly_6000_Jellyfish_in_your_Storage_Chest._I_heard_their_Jelly_goes_good_with_burgers_btw.",
+  "quantity": 1
+ },
+ {
+  "index": 102,
+  "world": 2,
+  "name": "Super_Cereal",
+  "description": "Have_a_stack_of_exactly_50,000_Sentient_Cereal_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 103,
+  "world": 2,
+  "name": "Sweet_Victory",
+  "description": "Get_a_Score_of_200,000_or_more_in_the_Sandstone_Colosseum",
+  "quantity": 1
+ },
+ {
+  "index": 104,
+  "world": 2,
+  "name": "Ink_Blot",
+  "description": "Use_101_silver_pens_in_the_Post_Office",
+  "quantity": 101
+ },
+ {
+  "index": 105,
+  "world": 2,
+  "name": "Demon_Demolisher",
+  "description": "Defeat_the_big_hourglass_and_the_toilet_paper_guy!",
+  "quantity": 1,
+  "steamIndex": 26
+ },
+ {
+  "index": 106,
+  "world": 2,
+  "name": "Dumbo_Destroyer",
+  "description": "Defeat_Chaotic_Efaunt._Look_out_for_the_kick,_kapow!",
+  "quantity": 1,
+  "steamIndex": 37
+ },
+ {
+  "index": 107,
+  "world": 2,
+  "name": "Threadin'_the_Needle",
+  "description": "Pass_through_the_teenie_tiny_Lava_hoop_in_the_Catching_Minigame._It_only_appears_if_you_go_through_25_hoops_in_a_row!",
+  "quantity": 1
+ },
+ {
+  "index": 108,
+  "world": 2,
+  "name": "S-M-R-T",
+  "description": "Level_up_the_'Smarty_Boi'_Alchemy_bubble_to_Lv._50",
+  "quantity": 1
+ },
+ {
+  "index": 109,
+  "world": 2,
+  "name": "Two_Desserts!",
+  "description": "Have_the_YumYum_Sheriff_trophy_equipped,_while_also_having_another_in_your_inventory.",
+  "quantity": 2
+ },
+ {
+  "index": 110,
+  "world": 2,
+  "name": "Nuget_Nightmare",
+  "description": "Kill_Crabbycakes_manually,_without_Auto_on,_until_one_drops_a_Nuget_Cake._Good_luck...",
+  "quantity": 1
+ },
+ {
+  "index": 111,
+  "world": 2,
+  "name": "Bigtime_Bloacher",
+  "description": "Have_a_stack_of_exactly_100,000_Bloaches_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 112,
+  "world": 2,
+  "name": "Vial_Junkee",
+  "description": "Get_10_vials_to_Lv._9,_which_are_the_hyperlight_Orange_ones._Stop_focusing_so_much_on_vials,_it's_not_healthy!",
+  "quantity": 1
+ },
+ {
+  "index": 113,
+  "world": 2,
+  "name": "Fruit_Salad",
+  "description": "Have_a_stack_of_exactly_1,000,000_Fruit_Flies_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 114,
+  "world": 2,
+  "name": "Your_Skin,_My_Skin",
+  "description": "Wear_the_Efaunt_helmet,_Ribcage,_Hipillium,_and_Ankles._Also_have_1_Efaunt_Obol_equipped.",
+  "quantity": 1
+ },
+ {
+  "index": 115,
+  "world": 2,
+  "name": "WAAAAAAAHH!",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Complete_all_available_Treasure_Hunts!_You_can_find_them_on_Youtube,_just_search_for_it!",
+  "quantity": 1
+ },
+ {
+  "index": 116,
+  "world": 2,
+  "name": "Bobjoepicklejar",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Pickles_belong_in_containers,_after_all!",
+  "quantity": 1
+ },
+ {
+  "index": 117,
+  "world": 2,
+  "name": "Fish_Aint_Biting",
+  "description": "SECRET_ACHIEVEMENT_------------------------_I'm_tellin'_ya,_the_fish_ain't_bitin'_today_gosh_darn_it!",
+  "quantity": 1
+ },
+ {
+  "index": 118,
+  "world": 2,
+  "name": "Skill_Master",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Goldric's_bag_of_peanuts_may_be_nearly_empty,_but_even_just_one_peanut_is_enough_for_some...",
+  "quantity": 1
+ },
+ {
+  "index": 119,
+  "world": 2,
+  "name": "Tomb_Raider",
+  "description": "Defeat_Snakenhotep_on_his_1st_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 120,
+  "world": 2,
+  "name": "Tomb_Defiler",
+  "description": "Defeat_Snakenhotep_on_his_2nd_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 121,
+  "world": 2,
+  "name": "Tomb_Completionist",
+  "description": "Defeat_Snakenhotep_on_his_3rd_Difficulty.",
+  "quantity": 1
+ },
+ {
+  "index": 122,
+  "world": 2,
+  "name": "Wazzzzam!",
+  "description": "Wazam_125_rooms_in_Snakenhotep's_Dungeon_by_performing_exceptionally_well_in_a_room.",
+  "quantity": 125
+ },
+ {
+  "index": 123,
+  "world": 2,
+  "name": "Just_Passing_By",
+  "description": "Pass_30_rooms_in_Snakenhotep's_Dungeon_by_doing_the_thingy_the_room_says_to_do.",
+  "quantity": 30
+ },
+ {
+  "index": 124,
+  "world": 2,
+  "name": "Dungeon_Slap",
+  "description": "Deal_1000_or_more_damage_in_a_single_hit_within_any_Dungeon.",
+  "quantity": 1
+ },
+ {
+  "index": 140,
+  "world": 3,
+  "name": "Snowy_Wonderland",
+  "description": "Reach_World_3,_the_coolest_world_in_the_game!",
+  "quantity": 1,
+  "steamIndex": 2
+ },
+ {
+  "index": 141,
+  "world": 3,
+  "name": "Veteran_Gamer",
+  "description": "Reach_level_80_on_any_character._I'm_glad_you're_enjoying_the_game,_hope_you_get_to_Lv._100!",
+  "quantity": 1,
+  "steamIndex": 6
+ },
+ {
+  "index": 142,
+  "world": 3,
+  "name": "A_Family_of_Me!",
+  "description": "Create_your_8th_character,_who_will_never_get_the_love_you_gave_to_your_earlier_characters_when_making_new_ones_was_still_special.",
+  "quantity": 1,
+  "steamIndex": 16
+ },
+ {
+  "index": 143,
+  "world": 3,
+  "name": "Croakin'_Froge",
+  "description": "Have_a_stack_of_exactly_250_Doge_-I_mean_froge-_critters_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 144,
+  "world": 3,
+  "name": "Sad_Souls",
+  "description": "Have_a_stack_of_exactly_1,000_Forest_Souls_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 145,
+  "world": 3,
+  "name": "Checkout_Takeout",
+  "description": "Checkout_a_total_of_1000_talent_books_from_the_Talent_Book_Library",
+  "quantity": 1000
+ },
+ {
+  "index": 146,
+  "world": 3,
+  "name": "Yawning_Cogs",
+  "description": "Have_4_unclaimed_Yellow_Cogs_during_any_single_moment_in_time,_apart_from_March_16,_2022_at_3.07pm",
+  "quantity": 1
+ },
+ {
+  "index": 147,
+  "world": 3,
+  "name": "Blunder_Skull",
+  "description": "Get_a_Copper_Skull_or_higher_on_every_Blunder_Hills_monster_in_the_Deathnote.",
+  "quantity": 1
+ },
+ {
+  "index": 148,
+  "world": 3,
+  "name": "Too_Cute_To_Live",
+  "description": "You're_gonna_kill_all_them_lil'_poofs?_You_monster..._well,_at_least_make_it_quick,_like_20s_or_less_after_entering_the_map.",
+  "quantity": 1
+ },
+ {
+  "index": 149,
+  "world": 3,
+  "name": "Big_Mobs_Eek",
+  "description": "Defeat_5_Giant_Monsters._Giants_only_spawn_IF_you_equip_the_Titan_Tachion_prayer,_unlocked_by_beating_wave_10_of_Waka_Tower_Defence_(world_2)",
+  "quantity": 5,
+  "steamIndex": 52
+ },
+ {
+  "index": 150,
+  "world": 3,
+  "name": "Powdered_Neutronium",
+  "description": "Rank_up_the_Explosive_Combustion_refinery_chamber_to_Rank_2.",
+  "quantity": 1,
+  "steamIndex": 53
+ },
+ {
+  "index": 151,
+  "world": 3,
+  "name": "Soulslike",
+  "description": "Have_4_Prayers_in_your_Prayer_Rock_thingy._You_get_Prayers_by_placing_these_wizard_dudes_into_towers_and_stuff_and_kickin'_butt!",
+  "quantity": 1
+ },
+ {
+  "index": 152,
+  "world": 3,
+  "name": "Good_Times_Roll",
+  "description": "Beat_wave_50_in_Glublin_Gorefest_using_ONLY_Boulder_Roller_wizards._No_freeze,_no_confetti,_just_boulder.",
+  "quantity": 1
+ },
+ {
+  "index": 153,
+  "world": 3,
+  "name": "Cog_in_the_System",
+  "description": "Have_20_Grey_Cogs_placed_on_the_board_at_once._Not_sure_why_this_is_an_achievement,_cogs_are_boring.",
+  "quantity": 1
+ },
+ {
+  "index": 154,
+  "world": 3,
+  "name": "I_Create...",
+  "description": "Upgrade_buildings_in_construction_a_total_of_50_times._Any_buildings,_utilities,_wizards,_shrines,_they_all_count!",
+  "quantity": 1
+ },
+ {
+  "index": 155,
+  "world": 3,
+  "name": "I_Sawed...",
+  "description": "Upgrade_buildings_in_construction_a_total_of_250_times.",
+  "quantity": 1
+ },
+ {
+  "index": 156,
+  "world": 3,
+  "name": "Hairy_Ice_Comb",
+  "description": "Manually_loot_1000_floof_poofs,_then_1000_melty_cubes,_then_1000_moustache_combs._So_3000_in_total!",
+  "quantity": 3000
+ },
+ {
+  "index": 157,
+  "world": 3,
+  "name": "Giant_Slayer",
+  "description": "Defeat_5_Giant_Mobs_of_each_type;_Bloque,_Mamooth,_Snowman,_Penguin,_then_Thermister,_IN_THAT_ORDER._So_25_in_total!.",
+  "quantity": 25
+ },
+ {
+  "index": 158,
+  "world": 3,
+  "name": "Saharan_Skull",
+  "description": "Get_a_Golden_Skull_or_higher_on_every_YumYum_Desert_monster_in_the_Deathnote.",
+  "quantity": 1
+ },
+ {
+  "index": 159,
+  "world": 3,
+  "name": "Fat_Souls",
+  "description": "Have_a_stack_of_exactly_10,000_Dune_Souls_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 160,
+  "world": 3,
+  "name": "Borrowed_Pens",
+  "description": "Remember_all_those_pens_you_lent_out_in_school_and_never_got_back?_You've_got_13_seconds_to_vent_your_anger_on_every_penguin_mob!",
+  "quantity": 1
+ },
+ {
+  "index": 161,
+  "world": 3,
+  "name": "Large_Fortune",
+  "description": "Save_up_100,000,000_coins._But_remember,_as_far_as_the_idleon_government_knows,_none_of_those_coins_came_from_a_taxable_income_wink_wink.",
+  "quantity": 1,
+  "steamIndex": 11
+ },
+ {
+  "index": 162,
+  "world": 3,
+  "name": "Sqeakin'_Mousey",
+  "description": "Have_a_stack_of_exactly_60,000_Mouseys_in_your_Storage_Chest._Imagine_the_noise_in_that_chest_of_yours..._or_even_the_smell,_ugh.",
+  "quantity": 1
+ },
+ {
+  "index": 163,
+  "world": 3,
+  "name": "Geared_for_Success",
+  "description": "Have_40_Yellow_Cogs_placed_on_the_board_at_once._Alright_now_I_see_how_this_is_achievement_worthy,_cogs_are_kinda_neat.",
+  "quantity": 1
+ },
+ {
+  "index": 164,
+  "world": 3,
+  "name": "Guild_Higher-Up",
+  "description": "Contribute_3,000_GP_to_your_guild,_putting_you_above_the_other_guild_members_who_only_have_the_500_GP_Achievment!",
+  "quantity": 1,
+  "steamIndex": 13
+ },
+ {
+  "index": 165,
+  "world": 3,
+  "name": "Legendary_Gamer",
+  "description": "Reach_level_100_on_any_character!_Just_4_more_digits_and_you'd_have_a_phone_number!",
+  "quantity": 1,
+  "steamIndex": 7
+ },
+ {
+  "index": 166,
+  "world": 3,
+  "name": "Entangled_Compounds",
+  "description": "Rank_up_the_Spontaneous_Combustion_refinery_chamber_to_Rank_3.",
+  "quantity": 1
+ },
+ {
+  "index": 167,
+  "world": 3,
+  "name": "There_Can_Be_Only_1",
+  "description": "Beat_wave_50_of_Wakawaka_War_without_using_more_than_1_of_any_specific_tower._Can't_have_2_pulsers,_or_2_frozones!",
+  "quantity": 1,
+  "steamIndex": 54
+ },
+ {
+  "index": 168,
+  "world": 3,
+  "name": "Blurple_Skull",
+  "description": "Get_a_Dementia_Skull_or_higher_on_every_Frostbite_Tundra_monster_in_the_Deathnote.",
+  "quantity": 1,
+  "steamIndex": 55
+ },
+ {
+  "index": 169,
+  "world": 3,
+  "name": "Souped_Up_Salts",
+  "description": "Rank_up_the_Redox_Combustion_refinery_chamber_to_Rank_10.",
+  "quantity": 1
+ },
+ {
+  "index": 170,
+  "world": 3,
+  "name": "I_Constructed!",
+  "description": "Upgrade_buildings_in_construction_a_total_of_900_times.",
+  "quantity": 1
+ },
+ {
+  "index": 171,
+  "world": 3,
+  "name": "Cogs_Be_Waitin'",
+  "description": "Have_16_unclaimed_Grey_Cogs_at_once._Jeez,_I'm_glad_anthropomorphic_cogs_aren't_real.",
+  "quantity": 1
+ },
+ {
+  "index": 172,
+  "world": 3,
+  "name": "Simpin'_for_NPC's",
+  "description": "Complete_150_unique_quests_on_a_single_character._Apparently_people_find_'simp'_offensive,_and_I'm_kinda_offended_by_that...",
+  "quantity": 1,
+  "steamIndex": 19
+ },
+ {
+  "index": 173,
+  "world": 3,
+  "name": "Top_Cogs",
+  "description": "78_Cogs._All_purple_cogs._Did_I_say_cogs_are_great?_I_think_cogs_are_great._Cog_cog_cog!",
+  "quantity": 1
+ },
+ {
+  "index": 174,
+  "world": 3,
+  "name": "Card_Dude",
+  "description": "Collect_120_unique_cards._Not_sure_why_something_as_mundane_as_'dude'_is_the_descriptor_here,_don't_read_too_much_into_it.",
+  "quantity": 1,
+  "steamIndex": 22
+ },
+ {
+  "index": 175,
+  "world": 3,
+  "name": "Crystal_Champ",
+  "description": "Defeat_2000_crystal_mobs._You_must've_watched_a_whole_lotta_Dev_Streams_to_get_this!",
+  "quantity": 1,
+  "steamIndex": 35
+ },
+ {
+  "index": 176,
+  "world": 3,
+  "name": "Smirky_Souls",
+  "description": "Have_a_stack_of_exactly_250,000_Rooted_Souls_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 177,
+  "world": 3,
+  "name": "Comatosed_Gamer",
+  "description": "Claim_30,000+_Hrs_of_AFK_gains._Thats_two_years,_woah!",
+  "quantity": 1,
+  "steamIndex": 48
+ },
+ {
+  "index": 178,
+  "world": 3,
+  "name": "Knock_on_Wood",
+  "description": "Beat_wave_50_of_Acorn_Assault_with_just_4_towers_active._Place_down_a_5th_tower_at_any_time,_and_it_wont_count!",
+  "quantity": 1
+ },
+ {
+  "index": 179,
+  "world": 3,
+  "name": "The_Goose_is_Loose",
+  "description": "Have_a_HONK_of_exactly_1,000,000_Honkers_in_your_HONK_Chest._HONKHONKHONK_HOOOONK!!!",
+  "quantity": 1
+ },
+ {
+  "index": 180,
+  "world": 3,
+  "name": "Sepia_Vision",
+  "description": "Have_a_stack_of_exactly_500_Black_Lenses_in_your_Storage_Chest._Better_complete_this_before_I_make_it_1,000!",
+  "quantity": 1
+ },
+ {
+  "index": 181,
+  "world": 3,
+  "name": "Rattle_them_Bones",
+  "description": "Defeat_every_Bloodbone_in_just_12_seconds_after_entering_the_map._Wow,_wild.",
+  "quantity": 1
+ },
+ {
+  "index": 182,
+  "world": 3,
+  "name": "A_Most_Nice_Sale",
+  "description": "SECRET_ACHIEVEMENT_------------------------_You_SOLD_gems_to_the_World_3_town_store...?_All_at_once?_How_many...?_Nice.",
+  "quantity": 1,
+  "steamIndex": 56
+ },
+ {
+  "index": 183,
+  "world": 3,
+  "name": "Cool_Score!",
+  "description": "Get_a_Score_of_2,500,000_or_more_in_the_Chillsnap_Colosseum",
+  "quantity": 1
+ },
+ {
+  "index": 184,
+  "world": 3,
+  "name": "Dungeon_Wallop",
+  "description": "Deal_25000_or_more_damage_in_a_single_hit_within_any_Dungeon.",
+  "quantity": 1
+ },
+ {
+  "index": 185,
+  "world": 3,
+  "name": "Boss_Defeated",
+  "description": "Defeat_Glaciaxus_on_its_1st_difficulty",
+  "quantity": 1
+ },
+ {
+  "index": 186,
+  "world": 3,
+  "name": "Manager_Defeated",
+  "description": "Defeat_Glaciaxus_on_its_2nd_difficulty",
+  "quantity": 1
+ },
+ {
+  "index": 187,
+  "world": 3,
+  "name": "Kingpin_Defeated",
+  "description": "Defeat_Glaciaxus_on_its_3rd_difficulty",
+  "quantity": 1
+ },
+ {
+  "index": 188,
+  "world": 3,
+  "name": "Capitalist_Win",
+  "description": "Complete_1000_jobs_within_the_Glacial_Basement_dungeon.",
+  "quantity": 1000
+ },
+ {
+  "index": 189,
+  "world": 3,
+  "name": "Equinox_Visitor",
+  "description": "Find_the_Equinox_Mirror_drop_from_Bloodbones,_a_1_in_1000_drop,_and_use_it_to_visit_the_Equinox_Valley.",
+  "quantity": 1
+ },
+ {
+  "index": 210,
+  "world": 4,
+  "name": "Milky_Wayfarer",
+  "description": "Reach_World_4,_the_purple_one_with_outer_space_stuff!",
+  "quantity": 1,
+  "steamIndex": 60
+ },
+ {
+  "index": 211,
+  "world": 4,
+  "name": "Channel_Surfing",
+  "description": "Have_a_stack_of_exactly_75,000_TV_remotes_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 212,
+  "world": 4,
+  "name": "Bottle_Capital",
+  "description": "Have_a_stack_of_exactly_800,000_Bottle_Caps_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 213,
+  "world": 4,
+  "name": "Too_Many_Tentacles",
+  "description": "Have_a_stack_of_exactly_10,000,000_Wriggly_Balls_in_your_Storage_Chest._Green_Stack_bro!",
+  "quantity": 1
+ },
+ {
+  "index": 214,
+  "world": 4,
+  "name": "Mythical_Gamer",
+  "description": "Reach_level_125_on_any_character!_This_used_to_be_a_HUGE_deal,_now_it's_just_a_big_deal.",
+  "quantity": 1,
+  "steamIndex": 8
+ },
+ {
+  "index": 215,
+  "world": 4,
+  "name": "Matrix_Wickermen",
+  "description": "Accumulate_8760_hours,_or_an_entire_year,_of_Lab_AFK_time_across_all_players.",
+  "quantity": 8760
+ },
+ {
+  "index": 216,
+  "world": 4,
+  "name": "Bland_Dish",
+  "description": "SECRET_ACHIEVEMENT_------------------------_What_exactly_were_you_expecting_to_cook,_an_invisible_meal?",
+  "quantity": 1
+ },
+ {
+  "index": 217,
+  "world": 4,
+  "name": "Lv._5_Nothing",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Ah,_I_see_you_enjoy_reading_upgrade_flavor_text_as_well!",
+  "quantity": 1,
+  "steamIndex": 58
+ },
+ {
+  "index": 218,
+  "world": 4,
+  "name": "I_Like_This_Mob",
+  "description": "Get_a_Breedability_III_heart_on_at_least_2_Mobs_within_the_nest.",
+  "quantity": 1
+ },
+ {
+  "index": 219,
+  "world": 4,
+  "name": "I_LOVE_These_Mobs",
+  "description": "Get_a_Breedability_VII_heart_on_at_least_15_Mobs_within_the_nest.",
+  "quantity": 1
+ },
+ {
+  "index": 220,
+  "world": 4,
+  "name": "Shiny_Shells",
+  "description": "Have_6_bronze_(or_rarer)_eggs_in_your_nest_at_the_same_time,_waiting_to_be_hatched!",
+  "quantity": 1
+ },
+ {
+  "index": 221,
+  "world": 4,
+  "name": "Gilded_Shells",
+  "description": "Have_12_gold_(or_rarer)_eggs_in_your_nest_at_the_same_time,_waiting_to_be_hatched!",
+  "quantity": 1
+ },
+ {
+  "index": 222,
+  "world": 4,
+  "name": "Barley_Lost",
+  "description": "Fail_a_Mob_battle_with_the_enemy_team_having_only_5%_HP_or_less._Wait,_it's_spelled_HOW???",
+  "quantity": 1
+ },
+ {
+  "index": 223,
+  "world": 4,
+  "name": "Mobless",
+  "description": "Trash_a_total_of_2500_Mobs._How_could_you_be_so_heartless,_so_cold...",
+  "quantity": 1,
+  "steamIndex": 59
+ },
+ {
+  "index": 224,
+  "world": 4,
+  "name": "Cabbage_Patch",
+  "description": "Have_5_kitchens_all_cooking_cabbages_at_the_same_time._Remember_gamers,_eat_your_vegetables,_they_ain't_so_bad!",
+  "quantity": 1
+ },
+ {
+  "index": 225,
+  "world": 4,
+  "name": "Le_Pretzel_Bleu",
+  "description": "Have_8_kitchens_all_cooking_Pretzels_at_the_same_time._Don't_get_it_twisted,_them_pretzels_are_the_real_deal.",
+  "quantity": 1
+ },
+ {
+  "index": 226,
+  "world": 4,
+  "name": "Michelin_Ranked",
+  "description": "Upgrade_any_kitchen_stat_to_Lv._300,_giving_you_an_elite_crown_over_the_upgrade_bars,_thus_resulting_in_dopamine.",
+  "quantity": 1
+ },
+ {
+  "index": 227,
+  "world": 4,
+  "name": "WOAH_That's_Fast",
+  "description": "Have_a_speed_of_'Too_Fast'_displayed_while_cooking_an_Eggplant._No_this_is_not_a_metaphor.",
+  "quantity": 1
+ },
+ {
+  "index": 228,
+  "world": 4,
+  "name": "Stars_Among_Stars",
+  "description": "Complete_all_constellations_in_the_Hyperion_Nebula._Thats_what_world_4_is_called_btw.",
+  "quantity": 1
+ },
+ {
+  "index": 229,
+  "world": 4,
+  "name": "Chippin'_Away",
+  "description": "Claim_25_chips_from_the_Chip_Repository._I_was_gonna_make_this_250_chips,_but_people_from_the_future_told_me_not_to.",
+  "quantity": 25
+ },
+ {
+  "index": 230,
+  "world": 4,
+  "name": "Hunned_Times_a_Day",
+  "description": "Claim_spices_by_any_means_10,000_times._Like,_individual_claims.",
+  "quantity": 10000
+ },
+ {
+  "index": 231,
+  "world": 4,
+  "name": "Good_Plate",
+  "description": "Upgrade_a_meal_at_the_Dinner_Menu_to_the_point_where_it_gets_a_diamond_plate!",
+  "quantity": 1
+ },
+ {
+  "index": 232,
+  "world": 4,
+  "name": "Great_Plate",
+  "description": "Upgrade_a_meal_at_the_Dinner_Menu_to_the_point_where_it_gets_a_purple_plate!",
+  "quantity": 1
+ },
+ {
+  "index": 233,
+  "world": 4,
+  "name": "Best_Plate",
+  "description": "Upgrade_a_meal_at_the_Dinner_Menu_to_the_point_where_it_gets_a_void_pearl_plate!",
+  "quantity": 1
+ },
+ {
+  "index": 234,
+  "world": 4,
+  "name": "Space_Party!!!",
+  "description": "Dance_with_at_least_5_other_people_while_you're_all_in_World_4_town!",
+  "quantity": 1
+ },
+ {
+  "index": 235,
+  "world": 4,
+  "name": "Zero_G_Scorin'",
+  "description": "Get_a_Score_of_10,000,000_or_more_in_the_Astro_Colosseum",
+  "quantity": 1
+ },
+ {
+  "index": 236,
+  "world": 4,
+  "name": "Hibernating_Gamer",
+  "description": "Claim_111,000_hours_of_AFK_time._Jeez,_thats_like_an_entire_year_of_all_characters_idling_to_the_max.",
+  "quantity": 1,
+  "steamIndex": 49
+ },
+ {
+  "index": 237,
+  "world": 4,
+  "name": "Mutant_Massacrer",
+  "description": "Defeat_both_Mutant_Minibosses,_the_W3_Slush_and_W4_Mush._You_must_defeat_Slush_before_Mush,_in_that_order.",
+  "quantity": 1,
+  "steamIndex": 57
+ },
+ {
+  "index": 238,
+  "world": 4,
+  "name": "Soda_Poisoning",
+  "description": "Beat_wave_50_of_Clash_of_Cans_with_3_Poisonic_Elders_at_Lv_5_or_higher._Also,_you_can't_sell_towers.",
+  "quantity": 1
+ },
+ {
+  "index": 239,
+  "world": 4,
+  "name": "The_True_King",
+  "description": "Reach_a_total_of_1_million_Orb_Kills.",
+  "quantity": 1000000
+ },
+ {
+  "index": 240,
+  "world": 4,
+  "name": "The_True_Pirate",
+  "description": "Reach_a_total_of_1_million_Plunderous_Kills._This_one_is_the_true_challenge_of_the_three.",
+  "quantity": 1000000
+ },
+ {
+  "index": 241,
+  "world": 4,
+  "name": "The_True_Emperor",
+  "description": "Reach_a_total_of_1_million_Wormhole_Kills.",
+  "quantity": 1000000
+ },
+ {
+  "index": 242,
+  "world": 4,
+  "name": "Veritable_Master",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Destruction_comes_to_all_who_cross_your_path,_no_matter_how_many_times_you_cross_paths.",
+  "quantity": 1
+ },
+ {
+  "index": 280,
+  "world": 5,
+  "name": "Maple_Logger",
+  "description": "Have_a_stack_of_exactly_200,000_Maple_Logs_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 281,
+  "world": 5,
+  "name": "Vitamin_D-licious",
+  "description": "Have_a_stack_of_exactly_5,000,000_Orange_Slices_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 282,
+  "world": 5,
+  "name": "Wurm_Wumbo",
+  "description": "Have_a_stack_of_exactly_100,000,000_Mongo_Worm_Slices_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 283,
+  "world": 5,
+  "name": "Supernatural_Gamer",
+  "description": "Reach_level_300_on_any_character!_My_oh_my!_This_would_have_been_inconceivable_just_a_few_years_ago!",
+  "quantity": 1
+ },
+ {
+  "index": 284,
+  "world": 5,
+  "name": "Smokin'_Stars",
+  "description": "Complete_all_constellations_in_the_Smolderin'_Plateau._You_can_check_your_progress_within_the_Telescope.",
+  "quantity": 1
+ },
+ {
+  "index": 285,
+  "world": 5,
+  "name": "The_Plateauourist",
+  "description": "Reach_World_5,_a_personal_favorite_world_of_mine!_Look,_I_like_lava_what_can_I_say.",
+  "quantity": 1
+ },
+ {
+  "index": 286,
+  "world": 5,
+  "name": "No_Krakens?_):",
+  "description": "Reach_Wave_50_of_Citric_Conflict_tower_defence_without_placing_a_single_Kraken_Towers._Not_even_one.",
+  "quantity": 1
+ },
+ {
+  "index": 287,
+  "world": 5,
+  "name": "Artifact_Finder",
+  "description": "Collect_15_Artifacts_from_Sailing",
+  "quantity": 1
+ },
+ {
+  "index": 288,
+  "world": 5,
+  "name": "Artifact_Enjoyer",
+  "description": "Collect_all_30_Artifacts_from_Sailing",
+  "quantity": 1
+ },
+ {
+  "index": 289,
+  "world": 5,
+  "name": "Artifact_Jones",
+  "description": "Collect_all_30_ANCIENT_Artifacts_from_Sailing._All_that_glitters_is_not_gold,_but_it_sure_is_shiny!",
+  "quantity": 1
+ },
+ {
+  "index": 290,
+  "world": 5,
+  "name": "Gilded_Vessel",
+  "description": "Upgrade_a_boat_to_Lv_100_in_Sailing._It'll_turn_gold_to_reflect_its_power!",
+  "quantity": 1
+ },
+ {
+  "index": 291,
+  "world": 5,
+  "name": "Maroon_Warship",
+  "description": "Upgrade_a_boat_to_Lv_300_in_Sailing._This_is_the_pinnacle_of_naval_prowess,_it_doesn't_get_fancier_than_this!",
+  "quantity": 1
+ },
+ {
+  "index": 292,
+  "world": 5,
+  "name": "Glory_To_Nobisect",
+  "description": "Unlock_the_3rd_Divinity_God.",
+  "quantity": 1
+ },
+ {
+  "index": 293,
+  "world": 5,
+  "name": "All_Hail_Purrmep",
+  "description": "Unlock_the_7th_Divinity_God.",
+  "quantity": 1
+ },
+ {
+  "index": 294,
+  "world": 5,
+  "name": "Long_Live_Bagur",
+  "description": "Unlock_the_10th_and_final_Divinity_God.",
+  "quantity": 1
+ },
+ {
+  "index": 295,
+  "world": 5,
+  "name": "POiNG_Champion",
+  "description": "Get_a_POiNG_score_of_25,000_or_more!_My_personal_highscore_is_38,323_at_the_time_of_coding_this!",
+  "quantity": 1
+ },
+ {
+  "index": 296,
+  "world": 5,
+  "name": "Lucky_Harvest",
+  "description": "Harvest_a_plant_with_a_Bit_worth_who's_first_3_digits_are_777._For_example,_77.7K_Bits_would_count,_or_777M_Bits_too!",
+  "quantity": 1
+ },
+ {
+  "index": 297,
+  "world": 5,
+  "name": "Chemical_Collector",
+  "description": "Harvest_a_total_of_1000_Chemical-type_Plants_in_Gaming.",
+  "quantity": 1000
+ },
+ {
+  "index": 298,
+  "world": 5,
+  "name": "Voraci_Vantasia",
+  "description": "Harvest_a_total_of_500_Voraci-type_Plants_in_Gaming.",
+  "quantity": 500
+ },
+ {
+  "index": 299,
+  "world": 5,
+  "name": "Bonsai_Bonanza",
+  "description": "Harvest_a_total_of_100_Bonsai-type_Plants_in_Gaming.",
+  "quantity": 100
+ },
+ {
+  "index": 300,
+  "world": 5,
+  "name": "Perfect_Trade_Deal",
+  "description": "Make_a_trade_with_Blobby_G_worth_a_gold_bar_amount_that_starts_with_777,_like_777K_or_7.77M_for_example._PS;_776_and_778_work_too_lol",
+  "quantity": 1
+ },
+ {
+  "index": 301,
+  "world": 5,
+  "name": "True_Naval_Captain",
+  "description": "Buy_all_20_Boats_in_Sailing._Uh,_yea,_there_is_a_scroll_bar_below_the_boats,_you_can_buy_more_than_5_boats_#",
+  "quantity": 1
+ },
+ {
+  "index": 302,
+  "world": 5,
+  "name": "Legendary_Orb",
+  "description": "On_your_Divine_Knight,_get_an_Orb_Score_of_400_or_more_on_OJ_Bay._This_is_the_number_above_your_Orb!",
+  "quantity": 1
+ },
+ {
+  "index": 303,
+  "world": 5,
+  "name": "Legendary_Flag",
+  "description": "On_your_Siege_Breaker,_get_a_Flag_Score_of_150_or_more_on_Erruption_River._This_is_the_number_above_your_Flag!",
+  "quantity": 1
+ },
+ {
+  "index": 304,
+  "world": 5,
+  "name": "Legendary_Wormhole",
+  "description": "On_your_Elemental_Sorcerer,_get_a_Wormhole_Score_of_83_or_more_on_Niagrilled_Falls._This_is_the_number_above_your_Wormhole!",
+  "quantity": 1
+ },
+ {
+  "index": 305,
+  "world": 5,
+  "name": "Utter_DISRESPECT",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Why_did_you_even_hire_the_poor_fella_in_the_first_place???",
+  "quantity": 1
+ },
+ {
+  "index": 306,
+  "world": 5,
+  "name": "Sneaky_Stealing",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Walk_to_a_uh..._weird_location?_Well_it's_not_that_weird,_but_it's_just_like,_what_ya_doin'_back_there?",
+  "quantity": 1
+ },
+ {
+  "index": 307,
+  "world": 5,
+  "name": "Broken_Controller",
+  "description": "SECRET_ACHIEVEMENT_------------------------_You_got..._zero?_Literally_zero??_Jeez,_Im_sorry_but_I_think_you_need_to_uninstall_^",
+  "quantity": 1
+ },
+ {
+  "index": 308,
+  "world": 5,
+  "name": "Lavathian_Skulls",
+  "description": "Get_a_Lava_Skull_or_higher_on_every_Smolderin'_Plateau_monster_in_the_Deathnote._Yea,_the_100M_Kill_Skull._This_is_gonna_take_a_while.",
+  "quantity": 1
+ },
+ {
+  "index": 309,
+  "world": 5,
+  "name": "Seaworthy_Captain",
+  "description": "Level_up_a_Sailing_Captain_to_Lv_15._Few_captains_in_the_universe_can_rival_their_ability_to_plunder!",
+  "quantity": 1
+ },
+ {
+  "index": 310,
+  "world": 5,
+  "name": "Grand_Captain",
+  "description": "Level_up_a_Sailing_Captain_to_Lv_10._They_shall_sail_the_seas_with_confidence!",
+  "quantity": 1
+ },
+ {
+  "index": 311,
+  "world": 5,
+  "name": "Hug_from_Timmy",
+  "description": "SECRET_ACHIEVEMENT_------------------------_The_lil'_fella_REALLY_likes_icecream!",
+  "quantity": 1
+ },
+ {
+  "index": 350,
+  "world": 6,
+  "name": "Valley_Visitor",
+  "description": "Reach_World_6,_the_Spirited_Valley!_You'll_love_it_here,_all_the_spirits_are_very_friendly!",
+  "quantity": 1
+ },
+ {
+  "index": 351,
+  "world": 6,
+  "name": "Scorin'_the_Ladies",
+  "description": "Have_a_stack_of_exactly_250,000_Ladybugs_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 352,
+  "world": 6,
+  "name": "Effervess_Enthusiess",
+  "description": "Have_a_stack_of_exactly_5,000,000_Effervescent_Logs_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 353,
+  "world": 6,
+  "name": "That's_MY_Crown",
+  "description": "Have_a_stack_of_exactly_100,000,000_Royal_Headpiece_in_your_Storage_Chest.",
+  "quantity": 1
+ },
+ {
+  "index": 354,
+  "world": 6,
+  "name": "Leet_Lanterns",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Oh_yea,_that's_a_good_number._Sure,_it's_no_69420,_but_it's_vintage!",
+  "quantity": 1
+ },
+ {
+  "index": 355,
+  "world": 6,
+  "name": "Lil'_Overgrowth",
+  "description": "Get_an_overgrowth_of_32x_on_a_single_crop.",
+  "quantity": 1
+ },
+ {
+  "index": 356,
+  "world": 6,
+  "name": "Major_Overgrowth",
+  "description": "Get_an_overgrowth_of_1,024x_on_a_single_crop.",
+  "quantity": 1
+ },
+ {
+  "index": 357,
+  "world": 6,
+  "name": "Unreal_Overgrowth",
+  "description": "Get_an_overgrowth_of_8,192x_on_a_single_crop.",
+  "quantity": 1
+ },
+ {
+  "index": 358,
+  "world": 6,
+  "name": "Doctor_Repellant",
+  "description": "Have_10,000_or_more_Apple_crops_in_your_Depot_at_once._You_can_lock_the_first_crop_before_it_grows_to_guarantee_an_apple!",
+  "quantity": 1
+ },
+ {
+  "index": 359,
+  "world": 6,
+  "name": "Cob_Enjoyer",
+  "description": "Have_1,000,000_or_more_Corn_crops_in_your_Depot_at_once._Mmmm,_Corn!",
+  "quantity": 1
+ },
+ {
+  "index": 360,
+  "world": 6,
+  "name": "Science_Undergrad",
+  "description": "Find_30_unique_crops,_as_shown_by_the_Crop_Scientist!",
+  "quantity": 1
+ },
+ {
+  "index": 361,
+  "world": 6,
+  "name": "Science_Graduate",
+  "description": "Find_70_unique_crops,_as_shown_by_the_Crop_Scientist!",
+  "quantity": 1
+ },
+ {
+  "index": 362,
+  "world": 6,
+  "name": "Science_Post_Doc",
+  "description": "Find_110_unique_crops,_as_shown_by_the_Crop_Scientist!",
+  "quantity": 1
+ },
+ {
+  "index": 363,
+  "world": 6,
+  "name": "Crop_Flooding",
+  "description": "SECRET_ACHIEVEMENT_------------------------_That's..._That's_enough..._THAT'S_ENOUGH_WATER!_THAT'S_ENOUGH!",
+  "quantity": 1
+ },
+ {
+  "index": 364,
+  "world": 6,
+  "name": "Legumulucky",
+  "description": "Make_a_crop_trade_with_the_Legumulyte_worth_exactly_777_magic_beans.",
+  "quantity": 1
+ },
+ {
+  "index": 365,
+  "world": 6,
+  "name": "Big_Time_Land_Owner",
+  "description": "Get_27_plots_of_land_in_your_farm.",
+  "quantity": 1
+ },
+ {
+  "index": 366,
+  "world": 6,
+  "name": "Ceramic_Sneaking",
+  "description": "Reach_the_Sneaking_Floor_with_the_Petrified_Ceramist_guest.",
+  "quantity": 1
+ },
+ {
+  "index": 367,
+  "world": 6,
+  "name": "Top_Floor_Sneaking",
+  "description": "Reach_what_seems_like_the_top_Floor_of_Sneaking_with_the_Eldar_Kingulyte_guest.",
+  "quantity": 1
+ },
+ {
+  "index": 368,
+  "world": 6,
+  "name": "Untying_Extraordinaire",
+  "description": "Untie_6_other_Ninja_Twins.",
+  "quantity": 1
+ },
+ {
+  "index": 369,
+  "world": 6,
+  "name": "Lucky_Stealy",
+  "description": "Successfully_find_6_items_in_a_row,_in_a_single_AFK_claim_within_Sneaking.",
+  "quantity": 1
+ },
+ {
+  "index": 370,
+  "world": 6,
+  "name": "Yellow_Belt",
+  "description": "Find_a_论50_Yellow_Belt_Sneaking_Charm._Yes,_exactly_论50.",
+  "quantity": 1
+ },
+ {
+  "index": 371,
+  "world": 6,
+  "name": "Straw_Hat_Stacking",
+  "description": "SECRET_ACHIEVEMENT_------------------------_It's_a_shame_you_can't_wear_them_all_at_once...",
+  "quantity": 1
+ },
+ {
+  "index": 372,
+  "world": 6,
+  "name": "Best_Bloomie",
+  "description": "Get_a_Bloomy_Summoning_Familiar.",
+  "quantity": 1
+ },
+ {
+  "index": 373,
+  "world": 6,
+  "name": "Regalis_My_Beloved",
+  "description": "Get_a_Regalis_Summoning_Familiar.",
+  "quantity": 1
+ },
+ {
+  "index": 374,
+  "world": 6,
+  "name": "This,_is,_Summoning!",
+  "description": "Survive_for_5_minutes_in_The_King's_Gambit._Find_this_feature_in_Cavern_14_of_the_Hole_in_world_5.",
+  "quantity": 1
+ },
+ {
+  "index": 375,
+  "world": 6,
+  "name": "Summoning_CM",
+  "description": "Get_10_Career_Wins_within_Summoning",
+  "quantity": 1
+ },
+ {
+  "index": 376,
+  "world": 6,
+  "name": "Summoning_IM",
+  "description": "Get_25_Career_Wins_within_Summoning",
+  "quantity": 1
+ },
+ {
+  "index": 377,
+  "world": 6,
+  "name": "Summoning_GM",
+  "description": "Get_58_Career_Wins_within_Summoning",
+  "quantity": 1
+ },
+ {
+  "index": 378,
+  "world": 6,
+  "name": "Penta_Defence",
+  "description": "Reach_Wave_50_in_Breezy_Battle_without_placing_more_than_5_Towers_in_total.",
+  "quantity": 1
+ },
+ {
+  "index": 379,
+  "world": 6,
+  "name": "Spectre_Stars",
+  "description": "Complete_all_constellations_in_the_Spirited_Valley._You_can_check_your_progress_within_the_Telescope.",
+  "quantity": 1
+ },
+ {
+  "index": 380,
+  "world": 6,
+  "name": "Beanstacker_Trainee",
+  "description": "Add_5_different_golden_foods_to_The_Beanstalk.",
+  "quantity": 1
+ },
+ {
+  "index": 381,
+  "world": 6,
+  "name": "Big_Big_Hampter",
+  "description": "SECRET_ACHIEVEMENT_------------------------_Hampter_is_worth_it!",
+  "quantity": 1
+ },
+ {
+  "index": 382,
+  "world": 6,
+  "name": "Ghost_Buster",
+  "description": "SECRET_ACHIEVEMENT_------------------------_You_took_out_the_baddest_spirit_of_them_all!",
+  "quantity": 1
+ },
+ {
+  "index": 383,
+  "world": 6,
+  "name": "Beanstacker_Prodigy",
+  "description": "Add_14_different_golden_foods_to_The_Beanstalk.",
+  "quantity": 1
+ },
+ {
+  "index": 384,
+  "world": 6,
+  "name": "W6_is_Donezo",
+  "description": "Get_a_Lava_Skull_or_higher_on_every_Spirited_Valley_monster_in_the_Deathnote.",
+  "quantity": 1
+ }
+]

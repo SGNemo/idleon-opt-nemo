@@ -1,0 +1,134 @@
+[
+  {
+    "id": "endgame.achievements.w1",
+    "system": "Endgame",
+    "world": 1,
+    "title": "W1: {endgame.w1.open} Achievements offen",
+    "reason": "{endgame.w1.done} von {endgame.w1.total} erledigt. Am nächsten dran: {endgame.w1.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w1.done",
+      "max": "endgame.w1.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w1.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "endgame.achievements.w2",
+    "system": "Endgame",
+    "world": 2,
+    "title": "W2: {endgame.w2.open} Achievements offen",
+    "reason": "{endgame.w2.done} von {endgame.w2.total} erledigt. Am nächsten dran: {endgame.w2.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w2.done",
+      "max": "endgame.w2.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w2.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "endgame.achievements.w3",
+    "system": "Endgame",
+    "world": 3,
+    "title": "W3: {endgame.w3.open} Achievements offen",
+    "reason": "{endgame.w3.done} von {endgame.w3.total} erledigt. Am nächsten dran: {endgame.w3.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w3.done",
+      "max": "endgame.w3.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w3.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "endgame.achievements.w4",
+    "system": "Endgame",
+    "world": 4,
+    "title": "W4: {endgame.w4.open} Achievements offen",
+    "reason": "{endgame.w4.done} von {endgame.w4.total} erledigt. Am nächsten dran: {endgame.w4.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w4.done",
+      "max": "endgame.w4.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w4.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "endgame.achievements.w5",
+    "system": "Endgame",
+    "world": 5,
+    "title": "W5: {endgame.w5.open} Achievements offen",
+    "reason": "{endgame.w5.done} von {endgame.w5.total} erledigt. Am nächsten dran: {endgame.w5.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w5.done",
+      "max": "endgame.w5.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w5.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "endgame.achievements.w6",
+    "system": "Endgame",
+    "world": 6,
+    "title": "W6: {endgame.w6.open} Achievements offen",
+    "reason": "{endgame.w6.done} von {endgame.w6.total} erledigt. Am nächsten dran: {endgame.w6.closest}.",
+    "effort": "high",
+    "gain": "Endgamer-Lücke schließen (Gems, Boni)",
+    "status": "verified",
+    "priority": 20,
+    "progress": {
+      "current": "endgame.w6.done",
+      "max": "endgame.w6.total"
+    },
+    "when": [
+      {
+        "fact": "endgame.w6.open",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

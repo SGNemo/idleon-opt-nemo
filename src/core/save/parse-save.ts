@@ -2,7 +2,7 @@ import { Account, AccountSchema } from '../model/account';
 import { toArray, toNumber, toNumberArray } from './json';
 import { normalizeSave, readKey, readServerVars, RawSave } from './normalize';
 
-const TRACKED_KEYS = ['Research', 'Ninja', 'Holes', 'Sushi', 'Spelunk', 'OptLacc', 'playerNames'];
+const TRACKED_KEYS = ['Research', 'Ninja', 'Holes', 'Sushi', 'AchieveReg', 'Spelunk', 'OptLacc', 'playerNames'];
 
 const parseCharacters = (save: RawSave): Account['characters'] => {
   const names = toArray(readKey(save, 'playerNames')) as string[];
@@ -62,6 +62,7 @@ export const parseSave = (input: string | object): Account => {
       highestMastery: toNumber(options[232]),
       ninjas: characters.map((c) => ({ floor: toNumber(sub(ninja, c.index)[0]) })),
     },
+    achievements: { registry: toNumberArray(toArray(readKey(save, 'AchieveReg'))), steam: toNumberArray(toArray(readKey(save, 'SteamAchieve'))) },
     sushi: { uniqueSushiTracking: toNumberArray(sub(sushi, 5)) },
     hole: {
       villagerLevels: toNumberArray(sub(holes, 1)),
