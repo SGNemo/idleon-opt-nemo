@@ -23,10 +23,10 @@
     "system": "Hole",
     "world": 5,
     "title": "{hole.lanternsLeft} Blinding Lanterns heute übrig",
-    "reason": "Tageslimit 12; der Zähler wird beim Daily-Reset zurückgesetzt.",
+    "reason": "Tageslimit 12 (Zähler wird beim Daily-Reset zurückgesetzt). Du besitzt laut Save mehr; nur die 12 pro Tag sind nutzbar.",
     "effort": "low",
-    "gain": "Layer-Fortschritt (Daily)",
-    "status": "verified",
+    "gain": "Hole-Fortschritt (Daily); genauer Effekt pro Lantern ungeprüft",
+    "status": "todo-formula",
     "priority": 40,
     "urgent": false,
     "when": [
