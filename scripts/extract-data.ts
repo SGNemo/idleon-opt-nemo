@@ -1,4 +1,4 @@
-// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements}.json from the Toolbox website-data tables.
+// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements,jelly}.json from the Toolbox website-data tables.
 // The Toolbox tables are used as a data SOURCE only (numbers/names generated from the game); no code is reused.
 //
 // Usage: npm run data:update -- [--game-version 143] [--sha <toolbox commit>]
@@ -165,6 +165,14 @@ const achievements = (achievementsSrc as any[])
     ...(a.steamIndex ? { steamIndex: num(a.steamIndex) } : {}),
   }));
 
+// Jelly Operator obstructions (research[45] names, [46] bonus descriptions, [47] values)
+const jelly = (research[45] as string[]).map((name, index) => ({
+  index,
+  name,
+  bonusDescription: research[46][index] ?? '',
+  bonusValue: num(research[47][index]),
+}));
+
 const meta = {
   gameVersion,
   source: `https://github.com/${REPO}`,
@@ -173,7 +181,7 @@ const meta = {
   note: 'Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version.',
 };
 
-const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements });
+const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements, jelly });
 
 const outDir = join('data', String(gameVersion));
 mkdirSync(outDir, { recursive: true });

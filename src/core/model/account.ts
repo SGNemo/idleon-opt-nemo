@@ -50,6 +50,12 @@ export const AccountSchema = z.object({
     /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered. */
     uniqueSushiTracking: numArray,
   }),
+  jelly: z.object({
+    /** Research[7][9]: Jelly Operator obstructions defeated. */
+    obstructionsDefeated: z.number(),
+    /** Research[7][10]: operations left today. */
+    operationsLeft: z.number(),
+  }),
   hole: z.object({
     villagerLevels: numArray,
     villagerExp: numArray,

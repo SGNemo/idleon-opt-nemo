@@ -120,6 +120,16 @@ export const AchievementsDataSchema = z.array(
   }),
 );
 
+export const JellyDataSchema = z.array(
+  z.object({
+    /** Obstruction number (0-based); defeated when Research[7][9] > index. */
+    index: z.number().int(),
+    name: z.string(),
+    bonusDescription: z.string(),
+    bonusValue: z.number(),
+  }),
+);
+
 export const DataMetaSchema = z.object({
   gameVersion: z.number(),
   source: z.string(),
@@ -135,6 +145,7 @@ export const GameDataSchema = z.object({
   hole: HoleDataSchema,
   sushi: SushiDataSchema,
   achievements: AchievementsDataSchema,
+  jelly: JellyDataSchema,
 });
 
 export type MineheadData = z.infer<typeof MineheadDataSchema>;

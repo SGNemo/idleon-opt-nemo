@@ -64,6 +64,7 @@ export const parseSave = (input: string | object): Account => {
     },
     achievements: { registry: toNumberArray(toArray(readKey(save, 'AchieveReg'))), steam: toNumberArray(toArray(readKey(save, 'SteamAchieve'))) },
     sushi: { uniqueSushiTracking: toNumberArray(sub(sushi, 5)) },
+    jelly: { obstructionsDefeated: toNumber(mineState[9]), operationsLeft: toNumber(mineState[10]) },
     hole: {
       villagerLevels: toNumberArray(sub(holes, 1)),
       villagerExp: toNumberArray(sub(holes, 2)),

@@ -106,3 +106,16 @@ describe('minehead plan facts', () => {
     expect(typeof facts['minehead.nextBuy']).toBe('string');
   });
 });
+
+describe('jelly operator', () => {
+  it('reads obstructions and operations from Research[7] and names the next obstruction', () => {
+    const account = parseSave(miniSave);
+    account.jelly.obstructionsDefeated = 38;
+    account.jelly.operationsLeft = 6;
+    const facts = computeFacts(account, data);
+    expect(facts['jelly.operationsLeft']).toBe(6);
+    expect(String(facts['jelly.nextObstruction'])).toMatch(/^#39 /);
+    const tasks = buildTasks(facts, rules);
+    expect(tasks.some((t) => t.id === 'jelly.operations')).toBe(true);
+  });
+});

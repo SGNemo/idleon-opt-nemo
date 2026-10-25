@@ -1,0 +1,434 @@
+[
+ {
+  "index": 0,
+  "name": "Longbone",
+  "bonusDescription": "}x_multiplier_to_Research_EXP_gain_@_Also,_+2_Jelly_Operator_slots!",
+  "bonusValue": 50
+ },
+ {
+  "index": 1,
+  "name": "Jawbone",
+  "bonusDescription": "All_Rank_EXP_gain_is_}x_higher_for_all_of_your_Royal_Guardian's_Outposts_@_Also,_+2_Jelly_Operator_slots!",
+  "bonusValue": 35
+ },
+ {
+  "index": 2,
+  "name": "Spine",
+  "bonusDescription": "All_forms_of_Clearing_Mobs_in_order_to_build_Outposts_on_your_Royal_Guardian_is_}x_higher",
+  "bonusValue": 25
+ },
+ {
+  "index": 3,
+  "name": "Antler",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_1_get_+{_PTS",
+  "bonusValue": 5
+ },
+ {
+  "index": 4,
+  "name": "Vertebrae",
+  "bonusDescription": "+{_Research_Point",
+  "bonusValue": 1
+ },
+ {
+  "index": 5,
+  "name": "Skull",
+  "bonusDescription": "+{_Yellow_PTS_for_Cooking_Mastery",
+  "bonusValue": 1
+ },
+ {
+  "index": 6,
+  "name": "Mawbone",
+  "bonusDescription": "+{_Talent_PTS_specifically_for_the_Royal_Guardian_Masterclass",
+  "bonusValue": 15
+ },
+ {
+  "index": 7,
+  "name": "Reintler",
+  "bonusDescription": "All_Optical_Monocles_generate_}x_more_Insight_for_your_Research_Observations!",
+  "bonusValue": 40
+ },
+ {
+  "index": 8,
+  "name": "Fatbone",
+  "bonusDescription": "+{%_Crystal_Monster_spawn_chance_@_Also,_}x_Minehead_Currency_gain",
+  "bonusValue": 25
+ },
+ {
+  "index": 9,
+  "name": "Invertedbrae",
+  "bonusDescription": "Boost_your_Damage_dealt_during_Mr._Minehead's_Depth_Charge_by_}x",
+  "bonusValue": 30
+ },
+ {
+  "index": 10,
+  "name": "Spinine",
+  "bonusDescription": "+{%_total_Golden_Food_bonus",
+  "bonusValue": 100
+ },
+ {
+  "index": 11,
+  "name": "Demonicle",
+  "bonusDescription": "The_first_5_upgrades_in_the_Royal_Armory_are_{%_cheaper",
+  "bonusValue": 50
+ },
+ {
+  "index": 12,
+  "name": "Ruby_Ring",
+  "bonusDescription": "+{_maximum_possible_roll_when_rolling_for_new_Observations",
+  "bonusValue": 1
+ },
+ {
+  "index": 13,
+  "name": "Starry_Bling",
+  "bonusDescription": "+{_Purple_PTS_for_Cooking_Mastery",
+  "bonusValue": 1
+ },
+ {
+  "index": 14,
+  "name": "Gold_Bangle",
+  "bonusDescription": "}x_Drop_Rate",
+  "bonusValue": 5
+ },
+ {
+  "index": 15,
+  "name": "Emerald_Broach",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_2_get_+{_PTS",
+  "bonusValue": 4
+ },
+ {
+  "index": 16,
+  "name": "Gildrose",
+  "bonusDescription": "}x_more_Stealth_for_all_your_Ninja_Twins_in_Sneaking",
+  "bonusValue": 200
+ },
+ {
+  "index": 17,
+  "name": "Opal_Pendant",
+  "bonusDescription": "Unlocks_a_new_Atom,_which_boosts_Bloodcell_gain",
+  "bonusValue": 1
+ },
+ {
+  "index": 18,
+  "name": "Crescent_Bling",
+  "bonusDescription": "All_Sushi_upgrades_are_{%_cheaper",
+  "bonusValue": 25
+ },
+ {
+  "index": 19,
+  "name": "Sapphire_Ring",
+  "bonusDescription": "}x_artifact_find_chance",
+  "bonusValue": 20
+ },
+ {
+  "index": 20,
+  "name": "Stud_Pendant",
+  "bonusDescription": "}x_Bluefin_Fish_gains_from_Poppy",
+  "bonusValue": 150
+ },
+ {
+  "index": 21,
+  "name": "Wiltrose",
+  "bonusDescription": "}x_Spelunking_POW",
+  "bonusValue": 30
+ },
+ {
+  "index": 22,
+  "name": "Morning_Glory",
+  "bonusDescription": "All_Spelunk_Shop_upgrades_are_permanently_{%_off",
+  "bonusValue": 10
+ },
+ {
+  "index": 23,
+  "name": "Tiger_Eye",
+  "bonusDescription": "}x_multiplier_to_Research_EXP_gain",
+  "bonusValue": 40
+ },
+ {
+  "index": 24,
+  "name": "Apol",
+  "bonusDescription": "Multiplies_Bloodcell_gain_by_}x",
+  "bonusValue": 30
+ },
+ {
+  "index": 25,
+  "name": "Blubbury",
+  "bonusDescription": "All_your_Kaleidoscopes_multiply_surrounding_Magnifiers_and_Monocles_by_+{%_more_than_before",
+  "bonusValue": 1
+ },
+ {
+  "index": 26,
+  "name": "Pair",
+  "bonusDescription": "The_first_10_upgrades_in_the_Royal_Armory_are_an_extra_{%_cheaper",
+  "bonusValue": 30
+ },
+ {
+  "index": 27,
+  "name": "Mongo",
+  "bonusDescription": "All_Summoning_upgrades_are_{%_cheaper",
+  "bonusValue": 200
+ },
+ {
+  "index": 28,
+  "name": "Strabbury",
+  "bonusDescription": "All_earned_Emperor_Bonuses_are_}x_bigger_than_before!",
+  "bonusValue": 2
+ },
+ {
+  "index": 29,
+  "name": "Cosmico",
+  "bonusDescription": "When_getting_a_new_Tiny_Cog,_there's_a_{%_chance_it'll_be_+1_Tier_higher,_up_to_T10.",
+  "bonusValue": 20
+ },
+ {
+  "index": 30,
+  "name": "Surrage",
+  "bonusDescription": "}x_Class_EXP_gain",
+  "bonusValue": 20
+ },
+ {
+  "index": 31,
+  "name": "Big_Nut",
+  "bonusDescription": "}x_Grand_Discovery_Chance_in_Spelunking",
+  "bonusValue": 25
+ },
+ {
+  "index": 32,
+  "name": "Splega",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_3_get_+{_PTS",
+  "bonusValue": 3
+ },
+ {
+  "index": 33,
+  "name": "Onyx_Apple",
+  "bonusDescription": "+{%_higher_Multi_Meritocracy_bonus",
+  "bonusValue": 1
+ },
+ {
+  "index": 34,
+  "name": "Rassbury",
+  "bonusDescription": "+{_more_weekly_Exotic_Market_purchases_for_Farming",
+  "bonusValue": 1
+ },
+ {
+  "index": 35,
+  "name": "Diamapair",
+  "bonusDescription": "+{_Regal_Mob_spawned_from_your_Royal_Guardian's_'Regal_Intervention'_effect!",
+  "bonusValue": 1
+ },
+ {
+  "index": 36,
+  "name": "Bowling_Pin",
+  "bonusDescription": "All_your_Prisma_Bubbles_give_a_0.01x_higher_bonus_than_before",
+  "bonusValue": 1
+ },
+ {
+  "index": 37,
+  "name": "Broken_Ball",
+  "bonusDescription": "}x_Total_DMG",
+  "bonusValue": 10
+ },
+ {
+  "index": 38,
+  "name": "Sody_Can",
+  "bonusDescription": "}x_Spelunking_POW",
+  "bonusValue": 35
+ },
+ {
+  "index": 39,
+  "name": "Balloon",
+  "bonusDescription": "}x_Tartar_Fish_gains_from_Poppy",
+  "bonusValue": 75
+ },
+ {
+  "index": 40,
+  "name": "Arcade_Ticket",
+  "bonusDescription": "Verminous_rats_in_the_Royal_Castle_have_a_+{%_higher_chance_to_drop_Parchments_of_Enchantment",
+  "bonusValue": 15
+ },
+ {
+  "index": 41,
+  "name": "Proball",
+  "bonusDescription": "Your_Royal_Guardian's_Support_Camps_provide_+{%_higher_bonuses_to_connected_Outposts",
+  "bonusValue": 5
+ },
+ {
+  "index": 42,
+  "name": "Empty_Can",
+  "bonusDescription": "}x_higher_odds_of_getting_new_crowns_for_the_Rat_King_in_Gaming",
+  "bonusValue": 25
+ },
+ {
+  "index": 43,
+  "name": "Ceramic_Ball",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_4_get_+{_PTS",
+  "bonusValue": 3
+ },
+ {
+  "index": 44,
+  "name": "Loveloon",
+  "bonusDescription": "+{_slot_unlock_to_use_right_here_in_Jelly_Operator",
+  "bonusValue": 1
+ },
+ {
+  "index": 45,
+  "name": "Mangled_Ball",
+  "bonusDescription": "+{_Golden_Tile_for_Mr._Minehead's_Depth_Charge_game",
+  "bonusValue": 1
+ },
+ {
+  "index": 46,
+  "name": "Golden_Ticket",
+  "bonusDescription": "}x_multiplier_to_Research_EXP_gain",
+  "bonusValue": 30
+ },
+ {
+  "index": 47,
+  "name": "Angelpin",
+  "bonusDescription": "+{%_Multi_Page_Drop_Chance_while_Spelunking_for_all_characters",
+  "bonusValue": 6
+ },
+ {
+  "index": 48,
+  "name": "Cool_Gem",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_5_get_+{_PTS",
+  "bonusValue": 3
+ },
+ {
+  "index": 49,
+  "name": "Pointed_Prism",
+  "bonusDescription": "+{_Max_LV_for_all_Divinity_Blessings",
+  "bonusValue": 25
+ },
+ {
+  "index": 50,
+  "name": "Fancy_Facet",
+  "bonusDescription": "All_your_Exalted_Stamps_give_a_0.01x_higher_bonus_than_before",
+  "bonusValue": 1
+ },
+ {
+  "index": 51,
+  "name": "Smooth_Stone",
+  "bonusDescription": "+{%_total_Golden_Food_bonus",
+  "bonusValue": 200
+ },
+ {
+  "index": 52,
+  "name": "Funky_Rock",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_6_get_+{_PTS",
+  "bonusValue": 3
+ },
+ {
+  "index": 53,
+  "name": "Quirky_Quartz",
+  "bonusDescription": "All_Symbols_in_Sneaking_have_a_}x_higher_chance_of_being_successful",
+  "bonusValue": 20
+ },
+ {
+  "index": 54,
+  "name": "Janky_Jewel",
+  "bonusDescription": "}x_multiplier_to_Research_EXP_gain",
+  "bonusValue": 60
+ },
+ {
+  "index": 55,
+  "name": "Jaguar_Shard",
+  "bonusDescription": "+{%_Burger",
+  "bonusValue": 5
+ },
+ {
+  "index": 56,
+  "name": "Slick_Sphere",
+  "bonusDescription": "+0.1%_Chance_for_Royal_Guardian_'Royal_Intervention'_effect_to_trigger",
+  "bonusValue": 1
+ },
+ {
+  "index": 57,
+  "name": "Barbed_Ball",
+  "bonusDescription": "+{_Research_Point",
+  "bonusValue": 1
+ },
+ {
+  "index": 58,
+  "name": "Jagged_Mineral",
+  "bonusDescription": "Bubba_now_produces_}x_more_Meat_Slices",
+  "bonusValue": 150
+ },
+ {
+  "index": 59,
+  "name": "Conical_Crystal",
+  "bonusDescription": "+{_Talent_PTS_specifically_for_the_Royal_Guardian_Masterclass",
+  "bonusValue": 20
+ },
+ {
+  "index": 60,
+  "name": "Soldier_Shiv",
+  "bonusDescription": "Ribbons_that_are_Tier_20_or_above_now_give_a_+{%_higher_multiplier_to_meal_bonus!",
+  "bonusValue": 5
+ },
+ {
+  "index": 61,
+  "name": "Knightly_Rapier",
+  "bonusDescription": "All_Royal_Guardian_Outposts_in_World_7_get_+{_PTS",
+  "bonusValue": 3
+ },
+ {
+  "index": 62,
+  "name": "Tribunal_Helmet",
+  "bonusDescription": "}x_Class_EXP_gain",
+  "bonusValue": 25
+ },
+ {
+  "index": 63,
+  "name": "Sharpened_Axe",
+  "bonusDescription": "+{_Max_LV_for_all_Divinity_Blessings",
+  "bonusValue": 25
+ },
+ {
+  "index": 64,
+  "name": "Hotforge_Mace",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 65,
+  "name": "Lord_Shield",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 66,
+  "name": "Molten_Shiv",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 67,
+  "name": "Damascus_Axe",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 68,
+  "name": "Coldsteel_Mace",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 69,
+  "name": "Radiant_Shield",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 70,
+  "name": "Eloquent_Rapier",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ },
+ {
+  "index": 71,
+  "name": "Centurion_Helmet",
+  "bonusDescription": "Nothing_yet...",
+  "bonusValue": 1
+ }
+]

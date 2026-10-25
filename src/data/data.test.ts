@@ -6,7 +6,7 @@ import { GameDataSchema } from './schemas';
 const read = (version: number, name: string) => JSON.parse(readFileSync(`data/${version}/${name}.json`, 'utf8'));
 const versions: number[] = JSON.parse(readFileSync('data/versions.json', 'utf8'));
 const load = (version: number) =>
-  GameDataSchema.parse(Object.fromEntries(['meta', 'minehead', 'sneaking', 'hole', 'sushi', 'achievements'].map((n) => [n, read(version, n)])));
+  GameDataSchema.parse(Object.fromEntries(['meta', 'minehead', 'sneaking', 'hole', 'sushi', 'achievements', 'jelly'].map((n) => [n, read(version, n)])));
 
 describe.each(versions)('game data %s', (version) => {
   const data = load(version);

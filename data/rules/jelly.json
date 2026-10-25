@@ -1,0 +1,43 @@
+[
+  {
+    "id": "jelly.operations",
+    "system": "Jelly",
+    "world": 7,
+    "title": "Jelly Operator: {jelly.operationsLeft} Operationen übrig",
+    "reason": "Tägliche Operationen verfallen beim Daily-Reset. Nächste Obstruction: {jelly.nextObstruction} (Belohnung: {jelly.nextBonus}).",
+    "effort": "medium",
+    "gain": "Obstruction-Fortschritt + Bloodcells",
+    "status": "todo-formula",
+    "priority": 88,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "jelly.operationsLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "jelly.obstruction",
+    "system": "Jelly",
+    "world": 7,
+    "title": "Jelly: nächste Obstruction {jelly.nextObstruction}",
+    "reason": "{jelly.obstructionsDefeated} von {jelly.obstructionsTotal} Obstructions besiegt. Belohnung: {jelly.nextBonus}.",
+    "effort": "high",
+    "gain": "Dauerhafter Bonus",
+    "status": "todo-formula",
+    "priority": 55,
+    "progress": {
+      "current": "jelly.obstructionsDefeated",
+      "max": "jelly.obstructionsTotal"
+    },
+    "when": [
+      {
+        "fact": "jelly.obstructionsDefeated",
+        "op": "<",
+        "value": 1000
+      }
+    ]
+  }
+]

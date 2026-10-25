@@ -87,6 +87,17 @@ export const computeFacts = (account: Account, data: GameData, calibration: Mine
     }
   }
 
+  // ---- Jelly Operator
+  const j = account.jelly;
+  const obstruction = data.jelly[j.obstructionsDefeated];
+  facts['jelly.operationsLeft'] = j.operationsLeft;
+  facts['jelly.obstructionsDefeated'] = j.obstructionsDefeated;
+  facts['jelly.obstructionsTotal'] = data.jelly.length;
+  if (obstruction) {
+    facts['jelly.nextObstruction'] = `#${j.obstructionsDefeated + 1} ${obstruction.name.replace(/_/g, ' ')}`;
+    facts['jelly.nextBonus'] = prettyDescription(obstruction.bonusDescription, obstruction.bonusValue);
+  }
+
   // ---- Sneaking: Jade Emporium
   const emporium = data.sneaking.emporium;
   const owned = (index: number): boolean => account.sneaking.jadeEmporiumUnlocks.includes(NUMBER_TO_LETTER[index] ?? '\u0000');
