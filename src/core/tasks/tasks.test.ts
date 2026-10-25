@@ -70,6 +70,22 @@ describe('formulas (unverified, see docs/FORMULAS.md)', () => {
     const cost = mineheadUpgradeCost({ index: 0, level: 159, costExponent: 1.1, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });
     expect(cost / 1e6).toBeCloseTo(9.54, 1);
   });
+  it('MH-01 matches six displayed upgrade costs of the Minehead screen (within display rounding)', () => {
+    // [index, level, exponent, displayed cost]; mineCost 1.31, sushi discount 50%
+    const shown: [number, number, number, number][] = [
+      [0, 160, 1.1, 10.5e6],
+      [1, 10, 0, 182e6],
+      [2, 11, 0, 14.8e9],
+      [3, 112, 0, 28.3e6],
+      [4, 153, 0, 195e6],
+      [5, 152, 0, 27.8e6],
+    ];
+    for (const [index, level, , displayed] of shown) {
+      const costExponent = data.minehead.upgrades[index].costExponent;
+      const cost = mineheadUpgradeCost({ index, level, costExponent, mineCost: 1.31, costReductionQty: 0, sushiDiscountPct: 50 });
+      expect(Math.abs(cost / displayed - 1)).toBeLessThan(0.005);
+    }
+  });
   it('sushi discount comes from the data: 64 sushi found -> bonus 16 = 50%', () => {
     const facts = computeFacts(parseSave(miniSave), data);
     expect(facts['minehead.sushiDiscountPct']).toBe(50);

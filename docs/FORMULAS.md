@@ -20,7 +20,7 @@ Notation: `QTY(i)` = upgrade effect of Minehead upgrade `i` = `doubler(i) * effe
 
 | ID | Formula | Definition | Status |
 |---|---|---|---|
-| MH-01 | Upgrade cost ("handleUpgCost") | `cost(i, lvl) = (5 + i + max(0,i-2)^1.3) * 2^max(0,i-4) * A_MineCost^max(0,i-9) / (1 + QTY(26)/100) * exponent[i]^lvl * max(0.1, 1 - max(sushi(1), sushi(16))/100)` | verified (scope: no Menagerie doubler on upgrade 26; 1 test value, see Test values) |
+| MH-01 | Upgrade cost ("handleUpgCost") | `cost(i, lvl) = (5 + i + max(0,i-2)^1.3) * 2^max(0,i-4) * A_MineCost^max(0,i-9) / (1 + QTY(26)/100) * exponent[i]^lvl * max(0.1, 1 - max(sushi(1), sushi(16))/100)` | verified (scope: no Menagerie doubler on upgrade 26; 7 test values: indices 0-5, see Test values) |
 | MH-02 | Research level required | `req(i) = 1 + 3i + floor(i/3) + floor(i/11)` | TODO |
 | MH-03 | Opponent max HP ("handleMaxHP_Opp") | `hp(t) = (5 + 2t + t²) * 1.8^t * 1.85^floor(max(0,t-4)/3) * 4^floor(max(0,t-5)/7) * A_MineHP^max(0,t-9)` | TODO |
 | MH-04 | Opponent mine count ("Minehead:Mines_Opp") | `round(clamp(1 - R + floor(t/3)+floor(t/7)+floor(t/13)+min(1,floor(t/15))+floor(t/17), 1, 40))`, `R` = superbit(Less_Charge) + equinox cloud 41 + jade(Depth_Charge_Disposal) + min(3, ceil(spelunk[18][40]/2)); each of the first three capped at 1 | TODO |
@@ -116,3 +116,9 @@ Sushi "rest of game" bonus 16 is 50 % on the owner's save (64 sushi types found,
 `max()` gives 50 % → 19.07M × 0.5 = 9.536M = the in-game 9.54M. Implemented as MH-01 (verified in the scope above) plus
 SU-01 (sushi bonus = `research[37][i]` if `uniqueSushi > i`, TODO until a second sushi value is compared).
 Still open for the rule `minehead.upgrades`: MH-02 (research level lock) and Menagerie doublers.
+
+### Update: MH-01 six more values (Minehead screen, save v143)
+Displayed next-level costs vs. formula (mineCost 1.31, sushi 50 %): Base Damage I Lv160 10.5M, Numbahs Lv10 182M,
+Grid Expansion Lv11 14.8B, Bettah Numbahs Lv112 28.3M, Mega Damage I Lv153 195M, Miney Farmey I Lv152 27.8M.
+All within 0.4 % (display rounding). Displayed effects hint at Menagerie doublers: Base Damage I Lv160 shows +320 (data 1/level → x2),
+Mega Damage I Lv153 +1530 % (data 5/level → x2), Miney Farmey I Lv152 +1520 % (data 10/level → x1). Doublers not parsed yet.
