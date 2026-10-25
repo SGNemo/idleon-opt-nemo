@@ -1,0 +1,46 @@
+<main>
+  <h1>IdleOn Optimizer</h1>
+
+  <section class="input">
+    <input type="file" accept=".json,application/json" (change)="onFile($event)" />
+    <textarea
+      rows="4"
+      placeholder="Paste it.json / save.json here"
+      [value]="raw()"
+      (input)="setRaw($any($event.target).value)"
+    ></textarea>
+    <button type="button" (click)="clear()" [disabled]="!raw()">Clear</button>
+  </section>
+
+  @if (result().error; as err) {
+    <p class="error">{{ err }}</p>
+  }
+
+  @if (result().account; as a) {
+    <section>
+      <h2>Account</h2>
+      <p>
+        Game v{{ a.gameVersion ?? '?' }} · {{ a.characters.length }} characters · Mine cost ×{{ a.serverVars.mineCost }},
+        HP ×{{ a.serverVars.mineHp }}
+      </p>
+    </section>
+
+    <section>
+      <h2>Minehead</h2>
+      <p>
+        Opponents beaten {{ a.minehead.opponentsBeaten }} · tries left {{ a.minehead.dailyTriesLeft }} · currency
+        {{ a.minehead.currency | number: '1.0-2' }}
+      </p>
+    </section>
+
+    <section>
+      <h2>Sneaking</h2>
+      <p>Mastery {{ a.sneaking.selectedMastery }} / {{ a.sneaking.highestMastery }} · {{ a.sneaking.upgradeLevels.length }} upgrades</p>
+    </section>
+
+    <section>
+      <h2>Hole</h2>
+      <p>Villager levels: {{ a.hole.villagerLevels.slice(0, 5).join(', ') }}</p>
+    </section>
+  }
+</main>
