@@ -91,3 +91,13 @@ Hole is the largest unknown: the progress-relevant formulas (what to invest opal
 `[18][40]` legend talent 40. `Ninja` (JSON string): `[100]` door HP, `[102]` jade (`[0]` exp, `[1]` coins, `[9]` emporium unlocks),
 `[103]` upgrade levels, `[104]` beanstalk, `[106]` gemstones unlocked, `[107]` charms. `Holes`: 35 sub-arrays, see index
 comments in `hole.ts`. Account options used: 231/232 mastery, 233+ gemstone counters, 355, 402.
+
+## Implemented in code (all still TODO until a test value matches)
+
+| ID | File | Used by |
+|---|---|---|
+| MH-01 (upper bound only, no discounts) | `src/core/formulas/minehead.ts` | rule `minehead.upgrades` |
+| MH-03 | `src/core/formulas/minehead.ts` | not used yet |
+| HO-01 | `src/core/formulas/hole.ts` | rule `hole.villagers-ready` |
+
+Tasks built on these carry `status: todo-formula` in `data/rules/*.json`.

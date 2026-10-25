@@ -3,3 +3,14 @@ main { max-width: 60rem; margin: 1rem auto; padding: 0 1rem; font-family: system
 textarea { width: 100%; font-family: monospace; }
 .error { color: #b00020; }
 section { margin-top: 1rem; }
+.tasks { list-style: none; padding: 0; display: grid; gap: .5rem; }
+.tasks li { border: 1px solid #ccc; border-radius: 6px; padding: .5rem .75rem; }
+.tasks li.urgent { border-color: #d97706; background: #fffbeb; }
+.head { display: flex; flex-wrap: wrap; gap: .4rem; align-items: baseline; }
+.chip { font-size: .75rem; padding: 0 .4rem; border-radius: 4px; background: #eee; }
+.chip.todo { background: #fde68a; }
+.reason { margin: .25rem 0; }
+.gain, .blocked { font-size: .85rem; color: #555; }
+.warn { color: #92400e; }
+.meta { color: #555; }
+progress { width: 100%; }

@@ -9,7 +9,8 @@
     "test:watch": "vitest",
     "check:fixture": "node scripts/check-fixture.mjs fixtures/save.json",
     "summary": "tsx scripts/summary.ts",
-    "data:update": "tsx scripts/extract-data.ts"
+    "data:update": "tsx scripts/extract-data.ts",
+    "tasks": "tsx scripts/tasks.ts"
   },
   "private": true,
   "dependencies": {

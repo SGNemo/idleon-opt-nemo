@@ -4,7 +4,7 @@
   <section class="input">
     <input type="file" accept=".json,application/json" (change)="onFile($event)" />
     <textarea
-      rows="4"
+      rows="3"
       placeholder="Paste it.json / save.json here"
       [value]="raw()"
       (input)="setRaw($any($event.target).value)"
@@ -15,32 +15,49 @@
   @if (result().error; as err) {
     <p class="error">{{ err }}</p>
   }
+  @if (loadError(); as err) {
+    <p class="error">Data: {{ err }}</p>
+  }
+  @if (loaded()?.warning; as w) {
+    <p class="warn">{{ w }}</p>
+  }
 
   @if (result().account; as a) {
-    <section>
-      <h2>Account</h2>
-      <p>
-        Game v{{ a.gameVersion ?? '?' }} · {{ a.characters.length }} characters · Mine cost ×{{ a.serverVars.mineCost }},
-        HP ×{{ a.serverVars.mineHp }}
-      </p>
-    </section>
+    <p class="meta">
+      Game v{{ a.gameVersion ?? '?' }} · {{ a.characters.length }} characters · Minehead {{ a.minehead.opponentsBeaten }}/32 ·
+      Mastery {{ a.sneaking.selectedMastery }}
+    </p>
 
-    <section>
-      <h2>Minehead</h2>
-      <p>
-        Opponents beaten {{ a.minehead.opponentsBeaten }} · tries left {{ a.minehead.dailyTriesLeft }} · currency
-        {{ a.minehead.currency | number: '1.0-2' }}
-      </p>
-    </section>
-
-    <section>
-      <h2>Sneaking</h2>
-      <p>Mastery {{ a.sneaking.selectedMastery }} / {{ a.sneaking.highestMastery }} · {{ a.sneaking.upgradeLevels.length }} upgrades</p>
-    </section>
-
-    <section>
-      <h2>Hole</h2>
-      <p>Villager levels: {{ a.hole.villagerLevels.slice(0, 5).join(', ') }}</p>
-    </section>
+    @for (group of tasksByWorld(); track group.world) {
+      <section>
+        <h2>World {{ group.world }}</h2>
+        <ul class="tasks">
+          @for (t of group.tasks; track t.id) {
+            <li [class.urgent]="t.urgent">
+              <div class="head">
+                <strong>{{ t.title }}</strong>
+                <span class="chip">{{ t.system }}</span>
+                <span class="chip">effort: {{ t.effort }}</span>
+                <span class="chip" [class.todo]="t.status === 'todo-formula'">{{ t.status }}</span>
+              </div>
+              <div class="reason">{{ t.reason }}</div>
+              <div class="gain">Gain: {{ t.gain }}</div>
+              @if (t.progress; as p) {
+                <progress [max]="p.max" [value]="p.current"></progress>
+              }
+              @if (t.blockedBy) {
+                <div class="blocked">Blocked by: {{ t.blockedBy }}</div>
+              }
+            </li>
+          }
+        </ul>
+      </section>
+    } @empty {
+      @if (loaded()) {
+        <p>Nothing to do right now.</p>
+      } @else {
+        <p>Loading game data…</p>
+      }
+    }
   }
 </main>

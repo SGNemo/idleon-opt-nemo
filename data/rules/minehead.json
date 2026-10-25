@@ -1,0 +1,40 @@
+[
+  {
+    "id": "minehead.tries",
+    "system": "Minehead",
+    "world": 7,
+    "title": "Minehead: {minehead.triesLeft} Versuche übrig",
+    "reason": "Tägliche Versuche verfallen. Jeder Sieg bringt Währung und schaltet den nächsten Gegner frei.",
+    "effort": "low",
+    "gain": "Währung + Gegner-Fortschritt",
+    "status": "verified",
+    "priority": 90,
+    "urgent": true,
+    "when": [{ "fact": "minehead.triesLeft", "op": ">", "value": 0 }]
+  },
+  {
+    "id": "minehead.opponent",
+    "system": "Minehead",
+    "world": 7,
+    "title": "Nächster Gegner: {minehead.nextOpponent}",
+    "reason": "Belohnung: {minehead.nextOpponentBonus}. {minehead.opponentsBeaten} von {minehead.opponentsTotal} besiegt.",
+    "effort": "medium",
+    "gain": "Dauerhafter Bonus",
+    "status": "verified",
+    "priority": 60,
+    "progress": { "current": "minehead.opponentsBeaten", "max": "minehead.opponentsTotal" },
+    "when": [{ "fact": "minehead.opponentsBeaten", "op": "<", "value": 32 }]
+  },
+  {
+    "id": "minehead.upgrades",
+    "system": "Minehead",
+    "world": 7,
+    "title": "{minehead.affordableCount} Minehead-Upgrades bezahlbar",
+    "reason": "Günstigste: {minehead.affordableTop}. Kosten sind eine Obergrenze (ohne Rabatte), Research-Level nicht geprüft.",
+    "effort": "low",
+    "gain": "Mehr Schaden / Währung",
+    "status": "todo-formula",
+    "priority": 70,
+    "when": [{ "fact": "minehead.affordableCount", "op": ">", "value": 0 }]
+  }
+]

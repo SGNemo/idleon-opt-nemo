@@ -116,3 +116,32 @@ export type MineheadData = z.infer<typeof MineheadDataSchema>;
 export type SneakingData = z.infer<typeof SneakingDataSchema>;
 export type HoleData = z.infer<typeof HoleDataSchema>;
 export type GameData = z.infer<typeof GameDataSchema>;
+
+const ConditionSchema = z.object({
+  fact: z.string(),
+  op: z.enum(['>', '>=', '<', '<=', '==', '!=']),
+  value: z.union([z.number(), z.string(), z.boolean()]),
+});
+
+/** A data-driven to-do rule. `{fact.path}` placeholders in title/reason are filled from computed facts. */
+export const RuleSchema = z.object({
+  id: z.string(),
+  system: z.string(),
+  /** World 1-7 the task is grouped under. */
+  world: z.number().int().min(1).max(7),
+  title: z.string(),
+  reason: z.string(),
+  effort: z.enum(['low', 'medium', 'high']),
+  gain: z.string(),
+  /** verified = built only on save facts / verified formulas; todo-formula = relies on an unverified formula. */
+  status: z.enum(['verified', 'todo-formula']),
+  /** 0-100, ranks tasks inside a world. */
+  priority: z.number(),
+  urgent: z.boolean().default(false),
+  progress: z.object({ current: z.string(), max: z.string() }).optional(),
+  blockedBy: z.string().optional(),
+  when: z.array(ConditionSchema),
+});
+
+export const RuleFileSchema = z.array(RuleSchema);
+export type Rule = z.infer<typeof RuleSchema>;

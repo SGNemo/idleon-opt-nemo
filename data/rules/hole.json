@@ -1,0 +1,15 @@
+[
+  {
+    "id": "hole.villagers-ready",
+    "system": "Hole",
+    "world": 5,
+    "title": "{hole.villagersReadyCount} Villager bereit zum Level-Up",
+    "reason": "Genug EXP für das nächste Level: {hole.villagersReady}.",
+    "effort": "low",
+    "gain": "Villager-Level (schaltet Boni frei)",
+    "status": "todo-formula",
+    "priority": 80,
+    "urgent": true,
+    "when": [{ "fact": "hole.villagersReadyCount", "op": ">", "value": 0 }]
+  }
+]
