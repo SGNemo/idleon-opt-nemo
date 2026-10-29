@@ -93,5 +93,24 @@
         "value": 0
       }
     ]
+  },
+  {
+    "id": "hole.study-eta",
+    "system": "Hole",
+    "world": 5,
+    "title": "Aktive {hole.activeStudy}: ca. {hole.activeStudyHours} h bis Level-Up",
+    "reason": "Rate {hole.studyPerHour}/h (ohne Stempel und Legend-Talent 29, daher eher zu langsam geschätzt).",
+    "effort": "low",
+    "gain": "Planung: wann die Study levelbar ist",
+    "status": "todo-formula",
+    "priority": 35,
+    "urgent": false,
+    "when": [
+      {
+        "fact": "hole.activeStudyHours",
+        "op": ">",
+        "value": 0
+      }
+    ]
   }
 ]

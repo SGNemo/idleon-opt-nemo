@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { lampWishCost, newJarCost, studyReq, totalLayersDestroyed, villagerExpReq } from './hole';
+import { fountainBonus, lampWishCost, newJarCost, studyProgressPerHour, studyReq, totalLayersDestroyed, villagerExpReq } from './hole';
 import { rankHoleInvestments } from './hole-optimizer';
 import { parseSave } from '../save/parse-save';
 
@@ -39,4 +39,10 @@ describe('hole parse + optimizer', () => {
     expect(r.map((o) => o.tier)).toEqual([...r.map((o) => o.tier)].sort());
     expect(r.some((o) => o.kind === 'lamp-wish')).toBe(true);
   });
+});
+
+describe('HO-06 study rate', () => {
+  it('base rate is 100/h without any bonus', () => expect(studyProgressPerHour({ fountain: 0, schematicSum: 0, studiesVillagerLevel: 0, jar16: 0, stamp: 0, cosmo: 0 })).toBe(100));
+  it('villager level 20 with base 5% per level doubles it', () => expect(studyProgressPerHour({ fountain: 0, schematicSum: 0, studiesVillagerLevel: 20, jar16: 0, stamp: 0, cosmo: 0 })).toBe(200));
+  it('fountain bonus uses marble tier', () => expect(fountainBonus([[], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4]], [[], [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2]], 3, 1, 14)).toBe(Math.round(4 * 3 * 2.5)));
 });

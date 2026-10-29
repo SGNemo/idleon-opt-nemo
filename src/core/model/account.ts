@@ -99,6 +99,13 @@ export const AccountSchema = z.object({
     layersDestroyed: numArray,
     /** Holes[24][0..39]: jar collectible levels. */
     jarCollectibleLevels: numArray,
+    /** Holes[13]: engineer schematic unlocked flags (1 = built). */
+    schematics: numArray,
+    /** Holes[5]: village cosmo (majik) levels. */
+    villageMajiks: numArray,
+    /** Holes[31]/[32]: fountain upgrade levels / marbleize tiers per water type. */
+    fountainLevels: z.array(numArray),
+    fountainMarble: z.array(numArray),
     /** Holes[11][37]: jar types unlocked (new jar cost exponent). */
     jarTypesUnlocked: z.number(),
   }),

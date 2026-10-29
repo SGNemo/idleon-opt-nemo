@@ -75,7 +75,7 @@ plus item-value mapping, i.e. an optimizer on top of SN-01..SN-08, not a parser 
 | HO-03 | Engineer build cost | by tier: `50*0.85^wish*1.28^(i+floor(i/2.7))`, then two later tiers with extra `1.23^…`/`1.34`,`1.26`; fixed `x3` if `x4=1` | TODO |
 | HO-04 | Unlocked schematics | `min(105, round(1 + 3*engLvl + floor(engLvl/5)))` | TODO |
 | HO-05 | Study requirement | `4000 * 1.25^studyLvl[t] * 1.5^floor(t/5)` | TODO |
-| HO-06 | Study progress / hour | `100 * (1+fountain/100) * (1 + (5 + schem85+87+88+99) * studiesVillagerLvl/100) * (1 + (jar16 + stamp + cosmo)/100)` | TODO |
+| HO-06 | Study progress / hour | `100 * (1+fountain/100) * (1 + (5 + schem85+87+88+99) * studiesVillagerLvl/100) * (1 + (jar16 + stamp + cosmo)/100)`; fountain = water 1 upgrade 14 (`round(lvl*bonus*marble)`), schematics 85/87/88/99 are plain (value 2/3/5/5 once built), cosmo = village majik 4 | TODO (implemented without stamp and legend talent 29, so the ETA is an upper bound) |
 | HO-07 | Measurement cost | `(1/(1+fountain/100)) * (250 + 50*lvl) * 1.6^(i - 6*floor(i/10)) * 1.1^lvl` | TODO |
 | HO-08 | Measurement multiplier | `f<5: 1 + 18f/100`, else `1 + (18f + 8(f-5))/100`; `f` per measure type: log10/ratio formulas (gloomie kills, crops/14, account lvl/500, tome score/2500, …) | TODO |
 | HO-09 | Cosmo bonus | `floor(x0 * level)`; special `floor(max(1, 3^level))` for [2][1] | TODO |
@@ -160,3 +160,7 @@ Daily/weekly flags (OptLacc 113, 137, 182, 189, 190, 105) come from the IdleonTo
 Holes save keys now parsed: `[7]` opals per cavern, `[21]` wish levels, `[23]` gem shop, `[24]` jar collectibles, `[26]/[27]` study levels/progress,
 `[11][25]` wishes, `[11][37]` jar types, `[11][61]` active study. Not done (needs `getSchematicBonus` switch, ~100 cases): villager EXP/hr (HO-02),
 study progress/hr (HO-06), jar production/rupie value/opal chance. The "invest next" list is therefore an ordering heuristic (ready levels, affordable wishes, opal advice), status todo-formula.
+
+Schematic bonus (`getSchematicBonus` in the-well.ts): 0 if not built, else the per-schematic constant; only schematics 14, 45-49, 52-59, 82-84 scale with other hole stats.
+Only the plain ones are modelled (`plainSchematicBonus`). HO-02 still needs compass/legend talent/charm/statue/jars/tome/arcade/grimoire/tesseract/monuments/measurements/bell
+inputs that the save parser does not read yet, so Villager EXP/hr and Jar production stay open.

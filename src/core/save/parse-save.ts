@@ -95,6 +95,10 @@ export const parseSave = (input: string | object): Account => {
       wishesAvailable: toNumber(sub(holes, 11)[25]),
       layersDestroyed: [1, 3, 5, 7].map((i) => toNumber(sub(holes, 11)[i])),
       jarCollectibleLevels: toNumberArray(sub(holes, 24)).slice(0, 40),
+      schematics: toNumberArray(sub(holes, 13)),
+      villageMajiks: toNumberArray(sub(holes, 5)),
+      fountainLevels: sub(holes, 31).map((w) => toNumberArray(w)),
+      fountainMarble: sub(holes, 32).map((w) => toNumberArray(w)),
       jarTypesUnlocked: Math.round(toNumber(sub(holes, 11)[37])),
     },
   };

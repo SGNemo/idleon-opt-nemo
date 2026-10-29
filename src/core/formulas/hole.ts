@@ -47,3 +47,25 @@ export const BLINDING_LANTERNS_PER_DAY = 12;
 
 /** HO-13: layers destroyed in total = Holes[11][1]+[3]+[5]+[7]. */
 export const totalLayersDestroyed = (perCavern: number[]): number => perCavern.reduce((a, b) => a + Math.max(0, Math.round(b)), 0);
+
+/** Plain engineer schematic bonus: the per-schematic value `i` once built, else 0 (scaling schematics 14, 45-59, 72-84, ... are not modelled). */
+export const plainSchematicBonus = (schematics: number[], t: number, i: number): number => ((schematics[t] ?? 0) === 0 ? 0 : i);
+
+/** Fountain upgrade bonus total (water type `t`, upgrade `i`): `round(level * bonusPerLevel * marble)`, marble = 1 or `1.5 + 0.5 * tier`. */
+export const fountainBonus = (levels: number[][], marble: number[][], bonusPerLevel: number, t: number, i: number): number => {
+  const tier = marble[t]?.[i] ?? 0;
+  return Math.round((levels[t]?.[i] ?? 0) * bonusPerLevel * (tier === 0 ? 1 : 1.5 + 0.5 * tier));
+};
+
+export interface StudyRateInput {
+  fountain: number;
+  schematicSum: number;
+  studiesVillagerLevel: number;
+  jar16: number;
+  stamp: number;
+  cosmo: number;
+}
+
+/** HO-06 (TODO): study progress per hour. `stamp` ("Study_rate_for_Bolaia") is not in the save parser yet and defaults to 0 at the call site. */
+export const studyProgressPerHour = (x: StudyRateInput): number =>
+  100 * (1 + x.fountain / 100) * (1 + ((5 + x.schematicSum) * x.studiesVillagerLevel) / 100) * (1 + (x.jar16 + x.stamp + x.cosmo) / 100);
