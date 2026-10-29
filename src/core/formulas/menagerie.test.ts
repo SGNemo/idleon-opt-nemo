@@ -16,3 +16,20 @@ describe('menagerie formulas vs. game screens (save v143)', () => {
     ui.forEach((req, i) => expect(missionRequirement(d.missions[i].baseReq, d.missions[i].increment, claims[i])).toBe(req));
   });
 });
+
+import { rankMenagerieBoosts } from './menagerie-optimizer';
+
+describe('menagerie boost ranking (model)', () => {
+  const input = { data: d, boostLevels: [21, 19, 4, 31, 30, 3, 5, 7, 2, 9, 2, 7, 1, 9, 9], rank: 25, lumi: 12.16e6, lumiPerHour: 440_451 };
+  it('puts the Minehead doubler first when it saves boss time', () => {
+    const r = rankMenagerieBoosts({ ...input, mineheadDoublerSavedHours: 61 });
+    expect(r[0].index).toBe(8);
+  });
+  it('prices the rank boost as Lumi/hr payback and orders the rest by cost', () => {
+    const r = rankMenagerieBoosts(input);
+    expect(r[0].index).toBe(1);
+    expect(r[0].paybackHours).toBeGreaterThan(0);
+    const rest = r.slice(1).map((x) => x.cost);
+    expect([...rest].sort((a, b) => a - b)).toEqual(rest);
+  });
+});

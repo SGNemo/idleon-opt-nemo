@@ -2,6 +2,7 @@ import { Account } from '../model/account';
 import { GameData } from '../../data/schemas';
 import { mineheadUpgradeCost, mineheadOpponentHp } from '../formulas/minehead';
 import { missionRequirement, boostCostAtLevel, unlockCost, visibleBoosts } from '../formulas/menagerie';
+import { rankMenagerieBoosts } from '../formulas/menagerie-optimizer';
 import { planTimeToTarget } from '../formulas/minehead-optimizer';
 import { DEFAULT_MINEHEAD_CALIBRATION, MineheadCalibration } from '../formulas/minehead-calibration';
 import { sushiRestOfGameBonus, uniqueSushiCount } from '../formulas/sushi';
@@ -9,6 +10,7 @@ import { jadeEmporiumCost } from '../formulas/sneaking';
 import { NUMBER_TO_LETTER } from '../save/letters';
 import { VILLAGER_NAMES, villagerExpReq } from '../formulas/hole';
 import { Facts } from './types';
+import { FACT_PROVIDERS } from './providers';
 
 const prettyDescription = (template: string, value: number): string =>
   template
@@ -141,6 +143,15 @@ export const computeFacts = (account: Account, data: GameData, calibration: Mine
     .sort((a, b) => a.cost - b.cost);
   facts['menagerie.affordableBoosts'] = boostRows.slice(0, 4).map((r) => `${cleanText(r.b.description)} Lv ${r.level} (${fmtCost(r.cost)})`);
   facts['menagerie.affordableBoostCount'] = boostRows.length;
+  const ranking = rankMenagerieBoosts({
+    data: mdata,
+    boostLevels: g.boostLevels,
+    rank: g.rank,
+    lumi: g.lumi,
+    lumiPerHour: calibration.lumiPerHour,
+    mineheadDoublerSavedHours: Number(facts['menagerie.doublerOnIncomeSavedHours'] ?? 0),
+  });
+  facts['menagerie.boostRanking'] = ranking.slice(0, 4).map((r) => `${r.name} Lv ${r.level} (${fmtCost(r.cost)} Lumi, ${r.hoursToAfford <= 0 ? 'bezahlbar' : `in ${Math.round(r.hoursToAfford)} h`}; ${r.note})`);
   const dBoostLevel = g.boostLevels[8] ?? 0;
   const dCost = boostCostAtLevel(mdata, 8, dBoostLevel);
   facts['menagerie.mineheadDoublersOwned'] = mineheadDoublersOwned;
@@ -210,6 +221,8 @@ export const computeFacts = (account: Account, data: GameData, calibration: Mine
 
   // ---- Hole: daily Blinding Lanterns (cap 12 per day)
   facts['hole.lanternsLeft'] = Math.max(0, 12 - Math.min(12, account.hole.blindingLanternsUsed));
+
+  for (const provider of FACT_PROVIDERS) Object.assign(facts, provider(account, data, facts));
 
   return facts;
 };

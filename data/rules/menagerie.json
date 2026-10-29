@@ -118,5 +118,23 @@
         "value": 0
       }
     ]
+  },
+  {
+    "id": "menagerie.boost-ranking",
+    "system": "Menagerie",
+    "world": 7,
+    "title": "Menagerie: Boost-Rangliste (Lumi ausgeben)",
+    "reason": "{menagerie.boostRanking}. Zuerst, was Minehead beschleunigt oder sich in Lumi/hr bezahlt macht, dann nach Kosten.",
+    "effort": "low",
+    "gain": "Beste Lumi-Verwendung",
+    "status": "todo-formula",
+    "priority": 52,
+    "when": [
+      {
+        "fact": "menagerie.rank",
+        "op": ">",
+        "value": 0
+      }
+    ]
   }
 ]

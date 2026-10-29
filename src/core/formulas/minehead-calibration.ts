@@ -11,6 +11,8 @@ export interface MineheadCalibration {
   incomeOffset: number;
   /** currency per hour shown in game for the levels in the loaded save */
   incomePerHour: number;
+  /** Lumi per hour shown in the Menagerie for the loaded save */
+  lumiPerHour: number;
 }
 
 export const DEFAULT_MINEHEAD_CALIBRATION: MineheadCalibration = {
@@ -18,4 +20,5 @@ export const DEFAULT_MINEHEAD_CALIBRATION: MineheadCalibration = {
   baseOffset: 655,
   incomeOffset: 0,
   incomePerHour: 62_194_730,
+  lumiPerHour: 440_451,
 };
