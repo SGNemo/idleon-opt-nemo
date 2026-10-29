@@ -39,7 +39,8 @@
         "op": "<",
         "value": 5
       }
-    ]
+    ],
+    "daily": true
   },
   {
     "id": "daily.random-event",
@@ -76,7 +77,8 @@
         "op": "==",
         "value": 0
       }
-    ]
+    ],
+    "daily": true
   },
   {
     "id": "daily.killroy",
