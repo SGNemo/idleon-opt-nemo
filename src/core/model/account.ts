@@ -20,6 +20,21 @@ export const AccountSchema = z.object({
     }),
   ),
   accountOptions: z.array(z.unknown()),
+  /** Raw inputs of the daily/weekly rules that are not plain OptLacc flags (see providers/dailies.ts). */
+  dailies: z.object({
+    /** A Glimmerwick Candle (Quest114) sits in a character inventory or the storage chest. */
+    ownsGlimmerwickCandle: z.boolean(),
+    /** Arcane (Tesseract) upgrade levels. */
+    arcaneLevels: numArray,
+    /** Compass[0]: Compass upgrade levels. */
+    compassLevels: numArray,
+    /** Rift[0]: current rift number (unlocks Rift bonuses by index). */
+    riftCurrent: z.number(),
+    /** Guild[1..]: task rows as [taskIndex, ?, progress]; empty when not in a guild. */
+    guildTasks: z.array(z.object({ index: z.number(), progress: z.number() })),
+    /** PostOfficeInfo1 / PostOfficeInfo0 merged per shipment box. */
+    postOfficeShipments: z.array(z.object({ totalShipments: z.number(), streak: z.number(), shield: z.number(), completedAnOrder: z.boolean() })),
+  }),
   minehead: z.object({
     opponentsBeaten: z.number(),
     currency: z.number(),

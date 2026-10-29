@@ -1,0 +1,38 @@
+[
+  {
+    "id": "daily.alchemy-particles",
+    "system": "Alchemy",
+    "world": 2,
+    "title": "Partikel-Upgrades heute übrig: {dailies.particleUpgradesLeft}",
+    "reason": "Boron erlaubt Bubbles ab 100M mit Partikeln statt Ressourcen zu bezahlen (OptLacc 135 = verbleibende Nutzungen, verfallen beim Daily-Reset). Quelle: IdleonToolbox, account.js alchemy.alternateParticles.",
+    "effort": "low",
+    "gain": "Bubble-Level",
+    "status": "todo-formula",
+    "priority": 35,
+    "when": [
+      {
+        "fact": "dailies.particleUpgradesLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "daily.post-office",
+    "system": "Post Office",
+    "world": 2,
+    "title": "Post Office: heute keine Bestellung abgeschlossen ({dailies.postOfficeOpen})",
+    "reason": "Für diese Lieferkisten wurde heute noch keine Bestellung erledigt (PostOfficeInfo0). Nur Kisten, aus denen schon einmal geliefert wurde. Quelle: IdleonToolbox, account.js postOffice.dailyShipments.",
+    "effort": "low",
+    "gain": "Streak / Bestellpunkte",
+    "status": "todo-formula",
+    "priority": 35,
+    "when": [
+      {
+        "fact": "dailies.postOfficeOpenCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

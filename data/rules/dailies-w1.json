@@ -1,0 +1,20 @@
+[
+  {
+    "id": "daily.gilded-stamps",
+    "system": "Stamps",
+    "world": 1,
+    "title": "{dailies.gildedStamps} Gilded Stamps verfügbar",
+    "reason": "Gilded-Stamp-Zähler (OptLacc 154) ist über 0 und der Rift-Bonus Stamp Mastery ist freigeschaltet. Quelle: IdleonToolbox, account.js stamps.gildedStamps.",
+    "effort": "low",
+    "gain": "Stamp-Level",
+    "status": "todo-formula",
+    "priority": 40,
+    "when": [
+      {
+        "fact": "dailies.gildedStamps",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

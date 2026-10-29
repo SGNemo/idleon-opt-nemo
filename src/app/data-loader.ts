@@ -13,7 +13,7 @@ export interface LoadedData {
   warning: string | null;
 }
 
-const RULE_FILES = ['minehead', 'hole', 'sneaking', 'endgame', 'jelly', 'menagerie', 'dailies'];
+const RULE_FILES = ['minehead', 'hole', 'sneaking', 'endgame', 'jelly', 'menagerie', 'dailies', 'dailies-general', 'dailies-w1', 'dailies-w2'];
 
 export const loadAppData = async (gameVersion: number | null): Promise<LoadedData> => {
   const versions = (await getJson('data/versions.json')) as number[];

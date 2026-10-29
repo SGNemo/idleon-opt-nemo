@@ -151,3 +151,26 @@ Verified against in-game counters: Cavern Layer Removals 125 = Holes[11][1]+[3]+
 Owner note: the boss is killed in one hit on the last life; "Final Round Fury" and "Big Hit Combos" (doubled by Menagerie doublers) are large multipliers for that. The optimizer models only
 the Base/Mega damage groups (the other factors cancel in ratios), so do not move doublers off those two upgrades.
 Daily/weekly flags (OptLacc 113, 137, 182, 189, 190, 105) come from the IdleonToolbox dashboard and are status todo-formula until compared with the game.
+
+## Dailies / weeklies (DA-*) — IdleonToolbox `utility/dashboard/account.js` @ `01c6e0a` (commit in `data/143/meta.json`)
+
+All rules live in `data/rules/dailies-{general,w1,w2}.json`, facts in `src/core/tasks/providers/dailies.ts`, raw inputs parsed in `src/core/save/parse-save.ts` (`Account.dailies`). All `todo-formula`: logic read from one source, no in-game test value yet (tests use synthetic saves only: `src/core/tasks/dailies.test.ts`).
+
+| ID | Rule | Condition (as implemented) | Source (account.js line) | Unlock gate / false-alarm guard |
+|---|---|---|---|---|
+| DA-01 | `daily.glimmerwick` | `OptLacc[491] != 1 && OptLacc[492] != 1 && candle owned` | 310-318 | candle = item `Quest114` (`items.json` displayName Glimmerwick_Candle) with quantity > 0 in `InventoryOrder_i`/`ItemQTY_i` or `ChestOrder`/`ChestQuantity` |
+| DA-02 | `daily.arcanist-weapons` / `-rings` | `100 - OptLacc[396]` (weapons) / `100 - OptLacc[397]` (rings) > 0 | 326-342, cap line 45 | `Arcane[5]` / `Arcane[23]` level > 0 (Toolbox: tesseract bonus > 0; bonus = level·x5, x5 = 5 for both, `parsers/class-specific/tesseract.ts` calcTesseractBonus) |
+| DA-03 | `daily.top-of-the-mornin` | `OptLacc[365] > 0` | 343-350 | `Compass[0][9]` level > 0 (Toolbox: bonus > 0.1; bonus = level·x5, x5 = 10, `compass.ts` getLocalCompassBonus) |
+| DA-04 | `event.tournament-register` | `OptLacc[511] <= OptLacc[496]`, `OptLacc[496] >= 1` | 288-297 | Toolbox also requires an owned companion (server data, not in save) and uses `max(496, global.T)`; we use `496 >= 1` as "event seen". A stale 496 can only hide the alert |
+| DA-05 | `event.raid-register` | `OptLacc[611] <= OptLacc[613]`, `OptLacc[613] >= 1` | 298-309 | Toolbox uses global doc `RD` (fresher) and skips when `RC` (registration closed) is set; neither is in the save, so 613 can be stale and "closed" is unknown |
+| DA-06 | `daily.gilded-stamps` | `OptLacc[154] > 0` | 397-402 | `Rift[0] >= 25` (riftInfo[25] = Stamp_Mastery, unlocked when index <= current rift; `parsers/world-4/rift.ts`) |
+| DA-07 | `daily.alchemy-particles` | `OptLacc[135] > 0` | 555-558 | Toolbox returns early unless World 1 is finished (needs NPC dialog data); `135 > 0` itself implies the Boron particle perk is active |
+| DA-08 | `daily.post-office` | boxes with no completed order today: `PostOfficeInfo0[i][2]` falsy | 599-608, parser `parsers/world-3/postoffice.ts` | Toolbox lists all 6 boxes; we only list boxes with `totalShipments > 0 or streak > 0` (our guard against never-used boxes) |
+| DA-09 | `daily.guild-daily`, `weekly.guild-weekly` | rows `Guild[1..]`: first 5 daily, rest weekly; open = `progress < requirement[taskIndex]` | 144-165, parser `parsers/guild.ts` parseGuildTasks | only when `OptLacc[37]` is truthy (guild check); requirement table = `guildTasks[].requirement` (26 values, copied as game data into the provider) |
+
+Not implemented yet (reason):
+- **Daily guaranteed crystals** (account.js 319-325): `ceil((1+meritocracy15/100)·(1+legend37/100)·(sigil SHINY_BEACON + task[2][3][0] + 4·achievement285))` needs Vote Ballot (meritocracy), Legend Talents, Sigils, Tasks and Achievement parsing; none are in our model.
+- **Owl restarts / Kangaroo resets / Greatest Catch** (account.js 417-433, 686-710): cost formulas depend on Menagerie cheapener, Mega Feathers, Fountain, Vault, Gambit, Poppy upgrade tables.
+- **Library books ready** (918-926): `libraryTimes.bookCount` from a timer parser we do not have.
+- **Arcade ball capacity / rotation** (613-637), **Alchemy Bargain Tag / gems** (459-472, liquid shop table + `multiplierArray`), **Stamps affordable / exalted** (stamp costs, Compass), **Sailing chests/captains** (1169-1260), **Dungeon Happy Hour** (`parsers/dungeons.ts` calcHappyHours, server-time based) and **Sailing trades** timers: need extra tables or the current clock, not plain save flags.
+- Opening a Toolbox "alert" setting ("Worlds to check", thresholds) is not mirrored; every rule is on.

@@ -18,6 +18,18 @@ const parseCharacters = (save: RawSave): Account['characters'] => {
   }));
 };
 
+/** Does any character inventory or the storage chest hold `rawName`? Order arrays and quantity arrays are parallel. */
+const ownsItem = (save: RawSave, rawName: string, characterCount: number): boolean => {
+  const holds = (names: unknown[], quantities: unknown[]): boolean => names.some((n, i) => n === rawName && toNumber(quantities[i]) > 0);
+  for (let i = 0; i < characterCount; i++) {
+    if (holds(toArray(readKey(save, `InventoryOrder_${i}`)), toArray(readKey(save, `ItemQTY_${i}`)))) return true;
+  }
+  return holds(toArray(readKey(save, 'ChestOrder')), toArray(readKey(save, 'ChestQuantity')));
+};
+
+/** Rows of the nested arrays the game exports either as arrays or as numeric-key objects. */
+const rows = (value: unknown): unknown[][] => toArray(value).map((r) => toArray(r));
+
 const sub = (arr: unknown, i: number): unknown[] => toArray(Array.isArray(arr) ? arr[i] : undefined);
 
 /** Layout of the Ninja array: see docs/FORMULAS.md (save-key map). */
@@ -36,6 +48,7 @@ export const parseSave = (input: string | object): Account => {
   const options = toArray(readKey(save, 'OptLacc'));
   const menagerie = readKey(save, 'Menagerie');
   const spelunk = readKey(save, 'Spelunk');
+  const postOfficeOrders = rows(readKey(save, 'PostOfficeInfo0'));
 
   const account: Account = {
     gameVersion: serverVars['GameVERSION'] === undefined ? null : toNumber(serverVars['GameVERSION']),
@@ -49,6 +62,19 @@ export const parseSave = (input: string | object): Account => {
     },
     characters,
     accountOptions: options,
+    dailies: {
+      ownsGlimmerwickCandle: ownsItem(save, 'Quest114', characters.length),
+      arcaneLevels: toNumberArray(toArray(readKey(save, 'Arcane'))),
+      compassLevels: toNumberArray(sub(readKey(save, 'Compass'), 0)),
+      riftCurrent: toNumber(toArray(readKey(save, 'Rift'))[0]),
+      guildTasks: rows(readKey(save, 'Guild')).slice(1).map((r) => ({ index: toNumber(r[0], -1), progress: toNumber(r[2]) })),
+      postOfficeShipments: rows(readKey(save, 'PostOfficeInfo1')).map((r, i) => ({
+        totalShipments: toNumber(r[0]),
+        streak: toNumber(r[1]),
+        shield: toNumber(r[2]),
+        completedAnOrder: toNumber(postOfficeOrders[i]?.[2]) > 0,
+      })),
+    },
     minehead: {
       opponentsBeaten: toNumber(mineState[4]),
       currency: toNumber(mineState[5]),

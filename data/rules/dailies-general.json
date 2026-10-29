@@ -1,0 +1,148 @@
+[
+  {
+    "id": "daily.glimmerwick",
+    "system": "Glimmerwick-Kerze",
+    "world": 1,
+    "title": "Glimmerwick-Kerze heute noch nicht benutzt",
+    "reason": "Du besitzt eine Kerze, der Wunsch ist noch offen (OptLacc 491) und heute wurde noch nicht gewünscht (OptLacc 492). Quelle: IdleonToolbox, account.js etc.glimmerwickCandle.",
+    "effort": "low",
+    "gain": "Tome-Wunsch",
+    "status": "todo-formula",
+    "priority": 40,
+    "when": [
+      {
+        "fact": "dailies.glimmerwick",
+        "op": "==",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "daily.guild-daily",
+    "system": "Gilde",
+    "world": 1,
+    "title": "Gilden-Dailies offen: {dailies.guildDailyOpen}",
+    "reason": "Offene tägliche Gilden-Aufgaben (Fortschritt unter Ziel). Nur wenn der Gilden-Check aktiv ist (OptLacc 37). Quelle: IdleonToolbox, account.js guild.",
+    "effort": "medium",
+    "gain": "Gilden-Punkte",
+    "status": "todo-formula",
+    "priority": 35,
+    "when": [
+      {
+        "fact": "dailies.guildDailyOpen",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "weekly.guild-weekly",
+    "system": "Gilde",
+    "world": 1,
+    "title": "Gilden-Wochenaufgaben offen: {dailies.guildWeeklyOpen}",
+    "reason": "Offene wöchentliche Gilden-Aufgaben (Fortschritt unter Ziel). Quelle: IdleonToolbox, account.js guild.",
+    "effort": "medium",
+    "gain": "Gilden-Punkte",
+    "status": "todo-formula",
+    "priority": 30,
+    "when": [
+      {
+        "fact": "dailies.guildWeeklyOpen",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "daily.arcanist-weapons",
+    "system": "Arcanist-Drops",
+    "world": 7,
+    "title": "Arcanist-Waffen: heute noch {dailies.arcanistWeaponLeft} Drops möglich",
+    "reason": "Tageslimit 100, bereits gedroppt laut OptLacc 396; Upgrade Wand Drops ist gekauft. Quelle: IdleonToolbox, account.js etc.arcanistDailyDrops.",
+    "effort": "medium",
+    "gain": "Arcanist-Waffen",
+    "status": "todo-formula",
+    "priority": 30,
+    "when": [
+      {
+        "fact": "dailies.arcanistWeaponLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "daily.arcanist-rings",
+    "system": "Arcanist-Drops",
+    "world": 7,
+    "title": "Arcanist-Ringe: heute noch {dailies.arcanistRingLeft} Drops möglich",
+    "reason": "Tageslimit 100, bereits gedroppt laut OptLacc 397; Upgrade Ring Drops ist gekauft. Quelle: IdleonToolbox, account.js etc.arcanistDailyDrops.",
+    "effort": "medium",
+    "gain": "Arcanist-Ringe",
+    "status": "todo-formula",
+    "priority": 30,
+    "when": [
+      {
+        "fact": "dailies.arcanistRingLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "daily.top-of-the-mornin",
+    "system": "Compass",
+    "world": 7,
+    "title": "Top of the Mornin': noch {dailies.topOfTheMorninLeft} Kills heute",
+    "reason": "Kills mit 200x Tempest-Droprate übrig (OptLacc 365), Compass-Upgrade ist gekauft. Quelle: IdleonToolbox, account.js etc.topOfTheMornin.",
+    "effort": "medium",
+    "gain": "Tempest-Drops",
+    "status": "todo-formula",
+    "priority": 30,
+    "when": [
+      {
+        "fact": "dailies.topOfTheMorninLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "event.tournament-register",
+    "system": "Pet-Turnier",
+    "world": 7,
+    "title": "Nicht für das aktuelle Pet-Turnier angemeldet",
+    "reason": "Angemeldet-bis (OptLacc 511) ist nicht größer als der Turniertag (OptLacc 496). Der Spielstand-Turniertag kann veraltet sein, dann fehlt der Hinweis eher, als dass er falsch auslöst. Quelle: IdleonToolbox, account.js etc.tournamentRegister.",
+    "effort": "low",
+    "gain": "Turnier-Belohnungen",
+    "status": "todo-formula",
+    "priority": 45,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "dailies.tournamentOpen",
+        "op": "==",
+        "value": 1
+      }
+    ]
+  },
+  {
+    "id": "event.raid-register",
+    "system": "Raid",
+    "world": 7,
+    "title": "Nicht für den aktuellen Raid angemeldet",
+    "reason": "Angemeldet-bis (OptLacc 611) ist nicht größer als der Raid-Tag (OptLacc 613, kann im Spielstand veraltet sein). Ob die Anmeldung geschlossen ist, steht nicht im Spielstand. Quelle: IdleonToolbox, account.js etc.raidRegister.",
+    "effort": "low",
+    "gain": "Raid-Belohnungen",
+    "status": "todo-formula",
+    "priority": 45,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "dailies.raidOpen",
+        "op": "==",
+        "value": 1
+      }
+    ]
+  }
+]

@@ -1,8 +1,9 @@
 import { Account } from '../../model/account';
 import { GameData } from '../../../data/schemas';
 import { Facts } from '../types';
+import { dailiesProvider } from './dailies';
 
 /** A fact provider adds facts for one system. Put each system in its own file here and register it below. */
 export type FactProvider = (account: Account, data: GameData, facts: Facts) => Facts;
 
-export const FACT_PROVIDERS: FactProvider[] = [];
+export const FACT_PROVIDERS: FactProvider[] = [dailiesProvider];
