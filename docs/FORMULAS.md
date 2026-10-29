@@ -70,7 +70,7 @@ plus item-value mapping, i.e. an optimizer on top of SN-01..SN-08, not a parser 
 
 | ID | Formula | Definition | Status |
 |---|---|---|---|
-| HO-01 | Villager EXP req | idx 0: lvl 1 → 5, else `10*(-1.5 + (10 + 7*lvl^2.1) * 2.1^lvl * (1 + 0.75*max(0,lvl-4)) * 3.4^(max(0,lvl-12)))`; idx 1: `30*(10+6*lvl^1.8)*1.57^lvl`; idx 2: `50*(10+5*lvl^1.7)*1.4^lvl`; idx 3: `120*(30+10*lvl²)*2^lvl`; idx 4: `500*(10+5*lvl^1.3)*1.13^lvl` | TODO |
+| HO-01 | Villager EXP req | idx 0: lvl 1 → 5, else `10*(-1.5 + (10 + 7*lvl^2.1) * 2.1^lvl * (1 + 0.75*max(0,lvl-4)) * 3.4^(max(0,lvl-12)))` (source wraps the 3.4 term in a constant that equals 1); idx 1: `30*(10+6*lvl^1.8)*1.57^lvl`; idx 2: `50*(10+5*lvl^1.7)*1.4^lvl`; idx 3: `120*(30+10*lvl²)*2^lvl`; idx 4: `500*(10+5*lvl^1.3)*1.13^lvl` | verified for idx 4 (Studies Lv 245: req 3.23e19 ≤ 3.35e19 in game < req Lv 246 3.66e19); idx 0-3 TODO |
 | HO-02 | Villager EXP / hour | `catchUp * (100 + schematic25) * max(1, Π(~10 mults)) * opals[t] * (1+gemShop[t]) * (1+exotic/100) * (1+arcade/100) * (1+grimoire/100) * (1+tesseract/100) * (1 + cosmo·floor(minOpals/5)/100) * (1 + Σ(monuments, measurements 0+7, cosmo, schematic 48, cards, bell, summoning, vault 73)/100)` | TODO |
 | HO-03 | Engineer build cost | by tier: `50*0.85^wish*1.28^(i+floor(i/2.7))`, then two later tiers with extra `1.23^…`/`1.34`,`1.26`; fixed `x3` if `x4=1` | TODO |
 | HO-04 | Unlocked schematics | `min(105, round(1 + 3*engLvl + floor(engLvl/5)))` | TODO |
@@ -79,6 +79,10 @@ plus item-value mapping, i.e. an optimizer on top of SN-01..SN-08, not a parser 
 | HO-07 | Measurement cost | `(1/(1+fountain/100)) * (250 + 50*lvl) * 1.6^(i - 6*floor(i/10)) * 1.1^lvl` | TODO |
 | HO-08 | Measurement multiplier | `f<5: 1 + 18f/100`, else `1 + (18f + 8(f-5))/100`; `f` per measure type: log10/ratio formulas (gloomie kills, crops/14, account lvl/500, tome score/2500, …) | TODO |
 | HO-09 | Cosmo bonus | `floor(x0 * level)`; special `floor(max(1, 3^level))` for [2][1] | TODO |
+| HO-13 | Layers destroyed | `Holes[11][1]+[3]+[5]+[7]` | verified (125 = in-game counter, see Menagerie) |
+| HO-14 | Lamp wish cost ("LampWishCost") | wish 0: `floor(1+2L+L²)` (L<11, else 999999); wish 2: `floor(1+2L+L^1.7)`; others `floor(L*x2+x1)`; wishes available `Holes[11][25]`, levels `Holes[21]` | TODO |
+| HO-15 | New jar cost | `50*(1+n)^1.5*4.8^n`, `n = Holes[11][37]`; jars: collectibles `Holes[24][0..39]`, 120 jars max | TODO |
+| HO-16 | Blinding lanterns | cap 12/day, counter `Holes[11][84]` | TODO (source only) |
 | HO-10 | Caverns (Well, Motherlode, Den, Bravery, Bell, Harp, Lamp, Hive, Grotto, Justice, Jars, Evertree, Wisdom, Gambit, Temple, Fountain, Trench, Glunko Cove) | each in `parsers/world-5/caverns/*.ts` | TODO — files not read yet |
 
 Hole is the largest unknown: the progress-relevant formulas (what to invest opals/resources in) sit in the
@@ -98,7 +102,7 @@ comments in `hole.ts`. Account options used: 231/232 mastery, 233+ gemstone coun
 |---|---|---|
 | MH-01 (full, incl. sushi discount) | `src/core/formulas/minehead.ts` | rule `minehead.upgrades` |
 | MH-03 | `src/core/formulas/minehead.ts` | not used yet |
-| HO-01 | `src/core/formulas/hole.ts` | rule `hole.villagers-ready` |
+| HO-01, HO-05, HO-13..16 | `src/core/formulas/hole.ts`, optimizer `hole-optimizer.ts`, facts `providers/hole.ts` | rules `hole.*` |
 
 Tasks built on these carry `status: todo-formula` in `data/rules/*.json`.
 
@@ -151,3 +155,8 @@ Verified against in-game counters: Cavern Layer Removals 125 = Holes[11][1]+[3]+
 Owner note: the boss is killed in one hit on the last life; "Final Round Fury" and "Big Hit Combos" (doubled by Menagerie doublers) are large multipliers for that. The optimizer models only
 the Base/Mega damage groups (the other factors cancel in ratios), so do not move doublers off those two upgrades.
 Daily/weekly flags (OptLacc 113, 137, 182, 189, 190, 105) come from the IdleonToolbox dashboard and are status todo-formula until compared with the game.
+
+### Update: Hole (W5) pass
+Holes save keys now parsed: `[7]` opals per cavern, `[21]` wish levels, `[23]` gem shop, `[24]` jar collectibles, `[26]/[27]` study levels/progress,
+`[11][25]` wishes, `[11][37]` jar types, `[11][61]` active study. Not done (needs `getSchematicBonus` switch, ~100 cases): villager EXP/hr (HO-02),
+study progress/hr (HO-06), jar production/rupie value/opal chance. The "invest next" list is therefore an ordering heuristic (ready levels, affordable wishes, opal advice), status todo-formula.

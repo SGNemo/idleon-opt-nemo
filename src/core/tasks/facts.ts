@@ -219,9 +219,6 @@ export const computeFacts = (account: Account, data: GameData, calibration: Mine
     facts[`endgame.w${world}.closest`] = open.slice(0, 4).map((o) => `${o.name} (${fmtCost(o.current)}/${fmtCost(o.quantity)})`);
   }
 
-  // ---- Hole: daily Blinding Lanterns (cap 12 per day)
-  facts['hole.lanternsLeft'] = Math.max(0, 12 - Math.min(12, account.hole.blindingLanternsUsed));
-
   for (const provider of FACT_PROVIDERS) Object.assign(facts, provider(account, data, facts));
 
   return facts;

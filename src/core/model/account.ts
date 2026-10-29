@@ -81,6 +81,26 @@ export const AccountSchema = z.object({
     /** Holes[11][84]: Blinding Lanterns used today (cap 12, resets daily). */
     blindingLanternsUsed: z.number(),
     opalsInvested: numArray,
+    /** Holes[7]: opals found per cavern. */
+    opalsPerCavern: numArray,
+    /** Holes[23]: per-villager gem shop level (parallel villagers). */
+    gemShopLevels: numArray,
+    /** Holes[26]: study levels. */
+    studyLevels: numArray,
+    /** Holes[27]: study progress. */
+    studyProgress: numArray,
+    /** Holes[11][61]: study currently running (-1 = none). */
+    activeStudy: z.number(),
+    /** Holes[21]: lamp wish levels bought. */
+    wishLevels: numArray,
+    /** Holes[11][25]: wishes available to spend. */
+    wishesAvailable: z.number(),
+    /** Holes[11][1,3,5,7]: layers destroyed in the four skilling caverns. */
+    layersDestroyed: numArray,
+    /** Holes[24][0..39]: jar collectible levels. */
+    jarCollectibleLevels: numArray,
+    /** Holes[11][37]: jar types unlocked (new jar cost exponent). */
+    jarTypesUnlocked: z.number(),
   }),
 });
 

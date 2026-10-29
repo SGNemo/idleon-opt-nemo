@@ -86,6 +86,16 @@ export const parseSave = (input: string | object): Account => {
       villagerExp: toNumberArray(sub(holes, 2)),
       blindingLanternsUsed: toNumber(sub(holes, 11)[84]),
       opalsInvested: toNumberArray(sub(holes, 3)),
+      opalsPerCavern: toNumberArray(sub(holes, 7)),
+      gemShopLevels: toNumberArray(sub(holes, 23)),
+      studyLevels: toNumberArray(sub(holes, 26)),
+      studyProgress: toNumberArray(sub(holes, 27)),
+      activeStudy: toNumber(sub(holes, 11)[61], -1),
+      wishLevels: toNumberArray(sub(holes, 21)),
+      wishesAvailable: toNumber(sub(holes, 11)[25]),
+      layersDestroyed: [1, 3, 5, 7].map((i) => toNumber(sub(holes, 11)[i])),
+      jarCollectibleLevels: toNumberArray(sub(holes, 24)).slice(0, 40),
+      jarTypesUnlocked: Math.round(toNumber(sub(holes, 11)[37])),
     },
   };
   return AccountSchema.parse(account);

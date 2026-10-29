@@ -4,7 +4,7 @@
     "system": "Hole",
     "world": 5,
     "title": "{hole.villagersReadyCount} Villager bereit zum Level-Up",
-    "reason": "Genug EXP für das nächste Level: {hole.villagersReady}.",
+    "reason": "Genug EXP für das nächste Level: {hole.villagersReady}. Formel für Studies (Lv 245) mit Spielwert bestätigt, die übrigen Villager nur per Quellcode.",
     "effort": "low",
     "gain": "Villager-Level (schaltet Boni frei)",
     "status": "todo-formula",
@@ -23,7 +23,7 @@
     "system": "Hole",
     "world": 5,
     "title": "{hole.lanternsLeft} Blinding Lanterns heute übrig",
-    "reason": "Tageslimit 12 (Zähler wird beim Daily-Reset zurückgesetzt). Du besitzt laut Save mehr; nur die 12 pro Tag sind nutzbar.",
+    "reason": "Tageslimit 12 (Quellcode; Zähler Holes[11][84] wird beim Daily-Reset zurückgesetzt). Nur die 12 pro Tag sind nutzbar.",
     "effort": "low",
     "gain": "Hole-Fortschritt (Daily); genauer Effekt pro Lantern ungeprüft",
     "status": "todo-formula",
@@ -32,6 +32,63 @@
     "when": [
       {
         "fact": "hole.lanternsLeft",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "hole.studies-ready",
+    "system": "Hole",
+    "world": 5,
+    "title": "{hole.studiesReadyCount} Study bereit zum Level-Up",
+    "reason": "Fortschritt reicht für das nächste Level: {hole.studiesReady}.",
+    "effort": "low",
+    "gain": "Study-Bonus",
+    "status": "todo-formula",
+    "priority": 70,
+    "urgent": true,
+    "when": [
+      {
+        "fact": "hole.studiesReadyCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "hole.lamp-wishes",
+    "system": "Hole",
+    "world": 5,
+    "title": "{hole.wishesAffordableCount} Lamp-Wünsche bezahlbar",
+    "reason": "Du hast {hole.wishesAvailable} Wünsche übrig: {hole.wishesAffordable}.",
+    "effort": "low",
+    "gain": "Lamp-Boni (Wunsch-Wirkung ungeprüft)",
+    "status": "todo-formula",
+    "priority": 55,
+    "urgent": false,
+    "when": [
+      {
+        "fact": "hole.wishesAffordableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "hole.invest-next",
+    "system": "Hole",
+    "world": 5,
+    "title": "Hole: als Nächstes investieren",
+    "reason": "Reihenfolge: {hole.investNext}. Opal-Tipp ist eine Heuristik ohne vollständige EXP-Rate (HO-02).",
+    "effort": "low",
+    "gain": "Schnellerer Hole-Fortschritt",
+    "status": "todo-formula",
+    "priority": 60,
+    "urgent": false,
+    "when": [
+      {
+        "fact": "hole.investCount",
         "op": ">",
         "value": 0
       }
