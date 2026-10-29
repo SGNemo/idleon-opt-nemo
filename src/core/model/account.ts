@@ -47,8 +47,28 @@ export const AccountSchema = z.object({
     steam: numArray,
   }),
   sushi: z.object({
-    /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered. */
+    /** Sushi[5]: highest tier found per sushi type, -1 = undiscovered, >= 1 = perfected. */
     uniqueSushiTracking: numArray,
+    /** Sushi[2]: station upgrade levels (table index). */
+    upgradeLevels: numArray,
+    /** Sushi[7]: knowledge level per sushi type. */
+    knowledgeLevels: numArray,
+    /** Sushi[4][3]: Sushi Bucks owned. */
+    bucks: z.number(),
+  }),
+  spelunking: z.object({
+    /** Spelunk[0]: > 0 once the cave's lore boss was beaten. */
+    caveClears: numArray,
+    /** Spelunk[1]: best depth per cave. */
+    bestDepths: numArray,
+    /** Spelunk[4][0]: Amber owned. */
+    amber: z.number(),
+    /** Spelunk[5]: shop upgrade levels (table index). */
+    upgradeLevels: numArray,
+    /** Spelunk[6]: names of rocks discovered so far. */
+    discoveries: z.array(z.string()),
+    /** Spelunk[44]: Grand Discoveries per cave. */
+    grandDiscoveries: numArray,
   }),
   menagerie: z.object({
     lumi: z.number(),

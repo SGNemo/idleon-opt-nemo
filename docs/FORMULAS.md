@@ -84,6 +84,34 @@ plus item-value mapping, i.e. an optimizer on top of SN-01..SN-08, not a parser 
 Hole is the largest unknown: the progress-relevant formulas (what to invest opals/resources in) sit in the
 18 cavern files, not in `hole.ts`. Reading those is the next research step if Hole becomes a system.
 
+## Sushi Station — `parsers/world-7/sushiStation.ts`
+
+| ID | Formula | Definition | Status |
+|---|---|---|---|
+| SU-01 | Rest-of-game bonus | `research[37][i]` if `uniqueSushi > i`, else 0 (see Update: MH-01 resolved) | TODO (2 values consistent with Minehead cost) |
+| SU-02 | Knowledge bonus of one sushi | `max(0, catValue[cat(i)] * knowledgeLv[i] * min(2, 1 + tracking[i]) * (1 + i/30))`; category total = sum over all tiers; a perfected sushi (`tracking >= 1`) counts twice | TODO |
+| SU-03 | Perfect-cook chance, tier `i` | `0.6 * 0.81^i / (1 + i/8) * (1 + knowledgeCat10/100)` | TODO |
+| SU-04 | Upgrade cost at level `L`, on-screen position `v` | `max(0.1, factor||1) * (5 + v + max(0,v-1)^2) * (1.5 + max(0,v-3)/16)^max(0,v-4) * 1.3^max(0,v-20) / (1 + wholesale/100) * max(0.1, 1 - max(rog26, rog44)/100) / (1 + knowledgeCat6/100) / (1 + jelly18/100) * exp^L`; `wholesale` = Wholesale Pricing (upgrade 36) effect | TODO (we omit `jelly18` and a Menagerie doubler on upgrade 36, so our cost is an upper bound) |
+| SU-05 | Not implemented yet | upgrade level requirement `floor(1 + min(2,v) + min(4,v) + 3v - max(0,v-4) - max(0,v-8) + floor(v/6) + floor(v/17))`, fuel cap/generation, Bucks per hour (needs ~15 cross-system inputs), overtuned/spark multipliers, combo multiplier | TODO (not read into rules) |
+
+Rules (`data/rules/sushi.json`, facts `providers/sushi.ts`): `sushi.upgrades` (affordable with Bucks, cost = upper bound; research-level gate not checked), `sushi.perfecto` (discovered, never perfect; lowest tiers first because the chance falls with the tier), `sushi.next-sushi` (next undiscovered sushi and its rest-of-game bonus). Priority 50 / 44 / 46: upgrades first (one click), then the new sushi (also a Menagerie mission), perfecto last (low chance).
+
+Save keys: `Sushi[2]` upgrade levels, `[4][3]` Bucks (`[0]` fuel, `[1]` overtuned, `[2]` sparks), `[5]` tier tracking (-1 undiscovered, 0 found, >= 1 perfected), `[6]` knowledge XP, `[7]` knowledge levels. Data: `research[30,32..37]`, `sushiUpgrades` (rows `[name, maxLevel, costExponent, bonusPerLevel, costFactor, description…]`).
+
+## Spelunking — `parsers/world-7/spelunking.ts`
+
+| ID | Formula | Definition | Status |
+|---|---|---|---|
+| SP-01 | Shop upgrade cost at level `L` | `base = discount * (10+L) * x1 * 9.5^col * 6.3^row` (`* 1e7` from table index 52, a further `* 1e9` from 66); `cost = 0.25 * base * growth^L + L^2 + 5L`; `L = -1` has no cost | TODO (`discount` in the source = meal `SplkUpg` * Royal Guardian * `max(0.1, 1 - (max(rog6, rog27) + jelly22)/100)`; we only apply the sushi part, so our cost is an upper bound) |
+| SP-02 | Upgrade availability | `parent` (x6) at level >= 1 | TODO (our assumption, the source does not use x6 in code; we also accept `level >= 1`) |
+| SP-03 | Discoveries | rocks of a cave except its last table row (boss rock); found = name in `Spelunk[6]` | TODO |
+| SP-04 | Tunnel boss cleared | `Spelunk[0][cave] > 0` | TODO |
+| SP-05 | Not implemented yet | POW, Amber gain, stamina, chapters/pages, elixirs, Grand Discovery chance (all need meals, jelly, talents, artifacts, cards) | TODO |
+
+Rules (`data/rules/spelunking.json`, facts `providers/spelunking.ts`): `spelunking.core-upgrades` (POW 0-3 and Amber-income 7-10 affordable with Amber; they compound, so they come first, priority 62), `spelunking.next-cave` (next uncleared tunnel and its reward text, 55), `spelunking.discoveries` (open discoveries per tunnel, each one multiplies several POW upgrades, 48), `spelunking.upgrades` (other affordable upgrades, 40). The ranking itself (core before the rest) is our heuristic, not a game formula.
+
+Save keys: `Spelunk[0]` tunnel boss clears, `[1]` best depth per cave (sum = Menagerie "Total Depths" with `[47]`), `[4][0]` Amber, `[5]` upgrade levels, `[6]` discovered rock names, `[44]` Grand Discoveries per cave. Data: `spelunkingUpgrades`, `spelunkingRocks`, `generalSpelunky[14]` (tunnel boss reward texts).
+
 ## Save-key map seen so far (parser inputs)
 
 `Research` (JSON string): `[7]` minehead state (`[4]` opponents beaten, `[5]` currency, `[6]` best hit, `[8]` daily tries),

@@ -1,0 +1,71 @@
+[
+  {
+    "id": "sushi.upgrades",
+    "system": "Sushi Station",
+    "world": 7,
+    "title": "Sushi Station: {sushi.affordableCount} Upgrades bezahlbar",
+    "reason": "Günstigste: {sushi.affordable}. Kosten sind eine Obergrenze (Jelly-Rabatt und Doppler auf Wholesale Pricing nicht bekannt); ob das Research-Level für den Kauf reicht, ist nicht geprüft.",
+    "effort": "low",
+    "gain": "Mehr Bucks und Fuel",
+    "status": "todo-formula",
+    "priority": 50,
+    "when": [
+      {
+        "fact": "sushi.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "sushi.affordableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "sushi.perfecto",
+    "system": "Sushi Station",
+    "world": 7,
+    "title": "Sushi Station: {sushi.perfectoOpenCount} Sorten noch ohne Perfecto",
+    "reason": "Leichteste: {sushi.perfectoNext}. Ein perfekt gekochtes Sushi zählt doppelt für seinen Knowledge-Bonus; die Chance sinkt mit der Sorte stark.",
+    "effort": "medium",
+    "gain": "Knowledge-Bonus x2 pro Sorte",
+    "status": "todo-formula",
+    "priority": 44,
+    "when": [
+      {
+        "fact": "sushi.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "sushi.perfectoOpenCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "sushi.next-sushi",
+    "system": "Sushi Station",
+    "world": 7,
+    "title": "Sushi Station: nächste Sorte entdecken ({sushi.nextSushi})",
+    "reason": "{sushi.uniqueCount} von {sushi.totalTypes} Sorten entdeckt. Neue Sorte schaltet frei: {sushi.nextSushiBonus}. Zählt auch für die Menagerie-Mission Unique Sushi.",
+    "effort": "medium",
+    "gain": "Permanenter Bonus je Sorte",
+    "status": "todo-formula",
+    "priority": 46,
+    "when": [
+      {
+        "fact": "sushi.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "sushi.undiscoveredCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

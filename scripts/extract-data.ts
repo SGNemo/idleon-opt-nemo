@@ -1,4 +1,4 @@
-// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,achievements,jelly,menagerie}.json from the Toolbox website-data tables.
+// Builds data/<gameVersion>/{meta,minehead,sneaking,hole,sushi,spelunking,achievements,jelly,menagerie}.json from the Toolbox website-data tables.
 // The Toolbox tables are used as a data SOURCE only (numbers/names generated from the game); no code is reused.
 //
 // Usage: npm run data:update -- [--game-version 143] [--sha <toolbox commit>]
@@ -150,6 +150,40 @@ const sushi = {
   names: research[30],
   restOfGameValues: nums(research[37]),
   restOfGameDescriptions: research[36],
+  // shared-data sushiUpgrades rows: [name, maxLevel, costExponent, bonusPerLevel, costFactor, ...description words]
+  upgrades: (shared.sushiUpgrades as string[][]).map((u, index) => ({
+    index,
+    name: String(u[0]),
+    maxLevel: num(u[1]),
+    costExponent: num(u[2]),
+    bonusPerLevel: num(u[3]),
+    costFactor: num(u[4]),
+    description: u.slice(5).join(' '),
+  })),
+  upgradeOrder: nums(research[32]),
+  knowledgeCategories: nums(research[33]),
+  knowledgeValues: nums(research[35]),
+  knowledgeDescriptions: research[34],
+};
+
+// ---- Spelunking (shared-data spelunkingUpgrades / spelunkingRocks / generalSpelunky[14])
+const spelunking = {
+  upgrades: (shared.spelunkingUpgrades as any[]).map((u, index) => ({
+    index,
+    name: u.name,
+    description: u.description ?? '',
+    costBase: num(u.x1),
+    costGrowth: num(u.x2),
+    maxLevel: num(u.x3),
+    bonusPerLevel: num(u.x4),
+    parent: num(u.x6),
+    column: num(u.x7),
+    row: num(u.x8),
+  })),
+  caves: (shared.spelunkingRocks as any[][]).map((rocks, index) => {
+    const reward = String(shared.generalSpelunky[14][index] ?? '');
+    return { index, loreReward: reward && Number.isNaN(Number(reward)) ? reward : '', rocks: rocks.slice(0, -1).map((r) => String(r.name)) };
+  }),
 };
 
 // 70 slots per world; unused slots are fillers the game never shows.
@@ -198,7 +232,7 @@ const meta = {
   note: 'Data version is the version this set is intended for; the source does not state its own game version. Verify against a save of that version.',
 };
 
-const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, achievements, jelly, menagerie });
+const data = GameDataSchema.parse({ meta, minehead, sneaking, hole, sushi, spelunking, achievements, jelly, menagerie });
 
 const outDir = join('data', String(gameVersion));
 mkdirSync(outDir, { recursive: true });

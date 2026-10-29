@@ -1,0 +1,98 @@
+[
+  {
+    "id": "spelunking.core-upgrades",
+    "system": "Spelunking",
+    "world": 7,
+    "title": "Spelunking: {spelunking.coreAffordableCount} POW-/Amber-Upgrades bezahlbar",
+    "reason": "Günstigste: {spelunking.coreAffordable}. Diese wirken auf POW und Amber-Einkommen und beschleunigen alles Weitere. Kosten sind eine Obergrenze (Mahlzeit-, Jelly- und Royal-Guardian-Rabatt fehlen), also sicher bezahlbar.",
+    "effort": "low",
+    "gain": "Mehr POW und Amber pro Lauf",
+    "status": "todo-formula",
+    "priority": 62,
+    "when": [
+      {
+        "fact": "spelunking.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "spelunking.coreAffordableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "spelunking.next-cave",
+    "system": "Spelunking",
+    "world": 7,
+    "title": "Spelunking: nächster Tunnelboss ist {spelunking.nextCave}",
+    "reason": "{spelunking.cavesCleared} von {spelunking.cavesTotal} Tunnel-Bossen besiegt. Beste Tiefe dort: {spelunking.nextCaveBestDepth}. Belohnung beim Sieg: {spelunking.nextCaveReward}",
+    "effort": "high",
+    "gain": "Neue Tiefe und Belohnung",
+    "status": "todo-formula",
+    "priority": 55,
+    "when": [
+      {
+        "fact": "spelunking.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "spelunking.cavesOpenCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "spelunking.discoveries",
+    "system": "Spelunking",
+    "world": 7,
+    "title": "Spelunking: {spelunking.discoveriesFound} von {spelunking.discoveriesTotal} Entdeckungen",
+    "reason": "Offen: {spelunking.discoveriesOpen}. Jede Entdeckung verstärkt mehrere POW-Upgrades (laut Upgrade-Text +5 % pro Entdeckung auf Discovering the POW).",
+    "effort": "medium",
+    "gain": "Mehr POW durch Entdeckungen",
+    "status": "todo-formula",
+    "priority": 48,
+    "progress": {
+      "current": "spelunking.discoveriesFound",
+      "max": "spelunking.discoveriesTotal"
+    },
+    "when": [
+      {
+        "fact": "spelunking.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "spelunking.discoveriesOpenCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  },
+  {
+    "id": "spelunking.upgrades",
+    "system": "Spelunking",
+    "world": 7,
+    "title": "Spelunking: {spelunking.otherAffordableCount} weitere Upgrades bezahlbar",
+    "reason": "Günstigste: {spelunking.otherAffordable}. Kosten sind eine Obergrenze; ob der Vorgänger im Upgrade-Baum freigeschaltet ist, wird nur geschätzt.",
+    "effort": "low",
+    "gain": "Dauerhafte Boni",
+    "status": "todo-formula",
+    "priority": 40,
+    "when": [
+      {
+        "fact": "spelunking.active",
+        "op": "==",
+        "value": true
+      },
+      {
+        "fact": "spelunking.otherAffordableCount",
+        "op": ">",
+        "value": 0
+      }
+    ]
+  }
+]

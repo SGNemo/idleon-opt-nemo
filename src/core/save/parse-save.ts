@@ -67,7 +67,20 @@ export const parseSave = (input: string | object): Account => {
       ninjas: characters.map((c) => ({ floor: toNumber(sub(ninja, c.index)[0]) })),
     },
     achievements: { registry: toNumberArray(toArray(readKey(save, 'AchieveReg'))), steam: toNumberArray(toArray(readKey(save, 'SteamAchieve'))) },
-    sushi: { uniqueSushiTracking: toNumberArray(sub(sushi, 5)) },
+    sushi: {
+      uniqueSushiTracking: toNumberArray(sub(sushi, 5)),
+      upgradeLevels: toNumberArray(sub(sushi, 2)),
+      knowledgeLevels: toNumberArray(sub(sushi, 7)),
+      bucks: toNumber(sub(sushi, 4)[3]),
+    },
+    spelunking: {
+      caveClears: toNumberArray(sub(spelunk, 0)),
+      bestDepths: toNumberArray(sub(spelunk, 1)),
+      amber: toNumber(sub(spelunk, 4)[0]),
+      upgradeLevels: toNumberArray(sub(spelunk, 5)),
+      discoveries: sub(spelunk, 6).filter((d): d is string => typeof d === 'string'),
+      grandDiscoveries: toNumberArray(sub(spelunk, 44)),
+    },
     menagerie: {
       lumi: toNumber(sub(menagerie, 0)[0]),
       shells: toNumber(sub(menagerie, 0)[1]),

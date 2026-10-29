@@ -103,6 +103,52 @@ export const SushiDataSchema = z.object({
   /** "Rest of game" bonus per tier index: value applies once more than `index` unique sushi were found. */
   restOfGameValues: z.array(z.number()),
   restOfGameDescriptions: z.array(z.string()),
+  /** Station upgrades in table order (`index`); `order` is the on-screen order (its position feeds the cost formula). */
+  upgrades: z.array(
+    z.object({
+      index: z.number().int(),
+      name: z.string(),
+      /** >= 999 means uncapped. */
+      maxLevel: z.number(),
+      costExponent: z.number(),
+      bonusPerLevel: z.number(),
+      /** Cost multiplier (0 in the source = 1). */
+      costFactor: z.number(),
+      description: z.string(),
+    }),
+  ),
+  upgradeOrder: z.array(z.number().int()),
+  /** Knowledge: category per sushi tier, value per category, description per category. */
+  knowledgeCategories: z.array(z.number().int()),
+  knowledgeValues: z.array(z.number()),
+  knowledgeDescriptions: z.array(z.string()),
+});
+
+export const SpelunkingDataSchema = z.object({
+  /** Shop upgrades. `parent` = x6, `column`/`row` = x7/x8 (cost exponents), `maxLevel` 99999 = uncapped. */
+  upgrades: z.array(
+    z.object({
+      index: z.number().int(),
+      name: z.string(),
+      description: z.string(),
+      costBase: z.number(),
+      costGrowth: z.number(),
+      maxLevel: z.number(),
+      bonusPerLevel: z.number(),
+      parent: z.number().int(),
+      column: z.number(),
+      row: z.number(),
+    }),
+  ),
+  /** One entry per cave (tunnel); `rocks` are its discoverable rock names (the cave's last table row is the boss rock and left out). */
+  caves: z.array(
+    z.object({
+      index: z.number().int(),
+      /** Lore boss reward text of this cave, empty when the table holds a placeholder. */
+      loreReward: z.string(),
+      rocks: z.array(z.string()),
+    }),
+  ),
 });
 
 export const AchievementsDataSchema = z.array(
@@ -155,6 +201,7 @@ export const GameDataSchema = z.object({
   sneaking: SneakingDataSchema,
   hole: HoleDataSchema,
   sushi: SushiDataSchema,
+  spelunking: SpelunkingDataSchema,
   achievements: AchievementsDataSchema,
   jelly: JellyDataSchema,
   menagerie: MenagerieDataSchema,
@@ -164,6 +211,7 @@ export type MenagerieData = z.infer<typeof MenagerieDataSchema>;
 export type MineheadData = z.infer<typeof MineheadDataSchema>;
 export type SneakingData = z.infer<typeof SneakingDataSchema>;
 export type SushiData = z.infer<typeof SushiDataSchema>;
+export type SpelunkingData = z.infer<typeof SpelunkingDataSchema>;
 export type HoleData = z.infer<typeof HoleDataSchema>;
 export type GameData = z.infer<typeof GameDataSchema>;
 
