@@ -188,6 +188,8 @@ export const RuleSchema = z.object({
   /** 0-100, ranks tasks inside a world. */
   priority: z.number(),
   urgent: z.boolean().default(false),
+  /** True if the task resets with the daily reset; the UI then clears its "done" tick each day. */
+  daily: z.boolean().default(false),
   progress: z.object({ current: z.string(), max: z.string() }).optional(),
   blockedBy: z.string().optional(),
   when: z.array(ConditionSchema),

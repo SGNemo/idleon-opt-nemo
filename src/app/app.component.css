@@ -14,3 +14,9 @@ section { margin-top: 1rem; }
 .warn { color: #92400e; }
 .meta { color: #555; }
 progress { width: 100%; }
+.filters { display: flex; flex-wrap: wrap; gap: .4rem; align-items: center; }
+.filters input[type='search'] { flex: 1 1 12rem; }
+.toggle { all: unset; cursor: pointer; }
+.count { font-size: .8rem; font-weight: normal; color: #555; }
+.tasks li.done { opacity: .55; }
+.tasks li.done strong { text-decoration: line-through; }

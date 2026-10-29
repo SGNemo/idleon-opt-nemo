@@ -18,7 +18,7 @@
   @if (loadError(); as err) {
     <p class="error">Data: {{ err }}</p>
   }
-  @if (loaded()?.warning; as w) {
+  @if (versionNotice(); as w) {
     <p class="warn">{{ w }}</p>
   }
 
@@ -28,36 +28,89 @@
       Mastery {{ a.sneaking.selectedMastery }}
     </p>
 
+    @if (loaded(); as l) {
+      <section class="filters">
+        <input type="search" placeholder="Search" [value]="filters().search" (input)="patchFilters({ search: $any($event.target).value })" />
+        <select aria-label="World" (change)="setWorld($any($event.target).value)">
+          <option value="">All worlds</option>
+          @for (w of options().worlds; track w) {
+            <option [value]="w" [selected]="filters().world === w">World {{ w }}</option>
+          }
+        </select>
+        <select aria-label="System" (change)="setSystem($any($event.target).value)">
+          <option value="">All systems</option>
+          @for (s of options().systems; track s) {
+            <option [value]="s" [selected]="filters().system === s">{{ s }}</option>
+          }
+        </select>
+        <select aria-label="Effort" (change)="setEffort($any($event.target).value)">
+          <option value="">Any effort</option>
+          <option value="low" [selected]="filters().effort === 'low'">low</option>
+          <option value="medium" [selected]="filters().effort === 'medium'">medium</option>
+          <option value="high" [selected]="filters().effort === 'high'">high</option>
+        </select>
+        <select aria-label="Status" (change)="setStatus($any($event.target).value)">
+          <option value="">Any status</option>
+          <option value="verified" [selected]="filters().status === 'verified'">verified</option>
+          <option value="todo-formula" [selected]="filters().status === 'todo-formula'">todo-formula</option>
+        </select>
+        <select aria-label="Sort" (change)="setSort($any($event.target).value)">
+          <option value="priority" [selected]="sort() === 'priority'">Sort: priority</option>
+          <option value="effort" [selected]="sort() === 'effort'">Sort: effort</option>
+          <option value="title" [selected]="sort() === 'title'">Sort: title</option>
+        </select>
+        <label><input type="checkbox" [checked]="filters().hideDone" (change)="patchFilters({ hideDone: $any($event.target).checked })" /> Hide done</label>
+        <button type="button" (click)="resetFilters()">Reset filters</button>
+      </section>
+    }
+
     @for (group of tasksByWorld(); track group.world) {
       <section>
-        <h2>World {{ group.world }}</h2>
-        <ul class="tasks">
-          @for (t of group.tasks; track t.id) {
-            <li [class.urgent]="t.urgent">
-              <div class="head">
-                <strong>{{ t.title }}</strong>
-                <span class="chip">{{ t.system }}</span>
-                <span class="chip">effort: {{ t.effort }}</span>
-                <span class="chip" [class.todo]="t.status === 'todo-formula'">{{ t.status }}</span>
-              </div>
-              <div class="reason">{{ t.reason }}</div>
-              <div class="gain">Gain: {{ t.gain }}</div>
-              @if (t.progress; as p) {
-                <progress [max]="p.max" [value]="p.current"></progress>
-              }
-              @if (t.blockedBy) {
-                <div class="blocked">Blocked by: {{ t.blockedBy }}</div>
-              }
-            </li>
-          }
-        </ul>
+        <h2>
+          <button type="button" class="toggle" [attr.aria-expanded]="!collapsed().has(group.world)" (click)="toggleGroup(group.world)">
+            {{ collapsed().has(group.world) ? '▸' : '▾' }} World {{ group.world }}
+            <span class="count">{{ group.open }} open / {{ group.tasks.length }}</span>
+          </button>
+        </h2>
+        @if (!collapsed().has(group.world)) {
+          <ul class="tasks">
+            @for (t of group.tasks; track t.id) {
+              <li [class.urgent]="t.urgent" [class.done]="isTaskDone(t.id)">
+                <div class="head">
+                  <input type="checkbox" [checked]="isTaskDone(t.id)" (change)="toggle(t.id)" [attr.aria-label]="'Done: ' + t.title" />
+                  <strong>{{ t.title }}</strong>
+                  <span class="chip">{{ t.system }}</span>
+                  <span class="chip">effort: {{ t.effort }}</span>
+                  <span class="chip" [class.todo]="t.status === 'todo-formula'">{{ t.status }}</span>
+                  @if (isDaily(t.id)) {
+                    <span class="chip">daily</span>
+                  }
+                </div>
+                <div class="reason">{{ t.reason }}</div>
+                <div class="gain">Gain: {{ t.gain }}</div>
+                @if (t.progress; as p) {
+                  <progress [max]="p.max" [value]="p.current"></progress>
+                }
+                @if (t.blockedBy) {
+                  <div class="blocked">Blocked by: {{ t.blockedBy }}</div>
+                }
+              </li>
+            }
+          </ul>
+        }
       </section>
     } @empty {
       @if (loaded()) {
-        <p>Nothing to do right now.</p>
+        <p>Nothing to show (check the filters).</p>
       } @else {
         <p>Loading game data…</p>
       }
+    }
+    @if (loaded(); as l) {
+      <p class="meta">
+        Data set v{{ l.data.meta.gameVersion }} · source {{ l.data.meta.source }} commit {{ l.data.meta.sourceCommit.slice(0, 7) }} · fetched
+        {{ l.data.meta.fetchedAt.slice(0, 10) }}. Status <em>verified</em> = source and a game test value agree; <em>todo-formula</em> = not yet checked.
+      </p>
     }
   }
 </main>
